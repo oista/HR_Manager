@@ -58,6 +58,16 @@ type
     MainQueryPENSIONDATE: TDateTimeField;
     MainQueryPENSIONDOCNUMB: TStringField;
     MainQueryPENSIONTYPE: TStringField;
+    GridDBTableView1LASTNAME: TcxGridDBColumn;
+    GridDBTableView1NAME: TcxGridDBColumn;
+    GridDBTableView1FATHERSHIP: TcxGridDBColumn;
+    GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
+    GridDBTableView1PASSPORTNUMB: TcxGridDBColumn;
+    GridDBTableView1PASSDATE: TcxGridDBColumn;
+    GridDBTableView1POL: TcxGridDBColumn;
+    GridDBTableView1BIRTHDATE: TcxGridDBColumn;
+    GridDBTableView1BIRTHPLACE: TcxGridDBColumn;
+    GridDBTableView1SNILSNO: TcxGridDBColumn;
   private
     { Private declarations }
   public

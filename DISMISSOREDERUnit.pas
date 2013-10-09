@@ -7,7 +7,7 @@ uses
   Dialogs, EditDialogUnit, PKDBTable, ComCtrls, StdCtrls, ExtCtrls, PKDBEdit,
   PKDBBBaseComboBox, PKDBDictEdit, DB, uADStanIntf, uADStanOption, uADStanParam,
   uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf, uADStanAsync,
-  uADDAptManager, uADCompDataSet, uADCompClient, ReportUnit, PKDBContext ;
+  uADDAptManager, uADCompDataSet, uADCompClient, ReportUnit, PKDBContext , PKDBDefs;
 
 type
   TPROCSTATE=(NEW, ACT, ARCHIVE);
@@ -62,7 +62,7 @@ begin // перевод в архивный статус
    if (PKDBLabelEdit1.Text<>'') then
     begin
       ADStoredProc2.Params[0].Value:= PKDBTable1.Fields.ParentKey.FieldVal; // сотрудник
-      ADStoredProc2.Params[1].Value:= strtodate(PKDBLabelEdit1.Text); // дата увольнения
+      ADStoredProc2.Params[1].Value:= strtodate(PKDBLabelEdit1.Text);       // дата увольнения
       ADStoredProc2.ExecProc;
       inherited;
     end
@@ -108,12 +108,22 @@ begin   // узнаем состояние процесса увольнения
 end;
 
 procedure TDISMISSORDER.runcommand;
-begin   // если начальное, создаем приказ, если нет - изменяем существующий
+begin
+  // если начальное, создаем приказ, если нет - изменяем существующий
   case CommandType of
     tcInsert:
      begin
        if (ProcState= NEW) then
-         inherited
+         if (CheckBox1.Checked) then
+          begin
+           ORDERSTATUS.DictionaryValue:= '6302833';
+           PKDBTable1.Insert;
+          end
+         else
+          begin
+           ORDERSTATUS.DictionaryValue:= '6302832';
+           PKDBTable1.Insert;
+          end
        else
          if (CheckBox1.Checked) then
           begin
@@ -126,6 +136,7 @@ begin   // если начальное, создаем приказ, если нет - изменяем существующий
            PKDBTable1.Update;
           end;
      end;
+     // приказ можно изменить из раздела увроленных
      tcUpdate:
      inherited;
   end;

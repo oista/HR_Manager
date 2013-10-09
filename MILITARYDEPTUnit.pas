@@ -81,7 +81,7 @@ implementation
 {$R *.dfm}
 procedure TMILITARYDEPT.N1Click(Sender: TObject);
 begin
-   cxGridExportLink.ExportGridToExcel('MilytaryList',Grid, True, True, True, 'xls' );
+   cxGridExportLink.ExportGridToExcel('MilytaryList'+datetostr(now),Grid, True, True, True, 'xls' );
 end;
 
 procedure TMILITARYDEPT.N2Click(Sender: TObject);

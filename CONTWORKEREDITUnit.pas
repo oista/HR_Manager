@@ -8,7 +8,7 @@ uses
   PKDBEdit, PKDBBBaseComboBox, reportunit, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
   uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, VACANCYUnit,
-  PKDBContext;
+  PKDBContext, PKDBDefs;
 
 type
   TContType = (podrad,uslugi,nothing);   // тип договора

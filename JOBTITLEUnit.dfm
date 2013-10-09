@@ -1,77 +1,83 @@
 inherited JOBTITLE: TJOBTITLE
   Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080'       '
-  ClientHeight = 547
-  ClientWidth = 1025
-  ExplicitWidth = 1041
-  ExplicitHeight = 585
+  ClientHeight = 608
+  ClientWidth = 1238
+  ExplicitWidth = 1254
+  ExplicitHeight = 646
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Top = 506
-    Width = 1025
-    ExplicitWidth = 791
+    Top = 567
+    Width = 1238
+    ExplicitTop = 506
+    ExplicitWidth = 1025
     inherited Button1: TButton
-      Left = 862
-      ExplicitLeft = 628
+      Left = 1075
+      ExplicitLeft = 862
     end
     inherited Button2: TButton
-      Left = 943
-      ExplicitLeft = 709
+      Left = 1156
+      ExplicitLeft = 943
     end
   end
   inherited Panel2: TPanel
-    Width = 1025
-    Height = 506
-    ExplicitWidth = 791
+    Width = 1238
+    Height = 567
+    ExplicitWidth = 1025
+    ExplicitHeight = 506
     inherited Splitter1: TSplitter
       Left = 25
-      Height = 506
+      Height = 567
+      ExplicitLeft = 25
+      ExplicitHeight = 506
     end
     inherited Panel3: TPanel
       Left = 28
-      Width = 997
-      Height = 506
+      Width = 1210
+      Height = 567
       ExplicitLeft = 28
-      ExplicitWidth = 763
+      ExplicitWidth = 997
+      ExplicitHeight = 506
       inherited Splitter2: TSplitter
-        Top = 488
-        Width = 997
+        Top = 549
+        Width = 1210
         ExplicitTop = 405
         ExplicitWidth = 653
       end
       inherited ExtPanel: TPanel
-        Top = 491
-        Width = 997
+        Top = 552
+        Width = 1210
         Height = 15
         Visible = False
-        ExplicitTop = 404
-        ExplicitWidth = 763
+        ExplicitTop = 491
+        ExplicitWidth = 997
         ExplicitHeight = 15
       end
       inherited cxPageControl1: TcxPageControl
-        Width = 997
-        Height = 488
-        ExplicitWidth = 763
-        ExplicitHeight = 401
-        ClientRectBottom = 488
-        ClientRectRight = 997
+        Width = 1210
+        Height = 549
+        ExplicitWidth = 997
+        ExplicitHeight = 488
+        ClientRectBottom = 549
+        ClientRectRight = 1210
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080'      '
-          ExplicitWidth = 763
-          ExplicitHeight = 377
+          ExplicitWidth = 997
+          ExplicitHeight = 464
           inherited GridPanel1: TGridPanel
-            Width = 991
-            ExplicitWidth = 757
+            Width = 1204
+            ExplicitWidth = 991
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
               Connection = DataModule1.ADConnection1
               EditDialogClassName = 'TEDITJOBTITLE'
             end
           end
           inherited Grid: TcxGrid
-            Width = 991
-            Height = 424
-            ExplicitWidth = 757
-            ExplicitHeight = 337
+            Width = 1204
+            Height = 485
+            ExplicitWidth = 991
+            ExplicitHeight = 424
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
               object GridDBTableView1ID: TcxGridDBColumn
@@ -100,9 +106,10 @@ inherited JOBTITLE: TJOBTITLE
     end
     inherited TreePanel: TPanel
       Width = 25
-      Height = 506
+      Height = 567
       Visible = False
       ExplicitWidth = 25
+      ExplicitHeight = 506
     end
   end
   inherited MainQuery: TADQuery

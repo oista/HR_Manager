@@ -1,47 +1,46 @@
 inherited GENERALDICT: TGENERALDICT
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1089#1083#1086#1074#1072#1088#1077#1081'     '
-  ClientHeight = 631
-  ClientWidth = 1137
+  ClientHeight = 653
+  ClientWidth = 1238
   OnShow = FormShow
-  ExplicitWidth = 1153
-  ExplicitHeight = 669
+  ExplicitWidth = 1254
+  ExplicitHeight = 691
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Top = 590
-    Width = 1137
-    ExplicitTop = 592
-    ExplicitWidth = 1060
+    Top = 612
+    Width = 1238
+    ExplicitTop = 612
+    ExplicitWidth = 1238
     inherited Button1: TButton
-      Left = 974
-      ExplicitLeft = 897
+      Left = 1075
+      ExplicitLeft = 1075
     end
     inherited Button2: TButton
-      Left = 1055
-      ExplicitLeft = 978
+      Left = 1156
+      ExplicitLeft = 1156
     end
   end
   inherited Panel2: TPanel
-    Width = 1137
-    Height = 590
-    ExplicitWidth = 1060
-    ExplicitHeight = 592
+    Width = 1238
+    Height = 612
+    ExplicitWidth = 1238
+    ExplicitHeight = 612
     inherited Splitter1: TSplitter
       Left = 33
-      Height = 590
+      Height = 612
       ExplicitLeft = 33
       ExplicitHeight = 592
     end
     inherited Panel3: TPanel
       Left = 36
-      Width = 1101
-      Height = 590
+      Width = 1202
+      Height = 612
       ExplicitLeft = 36
-      ExplicitWidth = 1024
-      ExplicitHeight = 592
+      ExplicitWidth = 1202
+      ExplicitHeight = 612
       inherited Splitter2: TSplitter
-        Top = 294
-        Width = 1101
+        Width = 1202
         Height = 2
         ExplicitLeft = 0
         ExplicitTop = 364
@@ -49,30 +48,27 @@ inherited GENERALDICT: TGENERALDICT
         ExplicitHeight = 2
       end
       inherited ExtPanel: TPanel
-        Top = 296
-        Width = 1101
+        Top = 318
+        Width = 1202
         Height = 294
-        ExplicitTop = 296
-        ExplicitWidth = 1101
+        ExplicitTop = 318
+        ExplicitWidth = 1202
         ExplicitHeight = 294
         object PageControl2: TPageControl
           Left = 0
           Top = 0
-          Width = 1101
+          Width = 1202
           Height = 294
           ActivePage = TabSheet2
           Align = alClient
           TabOrder = 0
-          ExplicitHeight = 100
           object TabSheet2: TTabSheet
             Caption = #1057#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1089#1083#1086#1074#1072#1088#1103
-            ExplicitWidth = 1016
-            ExplicitHeight = 72
             object GridPanel2: TGridPanel
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 1087
+              Width = 1188
               Height = 28
               Align = alTop
               BevelOuter = bvNone
@@ -99,13 +95,13 @@ inherited GENERALDICT: TGENERALDICT
                   Value = 100.000000000000000000
                 end>
               TabOrder = 0
-              ExplicitWidth = 1010
               object PKDBEditButtons2: TPKDBEditButtons
                 Left = 0
                 Top = 0
                 Width = 180
                 Height = 28
-                CheckUserPrivs = True
+                CheckUserPrivs = False
+                EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_FACETCONTENT'#13#10
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -122,13 +118,10 @@ inherited GENERALDICT: TGENERALDICT
               AlignWithMargins = True
               Left = 3
               Top = 37
-              Width = 1087
+              Width = 1188
               Height = 226
               Align = alClient
               TabOrder = 1
-              ExplicitLeft = 6
-              ExplicitTop = 40
-              ExplicitHeight = 154
               object cxGridDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 Navigator.Buttons.Insert.Visible = False
@@ -152,27 +145,27 @@ inherited GENERALDICT: TGENERALDICT
                 FilterRow.SeparatorWidth = 2
                 FilterRow.Visible = True
                 OptionsCustomize.ColumnsQuickCustomization = True
-                OptionsData.Deleting = False
                 OptionsData.DeletingConfirmation = False
-                OptionsData.Editing = False
                 OptionsData.Inserting = False
                 OptionsSelection.CellSelect = False
                 OptionsSelection.MultiSelect = True
                 OptionsSelection.UnselectFocusedRecordOnExit = False
                 OptionsView.NoDataToDisplayInfoText = #1053#1077#1090' '#1076#1072#1085#1085#1099#1093' '#1076#1083#1103' '#1086#1090#1086#1073#1088#1072#1078#1077#1085#1080#1103
-                OptionsView.CellAutoHeight = True
                 OptionsView.GroupByHeaderLayout = ghlHorizontal
                 OptionsView.Indicator = True
                 object cxGridDBTableView1ROWNUMB: TcxGridDBColumn
                   DataBinding.FieldName = 'ROWNUMB'
+                  HeaderAlignmentHorz = taCenter
                   Width = 80
                 end
                 object cxGridDBTableView1ID: TcxGridDBColumn
                   DataBinding.FieldName = 'ID'
                   Visible = False
+                  HeaderAlignmentHorz = taCenter
                 end
                 object cxGridDBTableView1ROWCONTENT: TcxGridDBColumn
                   DataBinding.FieldName = 'ROWCONTENT'
+                  HeaderAlignmentHorz = taCenter
                 end
               end
               object cxGridLevel1: TcxGridLevel
@@ -183,31 +176,27 @@ inherited GENERALDICT: TGENERALDICT
         end
       end
       inherited cxPageControl1: TcxPageControl
-        Width = 1101
-        Height = 294
-        ExplicitWidth = 1024
-        ExplicitHeight = 489
-        ClientRectBottom = 294
-        ClientRectRight = 1101
+        Width = 1202
+        ExplicitWidth = 1202
+        ClientRectRight = 1202
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1089#1083#1086#1074#1072#1088#1077#1081'       '
-          ExplicitWidth = 1024
-          ExplicitHeight = 465
+          ExplicitWidth = 1202
           inherited GridPanel1: TGridPanel
-            Width = 1095
-            ExplicitWidth = 1018
+            Width = 1196
+            ExplicitWidth = 1196
             inherited PKDBEditButtons1: TPKDBEditButtons
-              EnableButtons = [ebRefresh]
+              EnableButtons = [ebRefresh, ebNew, ebEdit]
+              TableName = 'HR_FACET'
               Connection = DataModule1.ADConnection1
+              EditDialogClassName = 'TGENERALDICTEDIT'
             end
           end
           inherited Grid: TcxGrid
-            Width = 1095
-            Height = 230
-            ExplicitLeft = 147
-            ExplicitWidth = 1095
-            ExplicitHeight = 424
+            Width = 1196
+            ExplicitWidth = 1196
             inherited GridDBTableView1: TcxGridDBTableView
+              OptionsView.CellAutoHeight = False
               object GridDBTableView1ID: TcxGridDBColumn
                 DataBinding.FieldName = 'ID'
                 Visible = False
@@ -235,10 +224,10 @@ inherited GENERALDICT: TGENERALDICT
     end
     inherited TreePanel: TPanel
       Width = 33
-      Height = 590
+      Height = 612
       Visible = False
       ExplicitWidth = 33
-      ExplicitHeight = 592
+      ExplicitHeight = 612
     end
   end
   inherited MainQuery: TADQuery

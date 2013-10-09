@@ -2,8 +2,8 @@ object MenuForm: TMenuForm
   Left = 0
   Top = 0
   Caption = #1052#1077#1085#1102'     '
-  ClientHeight = 286
-  ClientWidth = 197
+  ClientHeight = 605
+  ClientWidth = 291
   Color = clBtnFace
   DragKind = dkDock
   Font.Charset = DEFAULT_CHARSET
@@ -18,8 +18,8 @@ object MenuForm: TMenuForm
   object PKDBMainMenu1: TPKDBMainMenu
     Left = 0
     Top = 0
-    Width = 197
-    Height = 286
+    Width = 291
+    Height = 605
     Align = alClient
     BorderStyle = bsNone
     ButtonFlow = cbfVertical
@@ -35,5 +35,7 @@ object MenuForm: TMenuForm
     ClassNameField = 'CLASSNAME'
     MenuTableName = 'ae_v_menu'
     PageControl = MainForm.PKDBFormControl1
+    ExplicitWidth = 197
+    ExplicitHeight = 286
   end
 end

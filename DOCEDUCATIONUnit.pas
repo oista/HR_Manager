@@ -37,11 +37,9 @@ type
     MainQueryCVALIFICATION: TStringField;
     MainQueryFIO: TStringField;
     MainQueryEDUCATIONFORM: TStringField;
-    GridDBTableView1CITEZENID: TcxGridDBColumn;
     GridDBTableView1BIRTHDATE: TcxGridDBColumn;
     GridDBTableView1DCODE: TcxGridDBColumn;
     GridDBTableView1EDUCATION: TcxGridDBColumn;
-    GridDBTableView1ID: TcxGridDBColumn;
     GridDBTableView1DOCSERIA: TcxGridDBColumn;
     GridDBTableView1DOCNUMB: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
@@ -49,7 +47,6 @@ type
     GridDBTableView1DOCTYPE: TcxGridDBColumn;
     GridDBTableView1STEP: TcxGridDBColumn;
     GridDBTableView1OVEREDUCATION: TcxGridDBColumn;
-    GridDBTableView1SPECIALITYCODE: TcxGridDBColumn;
     GridDBTableView1SPECIALITY: TcxGridDBColumn;
     GridDBTableView1CVALIFICATIONCODE: TcxGridDBColumn;
     GridDBTableView1CVALIFICATION: TcxGridDBColumn;

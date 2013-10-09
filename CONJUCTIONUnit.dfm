@@ -59,10 +59,9 @@ inherited CONJUCTION: TCONJUCTION
           Top = 0
           Width = 1289
           Height = 300
-          ActivePage = TabSheet15
+          ActivePage = TabSheet19
           Align = alClient
           TabOrder = 0
-          Visible = False
           object TabSheet6: TTabSheet
             Caption = #1040#1090#1090#1077#1089#1090#1072#1094#1080#1103
             ImageIndex = 4
@@ -104,6 +103,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_ATESTATION'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -216,6 +216,8 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
+                EnableButtons = [ebRefresh]
                 TableName = 'HR_EMPLOYEE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -242,6 +244,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_JOBSTRUCTUREDBTableView1DCODE: TcxGridDBColumn
                   DataBinding.FieldName = 'DCODE'
                   HeaderAlignmentHorz = taCenter
@@ -286,21 +289,8 @@ inherited CONJUCTION: TCONJUCTION
                   HeaderAlignmentHorz = taCenter
                   Width = 108
                 end
-                object grd_JOBSTRUCTUREDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_JOBSTRUCTUREDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                  HeaderAlignmentHorz = taCenter
-                end
                 object grd_JOBSTRUCTUREDBTableView1STATUS: TcxGridDBColumn
                   DataBinding.FieldName = 'STATUS'
-                end
-                object grd_JOBSTRUCTUREDBTableView1STRUCTUREID: TcxGridDBColumn
-                  DataBinding.FieldName = 'STRUCTUREID'
-                  Visible = False
                 end
                 object grd_JOBSTRUCTUREDBTableView1CONTRACT: TcxGridDBColumn
                   DataBinding.FieldName = 'CONTRACT'
@@ -358,6 +348,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_SKILLUP'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -469,6 +460,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_RETRAINING'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -495,6 +487,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_RETRAININGDBTableView1INDATE: TcxGridDBColumn
                   DataBinding.FieldName = 'INDATE'
                   HeaderAlignmentHorz = taCenter
@@ -528,18 +521,6 @@ inherited CONJUCTION: TCONJUCTION
                   DataBinding.FieldName = 'REASON'
                   HeaderAlignmentHorz = taCenter
                   Width = 573
-                end
-                object grd_RETRAININGDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_RETRAININGDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                end
-                object grd_RETRAININGDBTableView1EMPLOYEEID: TcxGridDBColumn
-                  DataBinding.FieldName = 'EMPLOYEEID'
-                  Visible = False
                 end
               end
               object grd_RETRAININGLevel1: TcxGridLevel
@@ -587,6 +568,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_AWARD'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -613,6 +595,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_AWARDDBTableView1AWARDTYPE: TcxGridDBColumn
                   DataBinding.FieldName = 'AWARDTYPE'
                   Width = 743
@@ -628,18 +611,6 @@ inherited CONJUCTION: TCONJUCTION
                 object grd_AWARDDBTableView1DOCDATE: TcxGridDBColumn
                   DataBinding.FieldName = 'DOCDATE'
                   Width = 397
-                end
-                object grd_AWARDDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_AWARDDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                end
-                object grd_AWARDDBTableView1EMPLOYEEID: TcxGridDBColumn
-                  DataBinding.FieldName = 'EMPLOYEEID'
-                  Visible = False
                 end
               end
               object grd_AWARDLevel1: TcxGridLevel
@@ -687,6 +658,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_HOLIDAY'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -713,6 +685,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_HOLIDAYDBTableView1HOLTYPE: TcxGridDBColumn
                   DataBinding.FieldName = 'HOLTYPE'
                   HeaderAlignmentHorz = taCenter
@@ -761,18 +734,6 @@ inherited CONJUCTION: TCONJUCTION
                   HeaderAlignmentHorz = taCenter
                   Width = 451
                 end
-                object grd_HOLIDAYDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_HOLIDAYDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                end
-                object grd_HOLIDAYDBTableView1EMPLOYEEID: TcxGridDBColumn
-                  DataBinding.FieldName = 'EMPLOYEEID'
-                  Visible = False
-                end
               end
               object grd_HOLIDAYLevel1: TcxGridLevel
                 GridView = grd_HOLIDAYDBTableView1
@@ -819,6 +780,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_SOCIAL'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -845,6 +807,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_SOCIALDBTableView1PRIVTYPE: TcxGridDBColumn
                   DataBinding.FieldName = 'PRIVTYPE'
                   HeaderAlignmentHorz = taCenter
@@ -864,18 +827,6 @@ inherited CONJUCTION: TCONJUCTION
                   DataBinding.FieldName = 'REASON'
                   HeaderAlignmentHorz = taCenter
                   Width = 995
-                end
-                object grd_SOCIALDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_SOCIALDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                end
-                object grd_SOCIALDBTableView1EMPLOYEEID: TcxGridDBColumn
-                  DataBinding.FieldName = 'EMPLOYEEID'
-                  Visible = False
                 end
               end
               object grd_SOCIALLevel1: TcxGridLevel
@@ -924,6 +875,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_DISCIPLINE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -1193,6 +1145,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_DOCEDUCATION'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -1219,6 +1172,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_EDUCATIONDBTableView1DOCTYPE: TcxGridDBColumn
                   DataBinding.FieldName = 'DOCTYPE'
                   HeaderAlignmentHorz = taCenter
@@ -1263,14 +1217,6 @@ inherited CONJUCTION: TCONJUCTION
                   DataBinding.FieldName = 'OVEREDUCATION'
                   HeaderAlignmentHorz = taCenter
                   Width = 425
-                end
-                object grd_EDUCATIONDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                end
-                object grd_EDUCATIONDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
                 end
               end
               object grd_EDUCATIONLevel1: TcxGridLevel
@@ -1318,6 +1264,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_ADRESS'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -1336,6 +1283,7 @@ inherited CONJUCTION: TCONJUCTION
               Width = 1281
               Height = 238
               Align = alClient
+              PopupMenu = pm_STATUS
               TabOrder = 1
               object grd_ADRESSDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
@@ -1344,6 +1292,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_ADRESSDBTableView1TOWNNAME: TcxGridDBColumn
                   DataBinding.FieldName = 'TOWNNAME'
                   HeaderAlignmentHorz = taCenter
@@ -1382,14 +1331,6 @@ inherited CONJUCTION: TCONJUCTION
                 object grd_ADRESSDBTableView1STATUSNAME: TcxGridDBColumn
                   DataBinding.FieldName = 'STATUSNAME'
                   HeaderAlignmentHorz = taCenter
-                end
-                object grd_ADRESSDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_ADRESSDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
                 end
               end
               object grd_ADRESSLevel1: TcxGridLevel
@@ -1437,6 +1378,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_INSURANCE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -1560,6 +1502,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_INSURANCEDBTableView1DOCTYPE: TcxGridDBColumn
                   DataBinding.FieldName = 'DOCTYPE'
                   HeaderAlignmentHorz = taCenter
@@ -1593,14 +1536,6 @@ inherited CONJUCTION: TCONJUCTION
                   DataBinding.FieldName = 'STATUSNAME'
                   HeaderAlignmentHorz = taCenter
                   Width = 554
-                end
-                object grd_INSURANCEDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_INSURANCEDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
                 end
               end
               object grd_INSURANCELevel1: TcxGridLevel
@@ -1907,6 +1842,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_FAMILY'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -1933,6 +1869,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_FAMILYDBTableView1STEP: TcxGridDBColumn
                   DataBinding.FieldName = 'STEP'
                   HeaderAlignmentHorz = taCenter
@@ -1960,14 +1897,6 @@ inherited CONJUCTION: TCONJUCTION
                 end
                 object grd_FAMILYDBTableView1BIRTHPLACE: TcxGridDBColumn
                   DataBinding.FieldName = 'BIRTHPLACE'
-                  Visible = False
-                end
-                object grd_FAMILYDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_FAMILYDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
                   Visible = False
                 end
               end
@@ -2016,6 +1945,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_EMPLOYEE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'CITEZENID'
@@ -2042,6 +1972,7 @@ inherited CONJUCTION: TCONJUCTION
                 DataController.Summary.DefaultGroupSummaryItems = <>
                 DataController.Summary.FooterSummaryItems = <>
                 DataController.Summary.SummaryGroups = <>
+                OptionsData.Editing = False
                 object grd_JOBHISTORYDBTableView1INDATE: TcxGridDBColumn
                   DataBinding.FieldName = 'INDATE'
                   HeaderAlignmentHorz = taCenter
@@ -2105,15 +2036,6 @@ inherited CONJUCTION: TCONJUCTION
                   HeaderAlignmentHorz = taCenter
                   Width = 391
                 end
-                object grd_JOBHISTORYDBTableView1ID: TcxGridDBColumn
-                  DataBinding.FieldName = 'ID'
-                  Visible = False
-                end
-                object grd_JOBHISTORYDBTableView1CITEZENID: TcxGridDBColumn
-                  DataBinding.FieldName = 'CITEZENID'
-                  Visible = False
-                  HeaderAlignmentHorz = taCenter
-                end
               end
               object grd_JOBHISTORYLevel1: TcxGridLevel
                 GridView = grd_JOBHISTORYDBTableView1
@@ -2127,53 +2049,32 @@ inherited CONJUCTION: TCONJUCTION
         Height = 328
         ExplicitWidth = 1289
         ExplicitHeight = 328
-        ClientRectBottom = 328
-        ClientRectRight = 1289
+        ClientRectBottom = 322
+        ClientRectRight = 1283
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1057#1086#1074#1084#1077#1089#1090#1080#1090#1077#1083#1080'     '
-          ExplicitWidth = 1289
-          ExplicitHeight = 304
+          ExplicitWidth = 1281
+          ExplicitHeight = 295
           inherited GridPanel1: TGridPanel
-            Width = 1283
-            ExplicitWidth = 1283
+            Width = 1275
+            ExplicitWidth = 1275
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebNew, ebEdit, ebDelete]
               TableName = 'HR_EMPLOYEE'
               Connection = DataModule1.ADConnection1
+              EditDialogClassName = 'TEMPLOYEEDIT'
+              OnBeforeOpenNewClick = PKDBEditButtons1BeforeOpenNewClick
+              OnBeforeOpenEditClick = PKDBEditButtons1BeforeOpenEditClick
             end
           end
           inherited Grid: TcxGrid
-            Width = 1283
-            Height = 264
+            Width = 1275
+            Height = 255
             PopupMenu = PopupMenu1
-            ExplicitWidth = 1283
-            ExplicitHeight = 264
+            ExplicitWidth = 1275
+            ExplicitHeight = 255
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
-              object GridDBTableView1ID: TcxGridDBColumn
-                DataBinding.FieldName = 'ID'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
-              object GridDBTableView1CITEZENID: TcxGridDBColumn
-                DataBinding.FieldName = 'CITEZENID'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
-              object GridDBTableView1STRUCTUREID: TcxGridDBColumn
-                DataBinding.FieldName = 'STRUCTUREID'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
-              object GridDBTableView1WORKCONTRACTID: TcxGridDBColumn
-                DataBinding.FieldName = 'WORKCONTRACTID'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
-              object GridDBTableView1ORDERID: TcxGridDBColumn
-                DataBinding.FieldName = 'ORDERID'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
               object GridDBTableView1DCODE: TcxGridDBColumn
                 DataBinding.FieldName = 'DCODE'
                 HeaderAlignmentHorz = taCenter
@@ -2504,6 +2405,7 @@ inherited CONJUCTION: TCONJUCTION
     end
   end
   inherited DataSource1: TDataSource
+    OnDataChange = DataSource1DataChange
     Left = 328
     Top = 0
   end
@@ -3219,7 +3121,7 @@ inherited CONJUCTION: TCONJUCTION
     Left = 352
     Top = 240
   end
-  object PKDBTable1: TPKDBTable
+  object TBL_MILITARY: TPKDBTable
     Fields = <
       item
         FieldName = 'CITEZENID'
@@ -3325,10 +3227,10 @@ inherited CONJUCTION: TCONJUCTION
       end>
     TableName = 'HR_MILITARY'
     Connection = DataModule1.ADConnection1
-    Left = 608
-    Top = 624
+    Left = 1192
+    Top = 352
   end
-  object PKDBTable2: TPKDBTable
+  object TBL_TAXNUMBER: TPKDBTable
     Fields = <
       item
         FieldName = 'CITEZENID'
@@ -3368,10 +3270,10 @@ inherited CONJUCTION: TCONJUCTION
       end>
     TableName = 'HR_TAXNUMBER'
     Connection = DataModule1.ADConnection1
-    Left = 640
-    Top = 624
+    Left = 1192
+    Top = 397
   end
-  object PKDBTable3: TPKDBTable
+  object TBL_DOCSNILS: TPKDBTable
     Fields = <
       item
         FieldName = 'CITEZENID'
@@ -3483,10 +3385,10 @@ inherited CONJUCTION: TCONJUCTION
       end>
     TableName = 'HR_DOCSNILS'
     Connection = DataModule1.ADConnection1
-    Left = 672
-    Top = 624
+    Left = 1192
+    Top = 444
   end
-  object PKDBTable4: TPKDBTable
+  object TBL_DOCWORKBOOK: TPKDBTable
     Fields = <
       item
         FieldName = 'CITEZENID'
@@ -3520,8 +3422,8 @@ inherited CONJUCTION: TCONJUCTION
       end>
     TableName = 'HR_DOCWORKBOOK'
     Connection = DataModule1.ADConnection1
-    Left = 704
-    Top = 624
+    Left = 1192
+    Top = 490
   end
   object ADQuery8: TADQuery
     MasterSource = DataSource10
@@ -3798,63 +3700,6 @@ inherited CONJUCTION: TCONJUCTION
         ADDataType = dtAnsiString
         ParamType = ptOutput
       end>
-  end
-  object PKDBTable5: TPKDBTable
-    Fields = <
-      item
-        FieldName = 'STRUCTUREID'
-        FieldLabel = #1044#1086#1083#1078#1085#1086#1089#1090#1100
-        Nullable = True
-        FieldType = ftsNumber
-        ReferencingTable = 'CS_SCHEDULE_STRUCTURE'
-        ReferencingColumn = 'ID'
-        IsPrimaryKey = True
-        DisplayName = 'STRUCTUREID'
-      end
-      item
-        FieldName = 'HARMCONDITIONID'
-        FieldLabel = #1042#1088#1077#1076#1085#1086#1089#1090#1100' '#1091#1089#1083#1086#1074#1080#1081' '#1090#1088#1091#1076#1072
-        Nullable = True
-        FieldType = ftsNumber
-        ReferencingTable = 'CS_FACETCONTENT'
-        ReferencingColumn = 'ID'
-        LookUpRool = ' rowcontent'
-        DisplayName = 'HARMCONDITIONID'
-      end
-      item
-        FieldName = 'WORKTIMETYPEID'
-        FieldLabel = #1056#1072#1073#1086#1095#1077#1077' '#1074#1088#1077#1084#1103
-        Nullable = True
-        FieldType = ftsNumber
-        ReferencingTable = 'CS_FACETCONTENT'
-        ReferencingColumn = 'ID'
-        LookUpRool = ' rowcontent'
-        DisplayName = 'WORKTIMETYPEID'
-      end
-      item
-        FieldName = 'WORKTIME'
-        FieldLabel = #1055#1088#1086#1076#1086#1083#1078#1080#1090#1077#1083#1100#1085#1086#1089#1090#1100' '#1088#1072#1073#1086#1095#1077#1075#1086' '#1074#1088#1077#1084#1077#1085#1080
-        Nullable = True
-        FieldType = ftsString
-        DisplayName = 'WORKTIME'
-      end
-      item
-        FieldName = 'ID'
-        Nullable = False
-        FieldType = ftsNumber
-        DisplayName = 'ID'
-      end
-      item
-        FieldName = 'HARMHOLIDAYS'
-        FieldLabel = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1099#1077' '#1076#1085#1080' '#1086#1090#1087#1091#1089#1082#1072
-        Nullable = True
-        FieldType = ftsString
-        DisplayName = 'HARMHOLIDAYS'
-      end>
-    TableName = 'CS_WORKCONDITION'
-    Connection = DataModule1.ADConnection1
-    Left = 784
-    Top = 624
   end
   object ADStoredProc2: TADStoredProc
     Connection = DataModule1.ADConnection1

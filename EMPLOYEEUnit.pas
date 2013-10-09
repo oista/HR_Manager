@@ -17,7 +17,8 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, cxPC, dxSkinsCore,
   dxSkinOffice2007Blue, dxSkinOffice2007Silver, dxSkinOffice2010Blue,
   dxSkinOffice2010Silver, dxSkinscxPCPainter, uADGUIxIntf, uADStanDef,
-  uADStanPool, uADPhysManager, cxGridCustomPopupMenu, cxGridPopupMenu;
+  uADStanPool, uADPhysManager, cxGridCustomPopupMenu, cxGridPopupMenu,cxGridExportLink
+  , PKDBDefs;
 
 type
   TEditDialogClass = class of TEditDialog;
@@ -360,9 +361,6 @@ type
     PRC_MAKE_EMP_ADMHOLIDAY: TADStoredProc;
     MainQueryPOL: TStringField;
     MainQueryEXPA: TFMTBCDField;
-    GridDBTableView1ID: TcxGridDBColumn;
-    GridDBTableView1CITEZENID: TcxGridDBColumn;
-    GridDBTableView1STRUCTUREID: TcxGridDBColumn;
     GridDBTableView1LASTNAME: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
     GridDBTableView1FATHERSHIP: TcxGridDBColumn;
@@ -371,24 +369,15 @@ type
     GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
     GridDBTableView1SALARY: TcxGridDBColumn;
     GridDBTableView1DCODE: TcxGridDBColumn;
-    GridDBTableView1CODE: TcxGridDBColumn;
-    GridDBTableView1CONDITION: TcxGridDBColumn;
-    GridDBTableView1worktype: TcxGridDBColumn;
     GridDBTableView1RATECODE: TcxGridDBColumn;
     GridDBTableView1TABNUMB: TcxGridDBColumn;
     GridDBTableView1FIRSTINDATE: TcxGridDBColumn;
     GridDBTableView1INDATE: TcxGridDBColumn;
     GridDBTableView1OUTDATE: TcxGridDBColumn;
     GridDBTableView1UNITSTATUS: TcxGridDBColumn;
-    GridDBTableView1STATUSID: TcxGridDBColumn;
-    GridDBTableView1WORKUNITTYPE: TcxGridDBColumn;
     GridDBTableView1DEPT: TcxGridDBColumn;
-    GridDBTableView1WORKCONTRACTID: TcxGridDBColumn;
-    GridDBTableView1SUBORDINATIONID: TcxGridDBColumn;
-    GridDBTableView1SCHEDULEID: TcxGridDBColumn;
     GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
     GridDBTableView1AGREEMENTDATE: TcxGridDBColumn;
-    GridDBTableView1ORDERID: TcxGridDBColumn;
     GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
     GridDBTableView1PASSPORTNUMB: TcxGridDBColumn;
     GridDBTableView1PASSINST: TcxGridDBColumn;
@@ -414,10 +403,7 @@ type
     grd_JOBSTRUCTUREDBTableView1: TcxGridDBTableView;
     grd_JOBSTRUCTURELevel1: TcxGridLevel;
     grd_JOBSTRUCTURE: TcxGrid;
-    grd_JOBSTRUCTUREDBTableView1ID: TcxGridDBColumn;
-    grd_JOBSTRUCTUREDBTableView1CITEZENID: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1STATUS: TcxGridDBColumn;
-    grd_JOBSTRUCTUREDBTableView1STRUCTUREID: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1INDATE: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1AGREEMENTDATE: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1JOBTITLE: TcxGridDBColumn;
@@ -432,9 +418,6 @@ type
     grd_SKILLUPDBTableView1: TcxGridDBTableView;
     grd_SKILLUPLevel1: TcxGridLevel;
     grd_SKILLUP: TcxGrid;
-    grd_SKILLUPDBTableView1ID: TcxGridDBColumn;
-    grd_SKILLUPDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_SKILLUPDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_SKILLUPDBTableView1INDATE: TcxGridDBColumn;
     grd_SKILLUPDBTableView1OUTDATE: TcxGridDBColumn;
     grd_SKILLUPDBTableView1EDTYPE: TcxGridDBColumn;
@@ -446,9 +429,6 @@ type
     grd_RETRAININGDBTableView1: TcxGridDBTableView;
     grd_RETRAININGLevel1: TcxGridLevel;
     grd_RETRAINING: TcxGrid;
-    grd_RETRAININGDBTableView1ID: TcxGridDBColumn;
-    grd_RETRAININGDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_RETRAININGDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_RETRAININGDBTableView1INDATE: TcxGridDBColumn;
     grd_RETRAININGDBTableView1OUTDATE: TcxGridDBColumn;
     grd_RETRAININGDBTableView1JOBTITLE: TcxGridDBColumn;
@@ -459,9 +439,6 @@ type
     grd_AWARDDBTableView1: TcxGridDBTableView;
     grd_AWARDLevel1: TcxGridLevel;
     grd_AWARD: TcxGrid;
-    grd_AWARDDBTableView1ID: TcxGridDBColumn;
-    grd_AWARDDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_AWARDDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_AWARDDBTableView1AWARDTYPE: TcxGridDBColumn;
     grd_AWARDDBTableView1DOCTYPE: TcxGridDBColumn;
     grd_AWARDDBTableView1DOCNUMB: TcxGridDBColumn;
@@ -469,9 +446,6 @@ type
     grd_HOLIDAYDBTableView1: TcxGridDBTableView;
     grd_HOLIDAYLevel1: TcxGridLevel;
     grd_HOLIDAY: TcxGrid;
-    grd_HOLIDAYDBTableView1ID: TcxGridDBColumn;
-    grd_HOLIDAYDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_HOLIDAYDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_HOLIDAYDBTableView1HOLTYPE: TcxGridDBColumn;
     grd_HOLIDAYDBTableView1WORKDATE1: TcxGridDBColumn;
     grd_HOLIDAYDBTableView1WORKDATE2: TcxGridDBColumn;
@@ -485,9 +459,6 @@ type
     grd_SOCIALDBTableView1: TcxGridDBTableView;
     grd_SOCIALLevel1: TcxGridLevel;
     grd_SOCIAL: TcxGrid;
-    grd_SOCIALDBTableView1ID: TcxGridDBColumn;
-    grd_SOCIALDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_SOCIALDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_SOCIALDBTableView1PRIVTYPE: TcxGridDBColumn;
     grd_SOCIALDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_SOCIALDBTableView1DOCDATE: TcxGridDBColumn;
@@ -495,21 +466,15 @@ type
     grd_DISCIPLINEDBTableView1: TcxGridDBTableView;
     grd_DISCIPLINELevel1: TcxGridLevel;
     grd_DISCIPLINE: TcxGrid;
-    grd_DISCIPLINEDBTableView1ID: TcxGridDBColumn;
-    grd_DISCIPLINEDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_DISCIPLINEDBTableView1STATUSID: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1CHANGESTATUSDATE: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1EVENTDATE: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1BASICDOC: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1STATUSNAME: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1EVENTTYPE: TcxGridDBColumn;
     grd_DISCIPLINEDBTableView1COLLECTTYPE: TcxGridDBColumn;
-    grd_DISCIPLINEDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1: TcxGridDBTableView;
     grd_EDUCATIONLevel1: TcxGridLevel;
     grd_EDUCATION: TcxGrid;
-    grd_EDUCATIONDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_EDUCATIONDBTableView1ID: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1DOCSERIA: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1NAME: TcxGridDBColumn;
@@ -522,8 +487,6 @@ type
     grd_ADRESSDBTableView1: TcxGridDBTableView;
     grd_ADRESSLevel1: TcxGridLevel;
     grd_ADRESS: TcxGrid;
-    grd_ADRESSDBTableView1ID: TcxGridDBColumn;
-    grd_ADRESSDBTableView1CITEZENID: TcxGridDBColumn;
     grd_ADRESSDBTableView1REGDATE: TcxGridDBColumn;
     grd_ADRESSDBTableView1STATUS: TcxGridDBColumn;
     grd_ADRESSDBTableView1REGION: TcxGridDBColumn;
@@ -535,8 +498,6 @@ type
     grd_INSURANCEDBTableView1: TcxGridDBTableView;
     grd_INSURANCELevel1: TcxGridLevel;
     grd_INSURANCE: TcxGrid;
-    grd_INSURANCEDBTableView1ID: TcxGridDBColumn;
-    grd_INSURANCEDBTableView1CITEZENID: TcxGridDBColumn;
     grd_INSURANCEDBTableView1CHAGESTATUSDATE: TcxGridDBColumn;
     grd_INSURANCEDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_INSURANCEDBTableView1DELIVERYDATE: TcxGridDBColumn;
@@ -547,8 +508,6 @@ type
     grd_FAMILYDBTableView1: TcxGridDBTableView;
     grd_FAMILYLevel1: TcxGridLevel;
     grd_FAMILY: TcxGrid;
-    grd_FAMILYDBTableView1ID: TcxGridDBColumn;
-    grd_FAMILYDBTableView1CITEZENID: TcxGridDBColumn;
     grd_FAMILYDBTableView1BIRTHDATE: TcxGridDBColumn;
     grd_FAMILYDBTableView1BIRTHPLACE: TcxGridDBColumn;
     grd_FAMILYDBTableView1STEP: TcxGridDBColumn;
@@ -558,7 +517,6 @@ type
     grd_JOBHISTORYDBTableView1: TcxGridDBTableView;
     grd_JOBHISTORYLevel1: TcxGridLevel;
     grd_JOBHISTORY: TcxGrid;
-    grd_JOBHISTORYDBTableView1CITEZENID: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1INDATE: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1OUTDATE: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1DEPT_NO: TcxGridDBColumn;
@@ -567,12 +525,13 @@ type
     grd_JOBHISTORYDBTableView1JOBTITLE: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1SUMSAL: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1REASON: TcxGridDBColumn;
-    grd_JOBHISTORYDBTableView1ID: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1ROWCONTENT: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1CATEGORYNUMB: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1DESCR: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1ADDITIONHARM: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1EXTHOLYDAYS: TcxGridDBColumn;
+    MainQueryEDUC_YEAR: TStringField;
+    GridDBTableView1EDUC_YEAR: TcxGridDBColumn;
 
 
 
@@ -608,7 +567,6 @@ type
     procedure CLMilitary(Sender: TObject);
     procedure CLTaxInfo(Sender: TObject);
     procedure DataSource1DataChange(Sender: TObject; Field: TField);
-    procedure FormShow(Sender: TObject);
     procedure N10Click(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure N11Click(Sender: TObject);
@@ -640,7 +598,7 @@ var
 
 implementation
       {$R *.dfm}
-uses DM, MainUnit, UNUSE_HOLIDAYSUnit, PKDBQueryToExcel;
+uses DM, MainUnit, UNUSE_HOLIDAYSUnit;
 
 procedure TEMPLOYEE.Button3Click(Sender: TObject);
 begin
@@ -697,12 +655,11 @@ begin
   TBL_DOCSNILS.ReadFromDB(fld_MainQueryCITEZENID.Asstring);
   TBL_DOCWORKBOOK.ReadFromDB(fld_MainQueryCITEZENID.Asstring);
 
-  mainform.WindowState:= wsMaximized;
-
   QRY_ATESTATION.Open;
 
   // вкладка - первая
   PageControl2.ActivePageIndex := 0;
+  DM.DataModule1.alter_nls.Execute;
 end;
 
 procedure TEMPLOYEE.INVALIDFORMClick(Sender: TObject);
@@ -902,6 +859,7 @@ begin     // Соглашение о конфиденц.
 end;
 
 
+
 //============================================================
 
 
@@ -1013,8 +971,7 @@ end;
 
 procedure TEMPLOYEE.Excel1Click(Sender: TObject);
 begin
-  MainQuery.FindFirst;
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
+   cxGridExportLink.ExportGridToExcel('EmployeeList'+datetostr(now),Grid, True, True, True, 'xls' );
 end;
 
 procedure TEMPLOYEE.Excel2Click(Sender: TObject);
@@ -1022,25 +979,20 @@ var j: Integer;
 begin  // ЭКСПОРТ  EXCEL нижних таблиц
  case PageControl2.ActivePage.TabIndex    of
   1: begin
-       QRY_JOBSTRUCTURE.FindFirst;
-       PKDBQuerytoExcel.ImportVisible(QRY_JOBSTRUCTURE);   // раб места
+       cxGridExportLink.ExportGridToExcel('JobStructureList'+datetostr(now),grd_JOBSTRUCTURE, True, True, True, 'xls' );
+      // раб места
      end;
   5: begin
-      QRY_HOLIDAY.FindFirst;
-      PKDBQuerytoExcel.ImportVisible(QRY_HOLIDAY);   // отпуска
+      cxGridExportLink.ExportGridToExcel('HolidayList'+datetostr(now),grd_HOLIDAY, True, True, True, 'xls' );
+      //PKDBQuerytoExcel.ImportVisible(QRY_HOLIDAY);   // отпуска
      end;
   14:begin
-      QRY_JOBHISTORY.FindFirst;
-      PKDBQuerytoExcel.ImportVisible(QRY_JOBHISTORY);   // история работ
+      cxGridExportLink.ExportGridToExcel('JobHistoryList'+datetostr(now),grd_JOBHISTORY, True, True, True, 'xls' );
+      //PKDBQuerytoExcel.ImportVisible(QRY_JOBHISTORY);   // история работ
      end;
 end;
 end;
 
-procedure TEMPLOYEE.FormShow(Sender: TObject);
-begin
-  inherited;
-
-end;
 
 // очистка полей
 procedure TEMPLOYEE.clearboxes;

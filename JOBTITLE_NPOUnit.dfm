@@ -1,5 +1,5 @@
 inherited JOBTITLENPO: TJOBTITLENPO
-  Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1080' '#1085#1072' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1080
+  Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1080' '#1085#1072' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1080'        '
   ClientHeight = 629
   ClientWidth = 1208
   ExplicitWidth = 1224
@@ -58,13 +58,15 @@ inherited JOBTITLENPO: TJOBTITLENPO
         ClientRectBottom = 485
         ClientRectRight = 1148
         inherited cxTabSheet1: TcxTabSheet
-          Caption = #1076#1086#1083#1078#1085#1086#1089#1090#1080' '#1085#1072' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1080'      '
+          Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1080' '#1085#1072' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1080'      '
           ExplicitWidth = 1148
           ExplicitHeight = 461
           inherited GridPanel1: TGridPanel
             Width = 1142
             ExplicitWidth = 1142
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebEdit]
+              TableName = 'CS_JOBTITLE'
               Connection = DataModule1.ADConnection1
               EditDialogClassName = 'TEDITJOBTITLE'
             end

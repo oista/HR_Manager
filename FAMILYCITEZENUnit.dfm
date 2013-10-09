@@ -1,159 +1,124 @@
 inherited FAMILYCITEZEN: TFAMILYCITEZEN
   Caption = #1043#1088#1072#1078#1076#1072#1085#1077
-  ExplicitWidth = 689
-  ExplicitHeight = 498
+  ClientHeight = 531
+  ClientWidth = 1048
+  ExplicitWidth = 1064
+  ExplicitHeight = 569
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
+    Top = 490
+    Width = 1048
     Visible = True
+    inherited Button1: TButton
+      Left = 885
+    end
+    inherited Button2: TButton
+      Left = 966
+    end
   end
   inherited Panel2: TPanel
-    Left = 17
-    Width = 664
-    ExplicitLeft = 17
-    ExplicitWidth = 664
+    Width = 1048
+    Height = 490
+    inherited Splitter1: TSplitter
+      Left = 17
+      Height = 490
+    end
     inherited Panel3: TPanel
-      Width = 661
-      ExplicitWidth = 661
+      Left = 20
+      Width = 1028
+      Height = 490
+      ExplicitLeft = 20
+      ExplicitWidth = 723
       inherited Splitter2: TSplitter
-        Top = 405
-        Width = 661
+        Top = 472
+        Width = 1028
         ExplicitTop = 405
         ExplicitWidth = 661
       end
-      inherited Panel5: TPanel
-        Top = 408
-        Width = 661
+      inherited ExtPanel: TPanel
+        Top = 475
+        Width = 1028
         Height = 15
         Visible = False
-        ExplicitTop = 408
-        ExplicitWidth = 661
+        ExplicitTop = 404
+        ExplicitWidth = 723
         ExplicitHeight = 15
       end
-      inherited PageControl1: TPageControl
-        Width = 661
-        Height = 405
-        ExplicitWidth = 661
-        ExplicitHeight = 405
-        inherited TabSheet1: TTabSheet
+      inherited cxPageControl1: TcxPageControl
+        Width = 1028
+        Height = 472
+        ExplicitWidth = 723
+        ExplicitHeight = 401
+        ClientRectBottom = 466
+        ClientRectRight = 1022
+        inherited cxTabSheet1: TcxTabSheet
           Caption = #1043#1088#1072#1078#1076#1072#1085#1077
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 653
-          ExplicitHeight = 377
-          inherited Grid: TVrDbGrid
-            Width = 647
-            Height = 340
-            CheckFieldName = 'ID'
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'POL'
-                Width = 32
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'LASTNAME'
-                Width = 287
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'NAME'
-                Width = 73
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'FATHERSHIP'
-                Width = 133
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'BIRTHDATE'
-                Width = 94
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'PENSIONDATE'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'PENSIONTYPE'
-                Visible = False
-                SortMode = smNone
-              end>
-          end
+          ExplicitWidth = 715
+          ExplicitHeight = 368
           inherited GridPanel1: TGridPanel
-            Width = 647
-            ExplicitWidth = 647
+            Width = 1014
+            ExplicitWidth = 709
             inherited PKDBEditButtons1: TPKDBEditButtons
-              TableName = 'HR_CITEZEN'
-              PrimaryFieldName = 'ID'
-              ParentFieldName = 'ID'
-              Grid = Grid
               Connection = DataModule1.ADConnection1
               EditDialogClassName = 'TFAMILYCITEZENEDIT'
             end
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 495
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1043#1088#1072#1078#1076#1072#1085#1077
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'LASTNAME'
-                      FieldCaption = #1060#1072#1084#1080#1083#1080#1103
-                      FieldType = ffString
-                      DisplayName = 'LASTNAME'
-                    end
-                    item
-                      FieldName = 'NAME'
-                      FieldCaption = #1048#1084#1103
-                      FieldType = ffString
-                      DisplayName = 'NAME'
-                    end
-                    item
-                      FieldName = 'FATHERSHIP'
-                      FieldCaption = #1054#1090#1095#1077#1089#1090#1074#1086
-                      FieldType = ffString
-                      DisplayName = 'FATHERSHIP'
-                    end
-                    item
-                      FieldName = 'POL'
-                      FieldCaption = #1055#1086#1083
-                      FieldType = ffString
-                      DisplayName = 'POL'
-                    end
-                    item
-                      FieldName = 'BIRTHDATE'
-                      FieldCaption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-                      FieldType = ffDate
-                      DisplayName = 'BIRTHDATE'
-                    end>
-                end>
-              ExplicitWidth = 495
+          end
+          inherited Grid: TcxGrid
+            Width = 1014
+            Height = 399
+            ExplicitWidth = 709
+            ExplicitHeight = 328
+            inherited GridDBTableView1: TcxGridDBTableView
+              object GridDBTableView1POL: TcxGridDBColumn
+                DataBinding.FieldName = 'POL'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1LASTNAME: TcxGridDBColumn
+                DataBinding.FieldName = 'LASTNAME'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1NAME: TcxGridDBColumn
+                DataBinding.FieldName = 'NAME'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1FATHERSHIP: TcxGridDBColumn
+                DataBinding.FieldName = 'FATHERSHIP'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1PASSPORTSERIES: TcxGridDBColumn
+                DataBinding.FieldName = 'PASSPORTSERIES'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1PASSPORTNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'PASSPORTNUMB'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1BIRTHDATE: TcxGridDBColumn
+                DataBinding.FieldName = 'BIRTHDATE'
+                Width = 1200
+              end
+              object GridDBTableView1ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ID'
+                Visible = False
+                Width = 120
+              end
             end
           end
         end
       end
     end
-  end
-  inherited Panel6: TPanel
-    Width = 17
-    ExplicitWidth = 17
+    inherited TreePanel: TPanel
+      Width = 17
+      Height = 490
+      ExplicitWidth = 17
+    end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
@@ -235,7 +200,7 @@ inherited FAMILYCITEZEN: TFAMILYCITEZEN
     end
   end
   inherited DataSource1: TDataSource
-    Left = 440
+    Left = 480
     Top = 0
   end
 end

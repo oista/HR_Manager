@@ -1,7 +1,7 @@
 inherited GENERALDICTEDIT: TGENERALDICTEDIT
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1089#1083#1086#1074#1072#1088#1077#1081
   ClientHeight = 201
-  ExplicitWidth = 467
+  ExplicitWidth = 618
   ExplicitHeight = 225
   PixelsPerInch = 96
   TextHeight = 13
@@ -16,7 +16,7 @@ inherited GENERALDICTEDIT: TGENERALDICTEDIT
       Caption = ' '#1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1089#1083#1086#1074#1072#1088#1077#1081'        '
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 356
+      ExplicitWidth = 507
       ExplicitHeight = 167
       object PKDBLabelEdit1: TPKDBLabelEdit
         Left = 15
@@ -91,7 +91,10 @@ inherited GENERALDICTEDIT: TGENERALDICTEDIT
       end>
     TableName = 'HR_FACET'
     Connection = DataModule1.ADConnection1
-    Left = 400
-    Top = 96
+    Left = 552
+    Top = 144
+  end
+  inherited Context: TPKDBContext
+    Left = 552
   end
 end

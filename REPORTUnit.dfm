@@ -11,7 +11,7 @@ object WREPORT: TWREPORT
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Visible = True
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object CRV: TCRViewer9

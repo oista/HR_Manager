@@ -296,7 +296,6 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
           Top = 172
           Width = 317
           Height = 21
-          ItemHeight = 13
           TabOrder = 5
           Text = #1058#1080#1087' '#1086#1087#1083#1072#1090#1099
           DBTable = 'HR_FACETCONTENT'
@@ -314,7 +313,6 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
           Top = 33
           Width = 317
           Height = 21
-          ItemHeight = 13
           TabOrder = 6
           Text = #1058#1080#1087' '#1076#1086#1075#1086#1074#1086#1088#1072
           OnExit = PKDBBLabelComboBox5Change
@@ -333,7 +331,6 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
           Top = 308
           Width = 157
           Height = 21
-          ItemHeight = 13
           TabOrder = 7
           Text = #1048#1089#1087#1086#1083#1085#1080#1090#1077#1083#1100
           DBTable = 'HR_FACETCONTENT'
@@ -407,7 +404,6 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
           Top = 355
           Width = 157
           Height = 21
-          ItemHeight = 13
           TabOrder = 12
           Text = #1058#1080#1087' '#1088#1072#1073#1086#1090
           DBTable = 'HR_FACETCONTENT'
@@ -426,7 +422,6 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
           Width = 154
           Height = 21
           Color = clWhite
-          ItemHeight = 13
           TabOrder = 13
           Text = #1056#1072#1073#1086#1090#1086#1076#1072#1090#1077#1083#1100
           DBTable = 'HR_V_EMPLOYER'
@@ -624,7 +619,7 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 824
-    Top = 168
+    Top = 96
   end
   object PKDBTable2: TPKDBTable
     Fields = <
@@ -797,8 +792,8 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
     NeedGenPrimaryKey = True
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
-    Left = 861
-    Top = 200
+    Left = 821
+    Top = 152
   end
   object ADQuery1: TADQuery
     Connection = DataModule1.ADConnection1
@@ -808,7 +803,7 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
       'from HR_EMPLOYEE ee where'
       '  ee.id=:id')
     Left = 824
-    Top = 200
+    Top = 328
     ParamData = <
       item
         Name = 'ID'
@@ -910,8 +905,8 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
     NeedGenPrimaryKey = True
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
-    Left = 861
-    Top = 233
+    Left = 821
+    Top = 201
   end
   object ADQuery2: TADQuery
     Connection = DataModule1.ADConnection1
@@ -919,7 +914,7 @@ inherited CONTWORKEREDIT: TCONTWORKEREDIT
       'select o.id from  HR_ORDER o'
       'where o.workcontractid=:ID')
     Left = 824
-    Top = 232
+    Top = 384
     ParamData = <
       item
         Name = 'ID'

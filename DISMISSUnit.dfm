@@ -3,7 +3,6 @@ inherited DISMISS: TDISMISS
   ClientHeight = 589
   ClientWidth = 1285
   WindowState = wsMaximized
-  OnShow = FormShow
   ExplicitWidth = 1301
   ExplicitHeight = 627
   PixelsPerInch = 96
@@ -11,7 +10,7 @@ inherited DISMISS: TDISMISS
   inherited Panel1: TPanel
     Top = 548
     Width = 1285
-    ExplicitTop = 503
+    ExplicitTop = 548
     ExplicitWidth = 1285
     inherited Button1: TButton
       Left = 1122
@@ -26,7 +25,7 @@ inherited DISMISS: TDISMISS
     Width = 1285
     Height = 548
     ExplicitWidth = 1285
-    ExplicitHeight = 503
+    ExplicitHeight = 548
     inherited Splitter1: TSplitter
       Left = 33
       Height = 548
@@ -39,7 +38,7 @@ inherited DISMISS: TDISMISS
       Height = 548
       ExplicitLeft = 36
       ExplicitWidth = 1249
-      ExplicitHeight = 503
+      ExplicitHeight = 548
       inherited Splitter2: TSplitter
         Top = 445
         Width = 1249
@@ -50,33 +49,36 @@ inherited DISMISS: TDISMISS
         Top = 448
         Width = 1249
         Visible = False
-        ExplicitTop = 403
+        ExplicitTop = 448
         ExplicitWidth = 1249
       end
       inherited cxPageControl1: TcxPageControl
         Width = 1249
         Height = 445
         ExplicitWidth = 1249
-        ExplicitHeight = 400
-        ClientRectBottom = 445
-        ClientRectRight = 1249
+        ExplicitHeight = 445
+        ClientRectBottom = 439
+        ClientRectRight = 1243
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1059#1074#1086#1083#1077#1085#1085#1099#1077' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1080
-          ExplicitWidth = 1249
-          ExplicitHeight = 376
+          ExplicitWidth = 1241
+          ExplicitHeight = 412
           inherited GridPanel1: TGridPanel
-            Width = 1243
-            ExplicitWidth = 1243
+            Width = 1235
+            ExplicitWidth = 1235
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebEdit]
+              ParentFieldName = 'ORDERID'
               Connection = DataModule1.ADConnection1
+              EditDialogClassName = 'TDISMISSORDER'
             end
           end
           inherited Grid: TcxGrid
-            Width = 1243
-            Height = 381
+            Width = 1235
+            Height = 372
             PopupMenu = PopupMenu1
-            ExplicitWidth = 1243
-            ExplicitHeight = 336
+            ExplicitWidth = 1235
+            ExplicitHeight = 372
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
               object GridDBTableView1POL: TcxGridDBColumn
@@ -119,11 +121,6 @@ inherited DISMISS: TDISMISS
                 HeaderAlignmentHorz = taCenter
                 Width = 129
               end
-              object GridDBTableView1WORKTYPE: TcxGridDBColumn
-                DataBinding.FieldName = 'WORKTYPE'
-                Visible = False
-                HeaderAlignmentHorz = taCenter
-              end
               object GridDBTableView1WORKTYPESTR: TcxGridDBColumn
                 DataBinding.FieldName = 'WORKTYPESTR'
                 HeaderAlignmentHorz = taCenter
@@ -150,10 +147,6 @@ inherited DISMISS: TDISMISS
                 DataBinding.FieldName = 'REASONE'
                 HeaderAlignmentHorz = taCenter
                 Width = 394
-              end
-              object GridDBTableView1ID: TcxGridDBColumn
-                DataBinding.FieldName = 'ID'
-                Visible = False
               end
               object GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn
                 DataBinding.FieldName = 'AGREEMENTNUMB'
@@ -188,7 +181,7 @@ inherited DISMISS: TDISMISS
       Height = 548
       Visible = False
       ExplicitWidth = 33
-      ExplicitHeight = 503
+      ExplicitHeight = 548
     end
   end
   inherited MainQuery: TADQuery
@@ -411,7 +404,7 @@ inherited DISMISS: TDISMISS
     end
   end
   inherited DataSource1: TDataSource
-    Left = 424
+    Left = 464
     Top = 0
   end
   object ADStoredProc2: TADStoredProc

@@ -7,7 +7,13 @@ uses
   Dialogs, DictUnit, DB, PKDBEditButtons, ExtCtrls, Grids, DBGrids, VrDbGrid, ComCtrls,
   StdCtrls, PKDBFindPanel, uADStanIntf, uADStanOption, uADStanParam,
   uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf, uADStanAsync,
-  uADDAptManager, uADCompDataSet, uADCompClient;
+  uADDAptManager, uADCompDataSet, uADCompClient, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinOffice2007Blue,
+  dxSkinOffice2007Silver, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinscxPCPainter, cxPCdxBarPopupMenu, cxStyles, cxCustomData, cxFilter,
+  cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridCustomTableView,
+  cxGridTableView, cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView,
+  cxGrid, cxPC;
 
 type
   TSALARY = class(TDictForm)
@@ -20,6 +26,12 @@ type
     MainQueryCONTRACT: TStringField;
     MainQueryQUAL: TStringField;
     MainQueryJOBTITLE_HR: TStringField;
+    GridDBTableView1ID: TcxGridDBColumn;
+    GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
+    GridDBTableView1SALARY: TcxGridDBColumn;
+    GridDBTableView1CODE: TcxGridDBColumn;
+    GridDBTableView1QUAL: TcxGridDBColumn;
+    GridDBTableView1JOBTITLE_HR: TcxGridDBColumn;
   private
     { Private declarations }
   public

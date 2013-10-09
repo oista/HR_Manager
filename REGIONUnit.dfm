@@ -1,195 +1,111 @@
 inherited REGION: TREGION
   Caption = #1056#1077#1075#1080#1086#1085#1099
-  ClientWidth = 773
-  ExplicitWidth = 781
-  ExplicitHeight = 498
+  ClientHeight = 498
+  ClientWidth = 835
+  ExplicitWidth = 851
+  ExplicitHeight = 536
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 773
+    Top = 457
+    Width = 835
     ExplicitWidth = 773
     inherited Button1: TButton
-      Left = 610
+      Left = 672
       ExplicitLeft = 610
     end
     inherited Button2: TButton
-      Left = 691
+      Left = 753
       ExplicitLeft = 691
     end
   end
   inherited Panel2: TPanel
-    Left = 33
-    Width = 740
-    ExplicitLeft = 33
-    ExplicitWidth = 740
+    Width = 835
+    Height = 457
+    ExplicitWidth = 773
+    inherited Splitter1: TSplitter
+      Left = 33
+      Height = 457
+    end
     inherited Panel3: TPanel
-      Width = 737
+      Left = 36
+      Width = 799
+      Height = 457
+      ExplicitLeft = 36
       ExplicitWidth = 737
       inherited Splitter2: TSplitter
-        Width = 737
+        Top = 354
+        Width = 799
         ExplicitWidth = 737
       end
-      inherited Panel5: TPanel
-        Width = 737
+      inherited ExtPanel: TPanel
+        Top = 357
+        Width = 799
         Visible = False
         ExplicitWidth = 737
       end
-      inherited PageControl1: TPageControl
-        Width = 737
+      inherited cxPageControl1: TcxPageControl
+        Width = 799
+        Height = 354
         ExplicitWidth = 737
-        inherited TabSheet1: TTabSheet
-          Caption = #1056#1077#1075#1080#1086#1085#1099'    '
+        ClientRectBottom = 348
+        ClientRectRight = 793
+        inherited cxTabSheet1: TcxTabSheet
+          Caption = #1056#1077#1075#1080#1086#1085#1099'  '
           ExplicitWidth = 729
-          inherited Grid: TVrDbGrid
-            Width = 723
-            CheckFieldName = 'ID'
-            ColouredRows = True
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'ID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNNAME'
-                Width = 288
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TYPECODE'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNROWCODE'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNINDEX'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNGNINMB'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNUNO'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNOKATO'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNSTATUS'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'TOWNID'
-                Visible = True
-                SortMode = smNone
-              end>
-          end
           inherited GridPanel1: TGridPanel
-            Width = 723
+            Width = 785
             ExplicitWidth = 723
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 571
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1056#1077#1075#1080#1086#1085#1099
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'TOWNNAME'
-                      FieldCaption = #1053#1072#1079#1074#1072#1085#1080#1077
-                      FieldType = ffString
-                      DisplayName = 'TOWNNAME'
-                    end
-                    item
-                      FieldName = 'TYPECODE'
-                      FieldCaption = #1058#1080#1087
-                      FieldType = ffString
-                      DisplayName = 'TYPECODE'
-                    end
-                    item
-                      FieldName = 'TOWNROWCODE'
-                      FieldCaption = #1050#1086#1076
-                      FieldType = ffString
-                      DisplayName = 'TOWNROWCODE'
-                    end
-                    item
-                      FieldName = 'TOWNINDEX'
-                      FieldCaption = #1048#1085#1076#1077#1082#1089
-                      FieldType = ffString
-                      DisplayName = 'TOWNINDEX'
-                    end
-                    item
-                      FieldName = 'TOWNGNINMB'
-                      FieldCaption = 'TOWNGNINMB'
-                      FieldType = ffString
-                      DisplayName = 'TOWNGNINMB'
-                    end
-                    item
-                      FieldName = 'TOWNUNO'
-                      FieldCaption = 'TOWNUNO'
-                      FieldType = ffString
-                      DisplayName = 'TOWNUNO'
-                    end
-                    item
-                      FieldName = 'TOWNOKATO'
-                      FieldCaption = #1050#1086#1076' '#1054#1050#1040#1058#1054
-                      FieldType = ffString
-                      DisplayName = 'TOWNOKATO'
-                    end
-                    item
-                      FieldName = 'TOWNSTATUS'
-                      FieldCaption = 'TOWNSTATUS'
-                      FieldType = ffString
-                      DisplayName = 'TOWNSTATUS'
-                    end
-                    item
-                      FieldName = 'TOWNID'
-                      FieldCaption = 'TOWNID'
-                      FieldType = ffString
-                      DisplayName = 'TOWNID'
-                    end>
-                end>
-              ExplicitWidth = 571
+            inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh]
+              Connection = DataModule1.ADConnection1
+            end
+          end
+          inherited Grid: TcxGrid
+            Width = 785
+            Height = 281
+            ExplicitWidth = 723
+            ExplicitHeight = 243
+            inherited GridDBTableView1: TcxGridDBTableView
+              object GridDBTableView1ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ID'
+                Visible = False
+              end
+              object GridDBTableView1TOWNNAME: TcxGridDBColumn
+                DataBinding.FieldName = 'TOWNNAME'
+                Width = 389
+              end
+              object GridDBTableView1TYPECODE: TcxGridDBColumn
+                DataBinding.FieldName = 'TYPECODE'
+              end
+              object GridDBTableView1TOWNROWCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'TOWNROWCODE'
+              end
+              object GridDBTableView1TOWNINDEX: TcxGridDBColumn
+                DataBinding.FieldName = 'TOWNINDEX'
+              end
+              object GridDBTableView1TOWNOKATO: TcxGridDBColumn
+                DataBinding.FieldName = 'TOWNOKATO'
+                Width = 500
+              end
             end
           end
         end
       end
     end
-  end
-  inherited Panel6: TPanel
-    Width = 33
-    Visible = False
-    ExplicitWidth = 33
+    inherited TreePanel: TPanel
+      Width = 33
+      Height = 457
+      Visible = False
+      ExplicitWidth = 33
+    end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
     SQL.Strings = (
       'select * from HR_V_REGION')
-    Top = 0
+    Left = 536
+    Top = 24
     object MainQueryID: TFMTBCDField
       FieldName = 'ID'
       Required = True
@@ -239,6 +155,7 @@ inherited REGION: TREGION
     end
   end
   inherited DataSource1: TDataSource
-    Top = 0
+    Left = 448
+    Top = 24
   end
 end

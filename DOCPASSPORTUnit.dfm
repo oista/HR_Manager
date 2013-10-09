@@ -58,15 +58,15 @@ inherited DOCPASSPORT: TDOCPASSPORT
         Height = 506
         ExplicitWidth = 1099
         ExplicitHeight = 506
-        ClientRectBottom = 506
-        ClientRectRight = 1099
+        ClientRectBottom = 500
+        ClientRectRight = 1093
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1055#1072#1089#1087#1086#1088#1090#1072' '
-          ExplicitWidth = 1099
-          ExplicitHeight = 482
+          ExplicitWidth = 1091
+          ExplicitHeight = 473
           inherited GridPanel1: TGridPanel
-            Width = 1093
-            ExplicitWidth = 1093
+            Width = 1085
+            ExplicitWidth = 1085
             inherited PKDBEditButtons1: TPKDBEditButtons
               EnableButtons = [ebRefresh]
               TableName = 'HR_V_DOCPASSPORT'
@@ -74,10 +74,10 @@ inherited DOCPASSPORT: TDOCPASSPORT
             end
           end
           inherited Grid: TcxGrid
-            Width = 1093
-            Height = 442
-            ExplicitWidth = 1093
-            ExplicitHeight = 442
+            Width = 1085
+            Height = 433
+            ExplicitWidth = 1085
+            ExplicitHeight = 433
             inherited GridDBTableView1: TcxGridDBTableView
               object GridDBTableView1LASTNAME: TcxGridDBColumn
                 DataBinding.FieldName = 'LASTNAME'
@@ -116,10 +116,6 @@ inherited DOCPASSPORT: TDOCPASSPORT
               object GridDBTableView1CHANGESTATUSDATE: TcxGridDBColumn
                 DataBinding.FieldName = 'CHANGESTATUSDATE'
                 HeaderAlignmentHorz = taCenter
-              end
-              object GridDBTableView1ID: TcxGridDBColumn
-                DataBinding.FieldName = 'ID'
-                Visible = False
               end
               object GridDBTableView1ORGNAME: TcxGridDBColumn
                 DataBinding.FieldName = 'ORGNAME'

@@ -11,6 +11,7 @@ type
     App: TApplication;
     Rep: TReport;
     CRV: TCRViewer9;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     { Private declarations }
@@ -112,6 +113,11 @@ begin  // приказ о командировке
  rep.ParameterFields.GetItemByName('docid','HR_MISSIONORDER').AddCurrentValue(V1);
  CRV.ReportSource:=Rep.DefaultInterface;
  CRV.ViewReport;
+end;
+
+procedure TWREPORT.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+FreeAndNil(WREPORT);
 end;
 
 procedure TWREPORT.madeAgreementConf(V1: double);

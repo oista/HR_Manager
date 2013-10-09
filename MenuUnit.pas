@@ -28,6 +28,7 @@ uses DM, MainUnit;
 procedure TMenuForm.FormCreate(Sender: TObject);
 begin
   PKDBMainMenu1.CreateMenu;
+
 end;
 
 end.

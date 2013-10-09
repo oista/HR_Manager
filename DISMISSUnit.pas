@@ -13,7 +13,7 @@ uses
   dxSkinOffice2010Silver, dxSkinscxPCPainter, cxPCdxBarPopupMenu, cxStyles,
   cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGridLevel,
-  cxClasses, cxGridCustomView, cxGrid, cxPC;
+  cxClasses, cxGridCustomView, cxGrid, cxPC, cxGridExportLink;
 
 type
   TDISMISS = class(TDictForm)
@@ -63,7 +63,6 @@ type
     MainQueryOUTDATE: TDateTimeField;
     MainQueryWORKTYPESTR: TStringField;
     MainQueryPOL: TStringField;
-    GridDBTableView1ID: TcxGridDBColumn;
     GridDBTableView1LASTNAME: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
     GridDBTableView1FATHERSHIP: TcxGridDBColumn;
@@ -71,7 +70,6 @@ type
     GridDBTableView1QUALIFICATION: TcxGridDBColumn;
     GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
     GridDBTableView1DCODE: TcxGridDBColumn;
-    GridDBTableView1WORKTYPE: TcxGridDBColumn;
     GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
     GridDBTableView1AGREEMENTDATE: TcxGridDBColumn;
     GridDBTableView1FIRSTINDATE: TcxGridDBColumn;
@@ -85,7 +83,6 @@ type
     GridDBTableView1WORKTYPESTR: TcxGridDBColumn;
     GridDBTableView1POL: TcxGridDBColumn;
     procedure N2Click(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure PKDBEditButtons1BeforeOpenEditClick(Sender: TObject;
       Form: TDISMISSORDER);
     procedure Excel1Click(Sender: TObject);
@@ -104,15 +101,9 @@ implementation
 {$R *.dfm}
 procedure TDISMISS.Excel1Click(Sender: TObject);
 begin
-  MainQuery.FindFirst;    // Экспорт в Excel
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
+   cxGridExportLink.ExportGridToExcel('DismissList',Grid, True, True, True, 'xls' );
 end;
 
-procedure TDISMISS.FormShow(Sender: TObject);
-begin
-  inherited;
-  self.WindowState:=wsMaximized;
-end;
 
 procedure TDISMISS.N2Click(Sender: TObject);
   begin
@@ -127,7 +118,7 @@ end;
 
 
 procedure TDISMISS.PKDBEditButtons1BeforeOpenEditClick(Sender: TObject; Form: TDISMISSORDER);
-begin   // приредактированиие ставим уволенного(УЖЕ сотрудника). по словарю выбирает активных
+begin   // при редактированиие ставим уволенного(УЖЕ сотрудника). по словарю выбирает активных
   form.PKDBTable1.ReadFromDB(MainQueryORDERID.asstring);
 end;
 

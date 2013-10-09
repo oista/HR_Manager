@@ -1,7 +1,7 @@
 inherited EDITJOBTITLE: TEDITJOBTITLE
   Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080
   ClientHeight = 296
-  ExplicitWidth = 467
+  ExplicitWidth = 618
   ExplicitHeight = 320
   PixelsPerInch = 96
   TextHeight = 13
@@ -16,7 +16,7 @@ inherited EDITJOBTITLE: TEDITJOBTITLE
       Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 356
+      ExplicitWidth = 507
       ExplicitHeight = 262
       object PKDBLabelEdit1: TPKDBLabelEdit
         Left = 15
@@ -85,7 +85,6 @@ inherited EDITJOBTITLE: TEDITJOBTITLE
         Top = 69
         Width = 314
         Height = 21
-        ItemHeight = 13
         TabOrder = 5
         Text = #1050#1072#1090#1077#1075#1086#1088#1080#1103' '#1087#1077#1088#1089#1086#1085#1072#1083#1072
         DBTable = 'CS_CATEGORY'
@@ -164,7 +163,10 @@ inherited EDITJOBTITLE: TEDITJOBTITLE
       end>
     TableName = 'CS_JOBTITLE'
     Connection = DataModule1.ADConnection1
-    Left = 392
-    Top = 96
+    Left = 544
+    Top = 144
+  end
+  inherited Context: TPKDBContext
+    Left = 544
   end
 end

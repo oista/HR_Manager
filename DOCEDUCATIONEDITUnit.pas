@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, EditDialogUnit, StdCtrls, ExtCtrls, PKDBDictEdit, PKDBEdit,
-  PKDBTable, ComCtrls, PKDBBBaseComboBox;
+  PKDBTable, ComCtrls, PKDBBBaseComboBox, PKDBContext;
 
 type
   TDOCEDUCATIONEDIT  = class(TEditDialog)

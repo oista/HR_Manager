@@ -33,7 +33,6 @@ type
     GridDBTableView1LASTNAME: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
     GridDBTableView1FATHERSHIP: TcxGridDBColumn;
-    GridDBTableView1ID: TcxGridDBColumn;
     GridDBTableView1PASSDATE: TcxGridDBColumn;
     GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
     GridDBTableView1CHANGESTATUSDATE: TcxGridDBColumn;

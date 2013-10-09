@@ -25,7 +25,7 @@ uses
   cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData,
   cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, cxPC, cxGridCustomPopupMenu,
-  cxGridPopupMenu ;
+  cxGridPopupMenu ,cxGridExportLink, PKDBDefs;
 
 type
   EditDialogClass = class of TEditDialog;
@@ -143,10 +143,10 @@ type
     DataSource11: TDataSource;
     DataSource12: TDataSource;
     DataSource15: TDataSource;
-    PKDBTable1: TPKDBTable;
-    PKDBTable2: TPKDBTable;
-    PKDBTable3: TPKDBTable;
-    PKDBTable4: TPKDBTable;
+    TBL_MILITARY: TPKDBTable;
+    TBL_TAXNUMBER: TPKDBTable;
+    TBL_DOCSNILS: TPKDBTable;
+    TBL_DOCWORKBOOK: TPKDBTable;
     ADQuery8: TADQuery;
     ADQuery8CITEZENID: TFMTBCDField;
     ADQuery8INDATE: TDateTimeField;
@@ -187,7 +187,6 @@ type
     ADQuery14DOCTYPE: TStringField;
     ADQuery14SERVICE: TStringField;
     ADStoredProc1: TADStoredProc;
-    PKDBTable5: TPKDBTable;
     ADQuery10STRUCTUREID: TFMTBCDField;
     N2: TMenuItem;
     ADStoredProc2: TADStoredProc;
@@ -251,9 +250,6 @@ type
     MainQueryEDUCATION: TStringField;
     MainQueryWORKUNITTYPEROW: TStringField;
     MainQueryUNITSTATUS: TStringField;
-    GridDBTableView1ID: TcxGridDBColumn;
-    GridDBTableView1CITEZENID: TcxGridDBColumn;
-    GridDBTableView1STRUCTUREID: TcxGridDBColumn;
     GridDBTableView1LASTNAME: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
     GridDBTableView1FATHERSHIP: TcxGridDBColumn;
@@ -266,10 +262,8 @@ type
     GridDBTableView1INDATE: TcxGridDBColumn;
     GridDBTableView1OUTDATE: TcxGridDBColumn;
     GridDBTableView1DEPT: TcxGridDBColumn;
-    GridDBTableView1WORKCONTRACTID: TcxGridDBColumn;
     GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
     GridDBTableView1AGREEMENTDATE: TcxGridDBColumn;
-    GridDBTableView1ORDERID: TcxGridDBColumn;
     GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
     GridDBTableView1PASSPORTNUMB: TcxGridDBColumn;
     GridDBTableView1PASSINST: TcxGridDBColumn;
@@ -308,10 +302,7 @@ type
     grd_JOBSTRUCTUREDBTableView1AMOUNT: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1SALARY: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1AGREEMENTDATE: TcxGridDBColumn;
-    grd_JOBSTRUCTUREDBTableView1ID: TcxGridDBColumn;
-    grd_JOBSTRUCTUREDBTableView1CITEZENID: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1STATUS: TcxGridDBColumn;
-    grd_JOBSTRUCTUREDBTableView1STRUCTUREID: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1CONTRACT: TcxGridDBColumn;
     grd_JOBSTRUCTUREDBTableView1WORKTYPE: TcxGridDBColumn;
     grd_JOBSTRUCTURELevel1: TcxGridLevel;
@@ -344,9 +335,6 @@ type
     grd_RETRAININGDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_RETRAININGDBTableView1DOCDATE: TcxGridDBColumn;
     grd_RETRAININGDBTableView1REASON: TcxGridDBColumn;
-    grd_RETRAININGDBTableView1ID: TcxGridDBColumn;
-    grd_RETRAININGDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_RETRAININGDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_RETRAININGLevel1: TcxGridLevel;
     TabSheet5: TTabSheet;
     GridPanel4: TGridPanel;
@@ -357,9 +345,6 @@ type
     grd_AWARDDBTableView1DOCTYPE: TcxGridDBColumn;
     grd_AWARDDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_AWARDDBTableView1DOCDATE: TcxGridDBColumn;
-    grd_AWARDDBTableView1ID: TcxGridDBColumn;
-    grd_AWARDDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_AWARDDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_AWARDLevel1: TcxGridLevel;
     TabSheet9: TTabSheet;
     GridPanel8: TGridPanel;
@@ -376,9 +361,6 @@ type
     grd_HOLIDAYDBTableView1REASON: TcxGridDBColumn;
     grd_HOLIDAYDBTableView1ORDERNUMB: TcxGridDBColumn;
     grd_HOLIDAYDBTableView1ORDERDATE: TcxGridDBColumn;
-    grd_HOLIDAYDBTableView1ID: TcxGridDBColumn;
-    grd_HOLIDAYDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_HOLIDAYDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_HOLIDAYLevel1: TcxGridLevel;
     TabSheet10: TTabSheet;
     GridPanel9: TGridPanel;
@@ -389,9 +371,6 @@ type
     grd_SOCIALDBTableView1DOCNUMB: TcxGridDBColumn;
     grd_SOCIALDBTableView1DOCDATE: TcxGridDBColumn;
     grd_SOCIALDBTableView1REASON: TcxGridDBColumn;
-    grd_SOCIALDBTableView1ID: TcxGridDBColumn;
-    grd_SOCIALDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_SOCIALDBTableView1EMPLOYEEID: TcxGridDBColumn;
     grd_SOCIALLevel1: TcxGridLevel;
     TabSheet4: TTabSheet;
     GridPanel3: TGridPanel;
@@ -435,8 +414,6 @@ type
     grd_EDUCATIONDBTableView1NAME: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1OUTYEAR: TcxGridDBColumn;
     grd_EDUCATIONDBTableView1OVEREDUCATION: TcxGridDBColumn;
-    grd_EDUCATIONDBTableView1CITEZENID: TcxGridDBColumn;
-    grd_EDUCATIONDBTableView1ID: TcxGridDBColumn;
     grd_EDUCATIONLevel1: TcxGridLevel;
     TabSheet14: TTabSheet;
     GridPanel12: TGridPanel;
@@ -451,8 +428,6 @@ type
     grd_ADRESSDBTableView1REGION: TcxGridDBColumn;
     grd_ADRESSDBTableView1REGDATE: TcxGridDBColumn;
     grd_ADRESSDBTableView1STATUSNAME: TcxGridDBColumn;
-    grd_ADRESSDBTableView1ID: TcxGridDBColumn;
-    grd_ADRESSDBTableView1CITEZENID: TcxGridDBColumn;
     grd_ADRESSLevel1: TcxGridLevel;
     TabSheet3: TTabSheet;
     GridPanel11: TGridPanel;
@@ -467,8 +442,6 @@ type
     grd_INSURANCEDBTableView1SERVICE: TcxGridDBColumn;
     grd_INSURANCEDBTableView1CHAGESTATUSDATE: TcxGridDBColumn;
     grd_INSURANCEDBTableView1STATUSNAME: TcxGridDBColumn;
-    grd_INSURANCEDBTableView1ID: TcxGridDBColumn;
-    grd_INSURANCEDBTableView1CITEZENID: TcxGridDBColumn;
     grd_INSURANCELevel1: TcxGridLevel;
     TabSheet15: TTabSheet;
     PKDBLabelEdit4: TPKDBLabelEdit;
@@ -503,8 +476,6 @@ type
     grd_FAMILYDBTableView1FATHERSHIP: TcxGridDBColumn;
     grd_FAMILYDBTableView1BIRTHDATE: TcxGridDBColumn;
     grd_FAMILYDBTableView1BIRTHPLACE: TcxGridDBColumn;
-    grd_FAMILYDBTableView1ID: TcxGridDBColumn;
-    grd_FAMILYDBTableView1CITEZENID: TcxGridDBColumn;
     grd_FAMILYLevel1: TcxGridLevel;
     TabSheet19: TTabSheet;
     GridPanel15: TGridPanel;
@@ -524,8 +495,6 @@ type
     grd_JOBHISTORYDBTableView1ADDITIONHARM: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1EXTHOLYDAYS: TcxGridDBColumn;
     grd_JOBHISTORYDBTableView1DESCR: TcxGridDBColumn;
-    grd_JOBHISTORYDBTableView1ID: TcxGridDBColumn;
-    grd_JOBHISTORYDBTableView1CITEZENID: TcxGridDBColumn;
     grd_JOBHISTORYLevel1: TcxGridLevel;
     ADQuery10CITEZENID: TFMTBCDField;
     procedure N1Click(Sender: TObject);
@@ -533,22 +502,19 @@ type
     procedure Button4Click(Sender: TObject);
     procedure anotherrow;
     procedure clearboxes;
-    procedure GridCellClick(Column: TColumn);
-    procedure GridKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure GridKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
 
     procedure PKDBEditButtons1BeforeOpenNewClick(Sender: TObject;
-      Form:  TEMPLOYEEDIT);
+      Form:  TEditDialog);
     procedure PKDBEditButtons1BeforeOpenEditClick(Sender: TObject;
-      Form: TEMPLOYEEDIT);
+      Form: TEditDialog);
     procedure N4Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N6Click(Sender: TObject);
     procedure Excel1Click(Sender: TObject);
-    procedure VrDbGrid11CellClick(Column: TColumn);
+    procedure DataSource1DataChange(Sender: TObject; Field: TField);
 
   private
     procedure InitForm();  override;
@@ -567,16 +533,16 @@ uses DM, MainUnit,PKDBQueryToExcel;
 
 procedure TCONJUCTION.Button3Click(Sender: TObject);
 begin
-  PKDBTable1.Update;
+  TBL_MILITARY.Update;
   inherited;
 end;
 
 procedure TCONJUCTION.Button4Click(Sender: TObject);
 begin
   inherited;
-  PKDBTable2.Update;
-  PKDBTable3.Update;
-  PKDBTable4.Update;
+  TBL_TAXNUMBER.Update;
+  TBL_DOCSNILS.Update;
+  TBL_DOCWORKBOOK.Update;
 end;
 
 procedure TCONJUCTION.Button6Click(Sender: TObject);
@@ -585,7 +551,7 @@ begin
   if ADQuery10STRUCTUREID.Asstring='' then
     showmessage('ƒанному сотруднику не присвоена штатна€ единица.')
   else
-    PKDBTable5.Update;
+
 end;
 
 procedure TCONJUCTION.Button5Click(Sender: TObject);
@@ -628,12 +594,10 @@ begin
   ADQuery8.Open;
   ADQuery13.Open;
   ADQuery14.Open;
-  PKDBTable1.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable2.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable3.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable4.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable5.ReadFromDB(ADQuery10STRUCTUREID.Asstring);
-  mainform.WindowState:= wsMaximized;
+  TBL_MILITARY.ReadFromDB(MainQueryCITEZENID.Asstring);
+  TBL_TAXNUMBER.ReadFromDB(MainQueryCITEZENID.Asstring);
+  TBL_DOCSNILS.ReadFromDB(MainQueryCITEZENID.Asstring);
+  TBL_DOCWORKBOOK.ReadFromDB(MainQueryCITEZENID.Asstring);
 
   // вкладка - перва€
   PageControl2.ActivePageIndex := 1;
@@ -643,18 +607,19 @@ end;
 // переход на другую запись
 procedure TCONJUCTION.anotherrow;
 begin
-  clearboxes;
-  PKDBTable1.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable2.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable3.ReadFromDB(MainQueryCITEZENID.Asstring);
-  PKDBTable4.ReadFromDB(MainQueryCITEZENID.Asstring);
-  if ADQuery10STRUCTUREID.Asstring<>'' then
-    PKDBTable5.ReadFromDB(ADQuery10STRUCTUREID.Asstring);
-  PKDBTable1.Update;
-  PKDBTable2.Update;
-  PKDBTable3.Update;
-  PKDBTable4.Update;
-  PKDBTable5.update;
+ clearboxes;
+  case PageControl2.ActivePage.TabIndex    of
+  8:   // военщина
+      begin
+       TBL_MILITARY.ReadFromDB(MainQueryCITEZENID.Asstring);
+      end;
+  12:  // налоговый учет
+      begin
+       TBL_TAXNUMBER.ReadFromDB(MainQueryCITEZENID.Asstring);
+      // TBL_DOCSNILS.ReadFromDB(fld_MainQueryCITEZENID.Asstring);
+      // TBL_DOCWORKBOOK.ReadFromDB(fld_MainQueryCITEZENID.Asstring);
+      end;
+  end;
 end;
 
 
@@ -710,49 +675,24 @@ begin
 end;
 
 procedure TCONJUCTION.PKDBEditButtons1BeforeOpenEditClick(Sender: TObject;
-  Form: TEMPLOYEEDIT);
+  Form: TEditDialog);
 begin
   inherited;
   // значени€ по умолчанию дл€ совместителей
-  form.PKDBDictEdit2.DictionaryClass:='TVACANCY_CONJUCTION';
-  form.PKDBDictEdit9.dictionaryvalue:='3009017';
+    TEMPLOYEEDIT(Form).PKDBDictEdit2.DictionaryClass:='TVACANCY_CONJUCTION';
+    TEMPLOYEEDIT(Form).PKDBDictEdit9.dictionaryvalue:='3009017';
 end;
 
 procedure TCONJUCTION.PKDBEditButtons1BeforeOpenNewClick(Sender: TObject;
-  Form: TEMPLOYEEDIT);
+  Form: TEditDialog);
 begin
   inherited;
   // значени€ по умолчанию дл€ совместителей
-  form.PKDBDictEdit2.DictionaryClass:='TVACANCY_CONJUCTION';
-  form.PKDBDictEdit9.dictionaryvalue:='3009017';
+   TEMPLOYEEDIT(Form).PKDBDictEdit2.DictionaryClass:='TVACANCY_CONJUCTION';
+   TEMPLOYEEDIT(Form).PKDBDictEdit9.dictionaryvalue:='3009017';
 end;
 
-procedure TCONJUCTION.VrDbGrid11CellClick(Column: TColumn);
-begin
-  inherited;
 
-end;
-
-// переход на другую запись
-procedure TCONJUCTION.GridCellClick(Column: TColumn);
-begin
-  inherited;
-  anotherrow;
-end;
-// переход на другую запись
-procedure TCONJUCTION.GridKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  inherited;
-  anotherrow;
-end;
-// переход на другую запись
-procedure TCONJUCTION.GridKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  inherited;
-  anotherrow;
-end;
 
 // очистка полей
 procedure TCONJUCTION.clearboxes;
@@ -766,16 +706,19 @@ begin
  PKDBBLabelComboBox7.Text:='';
 
  PKDBBLabelComboBox9.Text:='';
- //DBBLabelComboBox10.Text:='';
- //PKDBLabelEdit15.Text:='';
- //PKDBLabelEdit16.Text:='';
+end;
+
+procedure TCONJUCTION.DataSource1DataChange(Sender: TObject; Field: TField);
+begin
+  inherited;
+  anotherrow;
 end;
 
 procedure TCONJUCTION.Excel1Click(Sender: TObject);
 begin
-    MainQuery.FindFirst;  // экспорт в Excel
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
-
+  cxGridExportLink.ExportGridToExcel('ConjuctionList',Grid, True, True, True, 'xls' );
+  //MainQuery.FindFirst;  // экспорт в Excel
+  //PKDBQuerytoExcel.ImportVisible(MainQuery);
 end;
 
 initialization

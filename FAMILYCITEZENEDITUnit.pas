@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, EditDialogUnit, StdCtrls, PKDBBBaseComboBox, PKDBEdit, PKDBTable,
-  ComCtrls, ExtCtrls;
+  ComCtrls, ExtCtrls, PKDBDefs, PKDBContext;
 
 type
   TFAMILYCITEZENEDIT = class(TEditDialog)

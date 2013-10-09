@@ -12,19 +12,19 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
     Height = 664
     ExplicitLeft = 449
     ExplicitWidth = 92
-    ExplicitHeight = 623
+    ExplicitHeight = 664
   end
   inherited PageControl1: TPageControl
     Width = 443
     Height = 658
     ExplicitWidth = 443
-    ExplicitHeight = 617
+    ExplicitHeight = 658
     inherited TabSheet1: TTabSheet
       Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1099' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080'           '
       ExplicitLeft = 4
       ExplicitTop = 24
       ExplicitWidth = 435
-      ExplicitHeight = 589
+      ExplicitHeight = 630
       object Label1: TLabel
         Left = 15
         Top = 6
@@ -47,6 +47,7 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
         Table = PKDBTable1
         TableField = 'ORGANISATIONID'
         LookUpRool = 'name'
+        ReadOnly = False
         DictionaryClass = 'TEDUCATIONORGS'
         WithoutTable = False
         DesignSize = (
@@ -88,6 +89,7 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
         Table = PKDBTable1
         TableField = 'SPCIALITYID'
         LookUpRool = 'NVL(CVALIFICATION,SPECIALITY) '
+        ReadOnly = False
         DictionaryClass = 'TOKSO'
         WithoutTable = False
         DesignSize = (
@@ -113,7 +115,6 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
         Width = 402
         Height = 21
         Color = clWhite
-        ItemHeight = 13
         TabOrder = 5
         Text = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
         DBTable = 'HR_FACETCONTENT'
@@ -131,7 +132,6 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
         Top = 340
         Width = 402
         Height = 21
-        ItemHeight = 13
         TabOrder = 6
         Text = #1055#1086#1089#1083#1077#1074#1091#1079#1086#1074#1089#1082#1086#1077' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1077
         DBTable = 'HR_FACETCONTENT'
@@ -149,7 +149,6 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
         Top = 295
         Width = 402
         Height = 21
-        ItemHeight = 13
         TabOrder = 7
         Text = #1060#1086#1088#1084#1072' '#1086#1073#1091#1095#1077#1085#1080#1103
         DBTable = 'HR_FACETCONTENT'
@@ -178,6 +177,7 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
           Table = PKDBTable1
           TableField = 'OVERORGANISATIONID'
           LookUpRool = ' name'
+          ReadOnly = False
           DictionaryClass = 'TEDUCATIONORGS'
           WithoutTable = False
           EditLabel.Width = 163
@@ -225,6 +225,7 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
           Table = PKDBTable1
           TableField = 'OVERSPCIALITYID'
           LookUpRool = ' NVL(CVALIFICATION,SPECIALITY) '
+          ReadOnly = False
           DictionaryClass = 'TOKSO'
           WithoutTable = False
           EditLabel.Width = 78
@@ -240,7 +241,6 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
           Width = 360
           Height = 21
           Color = clWhite
-          ItemHeight = 13
           TabOrder = 4
           Text = #1059#1095#1077#1085#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
           DBTable = 'HR_FACETCONTENT'
@@ -397,6 +397,5 @@ inherited DOCEDUCATIONEDIT: TDOCEDUCATIONEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 472
-    Top = 88
   end
 end

@@ -24,7 +24,7 @@ uses
   dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxPCdxBarPopupMenu,
   cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
   cxDBData, cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid, cxPC;
+  cxGridTableView, cxGridDBTableView, cxGrid, cxPC,cxGridExportLink, PKDBDefs;
 
 type
   TEditDialogClass = class of TEditDialog;
@@ -64,7 +64,7 @@ type
     PKDBFindPanel5: TPKDBFindPanel;
     VrDbGrid3: TVrDbGrid;
     VrDbGrid4: TVrDbGrid;
-    PopupMenu1: TPopupMenu;
+    pm_main: TPopupMenu;
     N1: TMenuItem;
     QRY_JOBSTRUCTUREINDATE: TDateTimeField;
     QRY_JOBSTRUCTUREAGREEMENTDATE: TDateTimeField;
@@ -382,6 +382,32 @@ type
     QRY_SEL_NEWEMPDESCR: TStringField;
     QRY_SEL_NEWEMPPREVIOUSID: TFMTBCDField;
     QRY_SEL_NEWEMPWORKCONTRACTID: TFMTBCDField;
+    GridDBTableView1ID: TcxGridDBColumn;
+    GridDBTableView1CITEZENID: TcxGridDBColumn;
+    GridDBTableView1STRUCTUREID: TcxGridDBColumn;
+    GridDBTableView1LASTNAME: TcxGridDBColumn;
+    GridDBTableView1NAME: TcxGridDBColumn;
+    GridDBTableView1FATHERSHIP: TcxGridDBColumn;
+    GridDBTableView1JOBTITLE: TcxGridDBColumn;
+    GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
+    GridDBTableView1DCODE: TcxGridDBColumn;
+    GridDBTableView1TABNUMB: TcxGridDBColumn;
+    GridDBTableView1INDATE: TcxGridDBColumn;
+    GridDBTableView1STATUSID: TcxGridDBColumn;
+    GridDBTableView1WORKUNITTYPE: TcxGridDBColumn;
+    GridDBTableView1DEPT: TcxGridDBColumn;
+    GridDBTableView1WORKCONTRACTID: TcxGridDBColumn;
+    GridDBTableView1SCHEDULEID: TcxGridDBColumn;
+    GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
+    GridDBTableView1AGREEMENTDATE: TcxGridDBColumn;
+    GridDBTableView1ORDERID: TcxGridDBColumn;
+    GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
+    GridDBTableView1PASSPORTNUMB: TcxGridDBColumn;
+    GridDBTableView1PASSINST: TcxGridDBColumn;
+    GridDBTableView1BIRTHDATE: TcxGridDBColumn;
+    GridDBTableView1ADRESS: TcxGridDBColumn;
+    GridDBTableView1EDUCATION: TcxGridDBColumn;
+    GridDBTableView1WORKUNITTYPEROW: TcxGridDBColumn;
     procedure N1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -666,8 +692,9 @@ end;
 
 procedure TCONTWORKER.Excel1Click(Sender: TObject);
 begin
-  MainQuery.FindFirst;    // Ёкспорт в Excel
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
+    cxGridExportLink.ExportGridToExcel('ContworkerList',Grid, True, True, True, 'xls' );
+  //MainQuery.FindFirst;    // Ёкспорт в Excel
+  //PKDBQuerytoExcel.ImportVisible(MainQuery);
 end;
 
 initialization

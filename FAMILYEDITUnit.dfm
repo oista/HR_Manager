@@ -35,10 +35,13 @@ inherited FAMILYEDIT: TFAMILYEDIT
         Top = 25
         Width = 426
         Height = 21
+        Connection = DataModule1.ADConnection1
         Table = PKDBTable1
         TableField = 'RELATIVEID'
         LookUpRool = 'lastname||'#39' '#39'||name||'#39' '#39'||fathership'
+        ReadOnly = False
         DictionaryClass = 'TFAMILYCITEZEN'
+        WithoutTable = False
         DesignSize = (
           426
           21)
@@ -48,7 +51,6 @@ inherited FAMILYEDIT: TFAMILYEDIT
         Top = 70
         Width = 426
         Height = 21
-        ItemHeight = 13
         TabOrder = 1
         Text = #1057#1090#1077#1087#1077#1085#1100' '#1088#1086#1076#1089#1090#1074#1072
         DBTable = 'HR_FACETCONTENT'
@@ -115,6 +117,5 @@ inherited FAMILYEDIT: TFAMILYEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_TEMPIDSEQ'
     Left = 512
-    Top = 88
   end
 end

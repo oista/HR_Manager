@@ -1,231 +1,148 @@
 inherited PROFFESION: TPROFFESION
   Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080'    '
-  ClientWidth = 798
-  ExplicitWidth = 806
+  ClientHeight = 587
+  ClientWidth = 1172
+  ExplicitWidth = 1188
+  ExplicitHeight = 625
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 798
-    ExplicitWidth = 798
+    Top = 546
+    Width = 1172
+    ExplicitTop = 546
+    ExplicitWidth = 1172
     inherited Button1: TButton
-      Left = 635
-      ExplicitLeft = 635
+      Left = 1009
+      ExplicitLeft = 1009
     end
     inherited Button2: TButton
-      Left = 716
-      ExplicitLeft = 716
+      Left = 1090
+      ExplicitLeft = 1090
     end
   end
   inherited Panel2: TPanel
-    Left = 17
-    Width = 781
-    ExplicitLeft = 17
-    ExplicitWidth = 781
+    Width = 1172
+    Height = 546
+    ExplicitWidth = 1172
+    ExplicitHeight = 546
+    inherited Splitter1: TSplitter
+      Left = 17
+      Height = 546
+      ExplicitLeft = 17
+      ExplicitHeight = 546
+    end
     inherited Panel3: TPanel
-      Width = 778
-      ExplicitWidth = 778
+      Left = 20
+      Width = 1152
+      Height = 546
+      ExplicitLeft = 20
+      ExplicitWidth = 1152
+      ExplicitHeight = 546
       inherited Splitter2: TSplitter
-        Top = 395
-        Width = 778
+        Top = 518
+        Width = 1152
         ExplicitTop = 395
         ExplicitWidth = 778
       end
-      inherited Panel5: TPanel
-        Top = 398
-        Width = 778
+      inherited ExtPanel: TPanel
+        Top = 521
+        Width = 1152
         Height = 25
         Visible = False
-        ExplicitTop = 398
-        ExplicitWidth = 778
+        ExplicitTop = 521
+        ExplicitWidth = 1152
         ExplicitHeight = 25
       end
-      inherited PageControl1: TPageControl
-        Width = 778
-        Height = 395
-        ExplicitWidth = 778
-        ExplicitHeight = 395
-        inherited TabSheet1: TTabSheet
-          Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1103
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 770
-          ExplicitHeight = 367
-          inherited Grid: TVrDbGrid
-            Width = 764
-            Height = 330
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'JOBTITLE'
-                Width = 328
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'PROFFTYPE'
-                Width = 83
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CODE'
-                Width = 72
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'KATEG'
-                Width = 41
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'FIELD'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'OKZCODE'
-                Width = 51
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'STARTCODE'
-                Width = 56
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CITEZENID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'LASTNAME'
-                Width = 82
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'NAME'
-                Width = 74
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'FATHERSHIP'
-                Visible = True
-                SortMode = smNone
-              end>
-          end
+      inherited cxPageControl1: TcxPageControl
+        Width = 1152
+        Height = 518
+        ExplicitWidth = 1152
+        ExplicitHeight = 518
+        ClientRectBottom = 518
+        ClientRectRight = 1152
+        inherited cxTabSheet1: TcxTabSheet
+          Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080'    '
+          ExplicitWidth = 1152
+          ExplicitHeight = 494
           inherited GridPanel1: TGridPanel
-            Width = 764
-            ExplicitWidth = 764
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 612
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1055#1088#1086#1092#1077#1089#1089#1080#1103
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'CODE'
-                      FieldCaption = #1050#1086#1076' '#1054#1050#1055#1044#1058#1056
-                      FieldType = ffString
-                      DisplayName = 'CODE'
-                    end
-                    item
-                      FieldName = 'KATEG'
-                      FieldCaption = #1050#1072#1090#1077#1075'.'
-                      FieldType = ffString
-                      DisplayName = 'KATEG'
-                    end
-                    item
-                      FieldName = 'JOBTITLE'
-                      FieldCaption = #1055#1088#1086#1092#1077#1089#1089#1080#1103
-                      FieldType = ffString
-                      DisplayName = 'JOBTITLE'
-                    end
-                    item
-                      FieldName = 'FIELD'
-                      FieldCaption = 'FIELD'
-                      FieldType = ffString
-                      DisplayName = 'FIELD'
-                    end
-                    item
-                      FieldName = 'OKZCODE'
-                      FieldCaption = #1050#1086#1076' '#1054#1050#1047
-                      FieldType = ffString
-                      DisplayName = 'OKZCODE'
-                    end
-                    item
-                      FieldName = 'STARTCODE'
-                      FieldCaption = #1050#1086#1076' '#1045#1058#1050#1057
-                      FieldType = ffString
-                      DisplayName = 'STARTCODE'
-                    end
-                    item
-                      FieldName = 'CITEZENID'
-                      FieldCaption = 'CITEZENID'
-                      FieldType = ffNumber
-                      DisplayName = 'CITEZENID'
-                    end
-                    item
-                      FieldName = 'LASTNAME'
-                      FieldCaption = #1060#1072#1084#1080#1083#1080#1103
-                      FieldType = ffString
-                      DisplayName = 'LASTNAME'
-                    end
-                    item
-                      FieldName = 'NAME'
-                      FieldCaption = #1048#1084#1103
-                      FieldType = ffString
-                      DisplayName = 'NAME'
-                    end
-                    item
-                      FieldName = 'FATHERSHIP'
-                      FieldCaption = #1054#1090#1095#1077#1089#1090#1074#1086
-                      FieldType = ffString
-                      DisplayName = 'FATHERSHIP'
-                    end
-                    item
-                      FieldName = 'PROFFTYPE'
-                      FieldCaption = #1058#1080#1087' '#1074#1083#1072#1076#1077#1085#1080#1103
-                      FieldType = ffString
-                      DisplayName = 'PROFFTYPE'
-                    end>
-                end>
-              ExplicitWidth = 612
+            Width = 1146
+            ExplicitWidth = 1146
+            inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebNew, ebEdit, ebDelete]
+              TableName = 'HR_PROFFESION'
+              Connection = DataModule1.ADConnection1
+            end
+          end
+          inherited Grid: TcxGrid
+            Width = 1146
+            Height = 454
+            ExplicitWidth = 1146
+            ExplicitHeight = 454
+            inherited GridDBTableView1: TcxGridDBTableView
+              OptionsView.CellAutoHeight = False
+              object GridDBTableView1JOBTITLE: TcxGridDBColumn
+                DataBinding.FieldName = 'JOBTITLE'
+                HeaderAlignmentHorz = taCenter
+                Width = 503
+              end
+              object GridDBTableView1KATEG: TcxGridDBColumn
+                DataBinding.FieldName = 'KATEG'
+                HeaderAlignmentHorz = taCenter
+                Width = 46
+              end
+              object GridDBTableView1CODE: TcxGridDBColumn
+                DataBinding.FieldName = 'CODE'
+                HeaderAlignmentHorz = taCenter
+                Width = 84
+              end
+              object GridDBTableView1OKZCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'OKZCODE'
+                HeaderAlignmentHorz = taCenter
+                Width = 75
+              end
+              object GridDBTableView1STARTCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'STARTCODE'
+                Width = 77
+              end
+              object GridDBTableView1CITEZENID: TcxGridDBColumn
+                DataBinding.FieldName = 'CITEZENID'
+                Visible = False
+                HeaderAlignmentHorz = taCenter
+              end
+              object GridDBTableView1LASTNAME: TcxGridDBColumn
+                DataBinding.FieldName = 'LASTNAME'
+                Width = 120
+              end
+              object GridDBTableView1NAME: TcxGridDBColumn
+                DataBinding.FieldName = 'NAME'
+                Width = 89
+              end
+              object GridDBTableView1FATHERSHIP: TcxGridDBColumn
+                DataBinding.FieldName = 'FATHERSHIP'
+              end
+              object GridDBTableView1PROFFTYPE: TcxGridDBColumn
+                DataBinding.FieldName = 'PROFFTYPE'
+              end
             end
           end
         end
       end
     end
-  end
-  inherited Panel6: TPanel
-    Width = 17
-    Visible = False
-    ExplicitWidth = 17
+    inherited TreePanel: TPanel
+      Width = 17
+      Height = 546
+      Visible = False
+      ExplicitWidth = 17
+      ExplicitHeight = 546
+    end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
     SQL.Strings = (
       'select * from HR_V_PROFFESION t'
       'where t.citezenid=:ID')
-    Left = 392
-    Top = 0
+    Left = 440
+    Top = 16
     ParamData = <
       item
         Name = 'ID'
@@ -287,7 +204,7 @@ inherited PROFFESION: TPROFFESION
     end
   end
   inherited DataSource1: TDataSource
-    Left = 424
-    Top = 0
+    Left = 512
+    Top = 16
   end
 end

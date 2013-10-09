@@ -51,7 +51,6 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
         Top = 299
         Width = 370
         Height = 21
-        ItemHeight = 13
         TabOrder = 1
         Text = #1048#1089#1090#1086#1095#1085#1080#1082' '#1082#1086#1084#1087#1083#1077#1082#1090#1086#1074#1072#1085#1080#1103
         DBTable = 'HR_FACETCONTENT'
@@ -69,7 +68,6 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
         Top = 209
         Width = 370
         Height = 21
-        ItemHeight = 13
         TabOrder = 2
         Text = #1055#1088#1080#1095#1080#1085#1072' '#1089#1088#1086#1095#1085#1086#1075#1086' '#1058#1044
         DBTable = 'HR_FACETCONTENT'
@@ -88,7 +86,6 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
         Width = 178
         Height = 21
         Enabled = False
-        ItemHeight = 13
         TabOrder = 3
         Text = #1058#1080#1087' '#1080#1089#1090#1086#1095#1085#1080#1082#1072' '#1082#1086#1084#1087#1083#1077#1082#1090#1086#1074#1072#1085#1080#1103
         DBTable = 'HR_FACETCONTENT'
@@ -107,7 +104,6 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
         Width = 370
         Height = 21
         Color = clWhite
-        ItemHeight = 13
         TabOrder = 4
         Text = #1059#1088#1086#1074#1077#1085#1100' '#1076#1086#1089#1090#1091#1087#1072
         DBTable = 'HR_FACETCONTENT'
@@ -226,6 +222,7 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
         Table = PKDBTable1
         TableField = 'EMPLOYEEID'
         LookUpRool = ' jobtitle||'#39' '#39'||qualification'
+        ReadOnly = False
         DictionaryClass = 'TJOBHISTORY'
         OnBeforeOpenButtonClick = PKDBDictEdit1BeforeOpenButtonClick
         WithoutTable = False
@@ -380,6 +377,5 @@ inherited DOCWORKCONTRACTEDIT: TDOCWORKCONTRACTEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 448
-    Top = 88
   end
 end

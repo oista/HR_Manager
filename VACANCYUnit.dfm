@@ -2,255 +2,141 @@ inherited VACANCY: TVACANCY
   Align = alCustom
   AutoSize = True
   Caption = #1042#1072#1082#1072#1085#1089#1080#1080'   '
-  ClientWidth = 884
+  ClientHeight = 567
+  ClientWidth = 1250
   WindowState = wsMaximized
   OnShow = FormShow
-  ExplicitWidth = 900
-  ExplicitHeight = 502
+  ExplicitWidth = 1266
+  ExplicitHeight = 605
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 884
-    ExplicitWidth = 884
+    Top = 526
+    Width = 1250
+    ExplicitTop = 526
+    ExplicitWidth = 1250
     inherited Button1: TButton
-      Left = 721
-      ExplicitLeft = 721
+      Left = 1087
+      ExplicitLeft = 1087
     end
     inherited Button2: TButton
-      Left = 802
-      ExplicitLeft = 802
+      Left = 1168
+      ExplicitLeft = 1168
     end
   end
   inherited Panel2: TPanel
-    Width = 884
+    Width = 1250
+    Height = 526
     AutoSize = True
-    ExplicitWidth = 884
+    ExplicitWidth = 1250
+    ExplicitHeight = 526
     inherited Splitter1: TSplitter
       Left = 25
+      Height = 526
+      ExplicitLeft = 25
+      ExplicitHeight = 526
     end
     inherited Panel3: TPanel
       Left = 28
-      Width = 856
+      Width = 1222
+      Height = 526
       AutoSize = True
       ExplicitLeft = 28
-      ExplicitWidth = 856
+      ExplicitWidth = 1222
+      ExplicitHeight = 526
       inherited Splitter2: TSplitter
-        Width = 856
+        Top = 423
+        Width = 1222
+        ExplicitTop = 423
         ExplicitWidth = 742
       end
-      inherited Panel5: TPanel
-        Width = 856
-        ExplicitWidth = 856
+      inherited ExtPanel: TPanel
+        Top = 426
+        Width = 1222
+        ExplicitTop = 426
+        ExplicitWidth = 1222
       end
-      inherited PageControl1: TPageControl
-        Width = 856
-        ExplicitWidth = 856
-        inherited TabSheet1: TTabSheet
-          Caption = #1042#1072#1082#1072#1085#1089#1080#1080'   '
-          ExplicitWidth = 848
-          inherited Grid: TVrDbGrid
-            Width = 842
-            CheckFieldName = 'ID'
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'ID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CATEGORYNUMB'
-                Width = 34
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CATEGORYID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'DCODE'
-                Width = 50
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'DEPT'
-                Width = 100
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'JOBTITLE'
-                Width = 198
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'QUALIFICATION'
-                Width = 71
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'AMOUNT'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'STATUS'
-                Width = 95
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'DESCR'
-                Width = 172
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'SALARY'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'SALID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'JOBTITLEID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'QUALIFICATIONID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'ADDITIONHARM'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'ADDITIONSECRET'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'ADDITIONOTHER'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'ALONESALARY'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CONTRACT'
-                Visible = True
-                SortMode = smNone
-              end>
-          end
+      inherited cxPageControl1: TcxPageControl
+        Width = 1222
+        Height = 423
+        ExplicitWidth = 1222
+        ExplicitHeight = 423
+        ClientRectBottom = 417
+        ClientRectRight = 1216
+        inherited cxTabSheet1: TcxTabSheet
+          Caption = #1042#1072#1082#1072#1085#1089#1080#1080'    '
+          ExplicitWidth = 1214
+          ExplicitHeight = 390
           inherited GridPanel1: TGridPanel
-            Width = 842
-            ExplicitWidth = 842
+            Width = 1208
+            ExplicitWidth = 1208
             inherited PKDBEditButtons1: TPKDBEditButtons
-              TableName = 'CS_SCHEDULE_STRUCTURE'
-              PrimaryFieldName = 'ID'
-              Grid = Grid
-              Connection = DataModule1.ADConnection1
+              EnableButtons = [ebRefresh]
             end
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 662
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1042#1072#1082#1072#1089#1085#1089#1080#1080
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'DCODE'
-                      FieldCaption = #1055#1086#1076#1088'.'
-                      FieldType = ffString
-                      DisplayName = 'DCODE'
-                    end
-                    item
-                      FieldName = 'JOBTITLE'
-                      FieldCaption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
-                      FieldType = ffString
-                      DisplayName = 'JOBTITLE'
-                    end
-                    item
-                      FieldName = 'QUALIFICATION'
-                      FieldCaption = #1050#1074#1072#1083#1080#1092'.'
-                      FieldType = ffString
-                      DisplayName = 'QUALIFICATION'
-                    end
-                    item
-                      FieldName = 'CATEGORYNUMB'
-                      FieldCaption = #1050#1072#1090#1077#1075'.'
-                      FieldType = ffNumber
-                      DisplayName = 'CATEGORYNUMB'
-                    end
-                    item
-                      FieldName = 'AMOUNT'
-                      FieldCaption = #1050#1086#1083'-'#1074#1086'.'
-                      FieldType = ffNumber
-                      DisplayName = 'AMOUNT'
-                    end
-                    item
-                      FieldName = 'DESCR'
-                      FieldCaption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-                      FieldType = ffString
-                      DisplayName = 'DESCR'
-                    end
-                    item
-                      FieldName = 'CONTRACT'
-                      FieldCaption = #1050#1086#1085#1090#1088#1072#1082#1090
-                      FieldType = ffString
-                      DisplayName = 'CONTRACT'
-                    end>
-                end>
-              ExplicitWidth = 662
+          end
+          inherited Grid: TcxGrid
+            Width = 1208
+            Height = 350
+            ExplicitWidth = 1208
+            ExplicitHeight = 350
+            inherited GridDBTableView1: TcxGridDBTableView
+              object GridDBTableView1DCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'DCODE'
+                Width = 83
+              end
+              object GridDBTableView1DEPT: TcxGridDBColumn
+                DataBinding.FieldName = 'DEPT'
+                Width = 120
+              end
+              object GridDBTableView1CATEGORYNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'CATEGORYNUMB'
+                Width = 39
+              end
+              object GridDBTableView1JOBTITLE: TcxGridDBColumn
+                DataBinding.FieldName = 'JOBTITLE'
+                Width = 437
+              end
+              object GridDBTableView1QUALIFICATION: TcxGridDBColumn
+                DataBinding.FieldName = 'QUALIFICATION'
+                Width = 112
+              end
+              object GridDBTableView1ADDITIONHARM: TcxGridDBColumn
+                DataBinding.FieldName = 'ADDITIONHARM'
+              end
+              object GridDBTableView1ADDITIONSECRET: TcxGridDBColumn
+                DataBinding.FieldName = 'ADDITIONSECRET'
+                Width = 71
+              end
+              object GridDBTableView1ADDITIONOTHER: TcxGridDBColumn
+                DataBinding.FieldName = 'ADDITIONOTHER'
+                Width = 70
+              end
+              object GridDBTableView1DESCR: TcxGridDBColumn
+                DataBinding.FieldName = 'DESCR'
+                Width = 157
+              end
+              object GridDBTableView1STATUS: TcxGridDBColumn
+                DataBinding.FieldName = 'STATUS'
+              end
             end
           end
         end
       end
     end
-    inherited Panel6: TPanel
+    inherited TreePanel: TPanel
       Width = 25
+      Height = 526
       Visible = False
       ExplicitWidth = 25
+      ExplicitHeight = 526
     end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
     SQL.Strings = (
       'select * from HR_V_VACANCY')
-    Top = 0
+    Left = 520
+    Top = 8
     object MainQueryID: TFMTBCDField
       FieldName = 'ID'
     end
@@ -345,6 +231,7 @@ inherited VACANCY: TVACANCY
     end
   end
   inherited DataSource1: TDataSource
-    Top = 0
+    Left = 440
+    Top = 8
   end
 end

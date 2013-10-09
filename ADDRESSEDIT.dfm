@@ -62,7 +62,6 @@ inherited ADDRESS: TADDRESS
         Top = 205
         Width = 434
         Height = 21
-        ItemHeight = 13
         TabOrder = 2
         Text = #1059#1083#1080#1094#1072
         DBTable = 'FIAS_STREET'
@@ -80,7 +79,6 @@ inherited ADDRESS: TADDRESS
         Top = 160
         Width = 434
         Height = 21
-        ItemHeight = 13
         TabOrder = 3
         Text = #1056#1072#1081#1086#1085' '#1085#1072#1089#1077#1083#1077#1085#1085#1086#1075#1086' '#1087#1091#1085#1082#1090#1072
         OnChange = PKDBBLabelComboBox2Change
@@ -142,7 +140,6 @@ inherited ADDRESS: TADDRESS
         Top = 115
         Width = 434
         Height = 21
-        ItemHeight = 13
         TabOrder = 7
         Text = #1053#1072#1089#1077#1083#1077#1085#1085#1099#1081' '#1087#1091#1085#1082#1090
         OnExit = CitySelect
@@ -161,7 +158,6 @@ inherited ADDRESS: TADDRESS
         Top = 70
         Width = 434
         Height = 21
-        ItemHeight = 13
         TabOrder = 8
         Text = #1056#1072#1081#1086#1085
         OnExit = PKDBBLabelComboBox4Select
@@ -292,7 +288,6 @@ inherited ADDRESS: TADDRESS
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_TEMPIDSEQ'
     Left = 496
-    Top = 88
   end
   object INSERT_ADRESS: TADStoredProc
     Connection = DataModule1.ADConnection1

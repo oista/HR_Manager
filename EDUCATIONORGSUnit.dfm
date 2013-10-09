@@ -9,53 +9,62 @@ inherited EDUCATIONORGS: TEDUCATIONORGS
   inherited Panel1: TPanel
     Top = 577
     Width = 1216
-    ExplicitWidth = 780
+    ExplicitTop = 577
+    ExplicitWidth = 1216
     inherited Button1: TButton
       Left = 1053
-      ExplicitLeft = 617
+      ExplicitLeft = 1053
     end
     inherited Button2: TButton
       Left = 1134
-      ExplicitLeft = 698
+      ExplicitLeft = 1134
     end
   end
   inherited Panel2: TPanel
     Width = 1216
     Height = 577
-    ExplicitWidth = 780
+    ExplicitWidth = 1216
+    ExplicitHeight = 577
     inherited Splitter1: TSplitter
       Left = 25
       Height = 577
+      ExplicitLeft = 25
+      ExplicitHeight = 577
     end
     inherited Panel3: TPanel
       Left = 28
       Width = 1188
       Height = 577
       ExplicitLeft = 28
-      ExplicitWidth = 752
+      ExplicitWidth = 1188
+      ExplicitHeight = 577
       inherited Splitter2: TSplitter
         Top = 474
         Width = 1188
+        ExplicitTop = 474
         ExplicitWidth = 653
       end
       inherited ExtPanel: TPanel
         Top = 477
         Width = 1188
         Visible = False
-        ExplicitWidth = 752
+        ExplicitTop = 477
+        ExplicitWidth = 1188
       end
       inherited cxPageControl1: TcxPageControl
         Width = 1188
         Height = 474
-        ExplicitWidth = 752
-        ClientRectBottom = 474
-        ClientRectRight = 1188
+        ExplicitWidth = 1188
+        ExplicitHeight = 474
+        ClientRectBottom = 468
+        ClientRectRight = 1182
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1054#1073#1088#1072#1079#1086#1074#1072#1090#1077#1083#1100#1085#1099#1077' '#1091#1095#1077#1088#1077#1078#1076#1077#1085#1080#1103'       '
-          ExplicitWidth = 752
+          ExplicitWidth = 1180
+          ExplicitHeight = 441
           inherited GridPanel1: TGridPanel
-            Width = 1182
-            ExplicitWidth = 746
+            Width = 1174
+            ExplicitWidth = 1174
             inherited PKDBEditButtons1: TPKDBEditButtons
               EnableButtons = [ebRefresh, ebNew]
               TableName = 'HR_ORGANISATION'
@@ -64,15 +73,12 @@ inherited EDUCATIONORGS: TEDUCATIONORGS
             end
           end
           inherited Grid: TcxGrid
-            Width = 1182
-            Height = 410
-            ExplicitWidth = 746
+            Width = 1174
+            Height = 401
+            ExplicitWidth = 1174
+            ExplicitHeight = 401
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
-              object GridDBTableView1ID: TcxGridDBColumn
-                DataBinding.FieldName = 'ID'
-                Visible = False
-              end
               object GridDBTableView1NAME: TcxGridDBColumn
                 DataBinding.FieldName = 'NAME'
                 HeaderAlignmentHorz = taCenter
@@ -93,6 +99,7 @@ inherited EDUCATIONORGS: TEDUCATIONORGS
       Height = 577
       Visible = False
       ExplicitWidth = 25
+      ExplicitHeight = 577
     end
   end
   inherited MainQuery: TADQuery

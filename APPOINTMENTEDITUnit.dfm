@@ -491,7 +491,6 @@ inherited APPOINTMENTEDIT: TAPPOINTMENTEDIT
           Top = 81
           Width = 178
           Height = 21
-          ItemHeight = 13
           TabOrder = 2
           DBTable = 'hr_v_employer'
           PrimaryKey = 'id'
@@ -505,7 +504,6 @@ inherited APPOINTMENTEDIT: TAPPOINTMENTEDIT
         Top = 115
         Width = 177
         Height = 21
-        ItemHeight = 13
         TabOrder = 11
         Text = #1058#1080#1087' '#1087#1077#1088#1077#1074#1086#1076#1072
         DBTable = 'HR_FACETCONTENT'
@@ -536,7 +534,6 @@ inherited APPOINTMENTEDIT: TAPPOINTMENTEDIT
     Top = 434
     Width = 178
     Height = 21
-    ItemHeight = 13
     TabOrder = 2
     Text = #1056#1072#1073#1086#1090#1086#1076#1072#1090#1077#1083#1100
     DBTable = 'hr_V_EMPLOYER'
@@ -668,7 +665,6 @@ inherited APPOINTMENTEDIT: TAPPOINTMENTEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 437
-    Top = 88
   end
   object ADStoredProc2: TADStoredProc
     Connection = DataModule1.ADConnection1

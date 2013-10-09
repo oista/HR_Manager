@@ -7,7 +7,7 @@ uses
   Dialogs, EditDialogUnit, PKDBTable, ComCtrls, StdCtrls, ExtCtrls, PKDBDictEdit,
   PKDBEdit, DB, uADStanIntf, uADStanOption, uADStanParam, uADStanError,
   uADDatSManager, uADPhysIntf, uADDAptIntf, uADStanAsync, uADDAptManager,
-  uADCompDataSet, uADCompClient, PKDBBBaseComboBox;
+  uADCompDataSet, uADCompClient, PKDBBBaseComboBox, PKDBDefs, PKDBContext;
 
 type
   TJOBHISTORYEDIT = class(TEditDialog)

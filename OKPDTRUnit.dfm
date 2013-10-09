@@ -1,177 +1,126 @@
 inherited OKPDTR: TOKPDTR
-  Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1080'     '
+  Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080'     '
   ClientHeight = 573
-  ClientWidth = 787
-  ExplicitWidth = 795
-  ExplicitHeight = 607
+  ClientWidth = 1197
+  ExplicitWidth = 1213
+  ExplicitHeight = 611
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Top = 532
-    Width = 787
+    Width = 1197
     ExplicitTop = 532
-    ExplicitWidth = 787
+    ExplicitWidth = 1197
     inherited Button1: TButton
-      Left = 624
-      ExplicitLeft = 624
+      Left = 1034
+      ExplicitLeft = 1034
     end
     inherited Button2: TButton
-      Left = 705
-      ExplicitLeft = 705
+      Left = 1115
+      ExplicitLeft = 1115
     end
   end
   inherited Panel2: TPanel
-    Left = 33
-    Width = 754
+    Width = 1197
     Height = 532
-    ExplicitLeft = 33
-    ExplicitWidth = 754
+    ExplicitWidth = 1197
     ExplicitHeight = 532
     inherited Splitter1: TSplitter
+      Left = 33
       Height = 532
+      ExplicitLeft = 33
       ExplicitHeight = 532
     end
     inherited Panel3: TPanel
-      Width = 751
+      Left = 36
+      Width = 1161
       Height = 532
-      ExplicitWidth = 751
+      ExplicitLeft = 36
+      ExplicitWidth = 1161
       ExplicitHeight = 532
       inherited Splitter2: TSplitter
         Top = 482
-        Width = 751
+        Width = 1161
         ExplicitTop = 482
         ExplicitWidth = 531
       end
-      inherited Panel5: TPanel
+      inherited ExtPanel: TPanel
         Top = 485
-        Width = 751
+        Width = 1161
         Height = 47
         Visible = False
         ExplicitTop = 485
-        ExplicitWidth = 751
+        ExplicitWidth = 1161
         ExplicitHeight = 47
       end
-      inherited PageControl1: TPageControl
-        Width = 751
+      inherited cxPageControl1: TcxPageControl
+        Width = 1161
         Height = 482
-        ExplicitWidth = 751
+        ExplicitWidth = 1161
         ExplicitHeight = 482
-        inherited TabSheet1: TTabSheet
-          Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1080
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 743
-          ExplicitHeight = 454
-          inherited Grid: TVrDbGrid
-            Width = 737
-            Height = 417
-            CheckFieldName = 'ID'
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'JOBTITLE'
-                Width = 426
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'KATEG'
-                Width = 39
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'ID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CODE'
-                Width = 77
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'OKZCODE'
-                Width = 52
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'STARTCODE'
-                Visible = True
-                SortMode = smNone
-              end>
-          end
+        ClientRectBottom = 482
+        ClientRectRight = 1161
+        inherited cxTabSheet1: TcxTabSheet
+          Caption = #1055#1088#1086#1092#1077#1089#1089#1080#1080
+          ExplicitWidth = 1161
+          ExplicitHeight = 458
           inherited GridPanel1: TGridPanel
-            Width = 737
-            ExplicitWidth = 737
+            Width = 1155
+            ExplicitWidth = 1155
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh]
               TableName = 'HR_JOBTITLE'
-              PrimaryFieldName = 'ID'
-              Grid = Grid
               Connection = DataModule1.ADConnection1
-              EditDialogClassName = 'TJOBTITLEDIT'
             end
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 585
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1080
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'JOBTITLE'
-                      FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                      FieldType = ffString
-                      DisplayName = 'JOBTITLE'
-                    end
-                    item
-                      FieldName = 'CODE'
-                      FieldCaption = #1050#1086#1076' '#1054#1050#1055#1044#1058#1056
-                      FieldType = ffString
-                      DisplayName = 'CODE'
-                    end
-                    item
-                      FieldName = 'KATEG'
-                      FieldCaption = #1050#1072#1090#1077#1075'.'
-                      FieldType = ffString
-                      DisplayName = 'KATEG'
-                    end
-                    item
-                      FieldName = 'OKZCODE'
-                      FieldCaption = #1050#1086#1076' '#1054#1050#1047
-                      FieldType = ffString
-                      DisplayName = 'OKZCODE'
-                    end
-                    item
-                      FieldName = 'STARTCODE'
-                      FieldCaption = #1050#1086#1076' '#1074#1099#1087#1091#1089#1082#1072' '#1045#1058#1050#1057
-                      FieldType = ffString
-                      DisplayName = 'STARTCODE'
-                    end>
-                end>
-              ExplicitLeft = 156
-              ExplicitTop = 1
-              ExplicitWidth = 585
+          end
+          inherited Grid: TcxGrid
+            Width = 1155
+            Height = 418
+            ExplicitWidth = 1155
+            ExplicitHeight = 418
+            inherited GridDBTableView1: TcxGridDBTableView
+              OptionsView.CellAutoHeight = False
+              object GridDBTableView1ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ID'
+                Visible = False
+                HeaderAlignmentHorz = taCenter
+              end
+              object GridDBTableView1JOBTITLE: TcxGridDBColumn
+                DataBinding.FieldName = 'JOBTITLE'
+                HeaderAlignmentHorz = taCenter
+                Width = 360
+              end
+              object GridDBTableView1KATEG: TcxGridDBColumn
+                DataBinding.FieldName = 'KATEG'
+                HeaderAlignmentHorz = taCenter
+                Width = 50
+              end
+              object GridDBTableView1CODE: TcxGridDBColumn
+                DataBinding.FieldName = 'CODE'
+                HeaderAlignmentHorz = taCenter
+                Width = 90
+              end
+              object GridDBTableView1OKZCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'OKZCODE'
+                HeaderAlignmentHorz = taCenter
+                Width = 89
+              end
+              object GridDBTableView1STARTCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'STARTCODE'
+                HeaderAlignmentHorz = taCenter
+              end
             end
           end
         end
       end
     end
-  end
-  inherited Panel6: TPanel
-    Width = 33
-    Height = 532
-    Visible = False
-    ExplicitWidth = 33
-    ExplicitHeight = 532
+    inherited TreePanel: TPanel
+      Width = 33
+      Height = 532
+      Visible = False
+      ExplicitWidth = 33
+      ExplicitHeight = 532
+    end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
@@ -215,7 +164,7 @@ inherited OKPDTR: TOKPDTR
     end
   end
   inherited DataSource1: TDataSource
-    Left = 448
+    Left = 472
     Top = 0
   end
 end

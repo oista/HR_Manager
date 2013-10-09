@@ -31,7 +31,6 @@ type
     MainQueryPHONEDESC2: TStringField;
     MainQueryPHONEDESC3: TStringField;
     MainQueryPHONEDESC4: TStringField;
-    GridDBTableView1ID: TcxGridDBColumn;
     GridDBTableView1NAME: TcxGridDBColumn;
     GridDBTableView1TYPENAME: TcxGridDBColumn;
   private

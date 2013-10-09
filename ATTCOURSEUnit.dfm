@@ -1,102 +1,88 @@
 inherited ATTCOUSE: TATTCOUSE
   Caption = #1040#1090#1077#1089#1090#1072#1094#1080#1086#1085#1085#1099#1077' '#1082#1091#1088#1089#1099'   '
   ClientHeight = 509
-  ClientWidth = 954
-  ExplicitWidth = 970
+  ClientWidth = 982
+  ExplicitWidth = 998
   ExplicitHeight = 547
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Top = 468
-    Width = 954
-    ExplicitTop = 474
-    ExplicitWidth = 954
+    Width = 982
+    ExplicitTop = 468
+    ExplicitWidth = 982
     inherited Button1: TButton
-      Left = 791
+      Left = 819
+      ExplicitLeft = 819
     end
     inherited Button2: TButton
-      Left = 872
+      Left = 900
+      ExplicitLeft = 900
     end
   end
   inherited Panel2: TPanel
-    Width = 954
+    Width = 982
     Height = 468
+    ExplicitWidth = 982
+    ExplicitHeight = 468
     inherited Splitter1: TSplitter
       Left = 41
       Height = 468
+      ExplicitLeft = 41
+      ExplicitHeight = 468
     end
     inherited Panel3: TPanel
       Left = 44
-      Width = 910
+      Width = 938
       Height = 468
+      ExplicitLeft = 44
+      ExplicitWidth = 938
+      ExplicitHeight = 468
       inherited Splitter2: TSplitter
         Top = 413
-        Width = 910
+        Width = 938
+        ExplicitTop = 413
+        ExplicitWidth = 910
       end
-      inherited Panel5: TPanel
+      inherited ExtPanel: TPanel
         Top = 416
-        Width = 910
+        Width = 938
         Height = 52
         Visible = False
         ExplicitTop = 416
-        ExplicitWidth = 910
+        ExplicitWidth = 938
         ExplicitHeight = 52
       end
-      inherited PageControl1: TPageControl
-        Width = 910
+      inherited cxPageControl1: TcxPageControl
+        Width = 938
         Height = 413
-        ExplicitWidth = 910
+        ExplicitWidth = 938
         ExplicitHeight = 413
-        inherited TabSheet1: TTabSheet
-          Caption = #1040#1090#1077#1089#1090#1072#1094#1080#1086#1085#1085#1099#1077' '#1082#1091#1088#1089#1099'    '
-          inherited Grid: TVrDbGrid
-            Width = 896
-            Height = 348
-            CheckFieldName = 'ID'
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'ID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'COURSENAME'
-                Visible = True
-                SortMode = smNone
-              end>
-          end
+        ClientRectBottom = 407
+        ClientRectRight = 932
+        inherited cxTabSheet1: TcxTabSheet
+          ExplicitWidth = 930
+          ExplicitHeight = 380
           inherited GridPanel1: TGridPanel
-            Width = 896
-            inherited PKDBEditButtons1: TPKDBEditButtons
-              TableName = 'HR_ATESTAT_COURESES'
-              PrimaryFieldName = 'ID'
-              ParentFieldName = 'ID'
-              Grid = Grid
-              Connection = DataModule1.ADConnection1
-              EditDialogClassName = 'TATTCOUSEEDIT'
-            end
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 716
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'COURSENAME'
-                      FieldCaption = #1053#1072#1079#1074#1072#1085#1080#1077
-                      FieldType = ffString
-                      DisplayName = 'COURSENAME'
-                    end>
-                end>
+            Width = 924
+            ExplicitWidth = 924
+          end
+          inherited Grid: TcxGrid
+            Width = 924
+            Height = 340
+            ExplicitWidth = 924
+            ExplicitHeight = 340
+            inherited GridDBTableView1: TcxGridDBTableView
+              object GridDBTableView1COURSENAME: TcxGridDBColumn
+                DataBinding.FieldName = 'COURSENAME'
+                HeaderAlignmentHorz = taCenter
+              end
             end
           end
         end
       end
     end
-    inherited Panel6: TPanel
+    inherited TreePanel: TPanel
       Width = 41
       Height = 468
       Visible = False
@@ -108,7 +94,8 @@ inherited ATTCOUSE: TATTCOUSE
     Connection = DataModule1.ADConnection1
     SQL.Strings = (
       'select * from HR_ATESTAT_COURESES')
-    Top = 0
+    Left = 576
+    Top = 8
     object MainQueryID: TFMTBCDField
       FieldName = 'ID'
       KeyFields = 'ID'
@@ -123,6 +110,7 @@ inherited ATTCOUSE: TATTCOUSE
     end
   end
   inherited DataSource1: TDataSource
-    Top = 0
+    Left = 504
+    Top = 8
   end
 end

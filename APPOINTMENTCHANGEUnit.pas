@@ -8,7 +8,7 @@ uses
   PKDBEdit, PKDBBBaseComboBox,dictunit, DB, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
   uADStanAsync, uADDAptManager, uADCompClient, uADCompDataSet, reportunit,
-  PKDBCheckBox;
+  PKDBCheckBox, PKDBDefs, PKDBContext;
 
 type
   TPROCSTATE=(NEW, ACT, ARCHIVE);

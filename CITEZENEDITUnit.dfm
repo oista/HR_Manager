@@ -1,27 +1,29 @@
 inherited CITEZENEDIT: TCITEZENEDIT
   Caption = #1043#1088#1072#1078#1076#1072#1085#1080#1085
   ClientHeight = 577
-  ClientWidth = 1027
-  ExplicitWidth = 1033
+  ClientWidth = 1064
+  ExplicitWidth = 1070
   ExplicitHeight = 601
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Left = 936
+    Left = 973
     Height = 577
     TabOrder = 1
-    ExplicitLeft = 978
+    ExplicitLeft = 936
     ExplicitHeight = 577
   end
   inherited PageControl1: TPageControl
-    Width = 930
+    Width = 967
     Height = 571
     TabOrder = 0
-    ExplicitWidth = 972
+    ExplicitWidth = 967
     ExplicitHeight = 571
     inherited TabSheet1: TTabSheet
       Caption = #1043#1088#1072#1078#1076#1072#1085#1080#1085
-      ExplicitWidth = 964
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 951
       ExplicitHeight = 543
       object PKDBLabelEdit1: TPKDBLabelEdit
         Left = 15
@@ -319,7 +321,10 @@ inherited CITEZENEDIT: TCITEZENEDIT
     object TabSheet8: TTabSheet
       Caption = #1055#1072#1076#1077#1078#1080' '#1060#1048#1054
       ImageIndex = 7
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object GroupBox4: TGroupBox
         Left = 16
         Top = 16
@@ -477,12 +482,15 @@ inherited CITEZENEDIT: TCITEZENEDIT
     object TabSheet5: TTabSheet
       Caption = #1054#1073#1088#1072#1079#1086#1074#1072#1085#1080#1077
       ImageIndex = 4
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 922
+      ExplicitHeight = 0
       object GridPanel2: TGridPanel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 916
+        Width = 953
         Height = 28
         Align = alTop
         BevelOuter = bvNone
@@ -503,29 +511,26 @@ inherited CITEZENEDIT: TCITEZENEDIT
             Column = 0
             Control = PKDBEditButtons2
             Row = 0
-          end
-          item
-            Column = 1
-            Control = PKDBFindPanel2
-            Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 0
-        ExplicitWidth = 958
+        ExplicitWidth = 916
         object PKDBEditButtons2: TPKDBEditButtons
           Left = 0
           Top = 0
           Width = 180
           Height = 28
           CheckUserPrivs = False
+          CheckRecStatus = False
+          EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
           TableName = 'HR_DOCEDUCATION'
           TempTableName = 'HR_DOCEDUCATIONTEMP'
           PrimaryFieldName = 'ID'
           ParentFieldName = 'CITEZENID'
-          Grid = VrDbGrid2
+          Grid = grd_education
           Connection = DataModule1.ADConnection1
           UseTempTable = True
           EditDialogClassName = 'TDOCEDUCATIONEDIT'
@@ -533,226 +538,93 @@ inherited CITEZENEDIT: TCITEZENEDIT
             180
             28)
         end
-        object PKDBFindPanel2: TPKDBFindPanel
-          Left = 152
-          Top = 0
-          Width = 764
-          Height = 27
-          QuerysCollection = <
-            item
-              QueryCaption = 'C'#1086#1089#1090#1072#1074' '#1088#1072#1089#1087#1080#1089#1072#1085#1080#1103
-              MainQuery = True
-              KeyFieldName = 'ID'
-              FieldList = <
-                item
-                  FieldName = 'JOBTITLE'
-                  FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                  FieldType = ffString
-                  DisplayName = 'JOBTITLE'
-                end
-                item
-                  FieldName = 'CATEGORYNUMB'
-                  FieldCaption = #1050#1072#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'CATEGORYNUMB'
-                end
-                item
-                  FieldName = 'AMOUNT'
-                  FieldCaption = #1050#1086#1083'-'#1074#1086'.'
-                  FieldType = ffNumber
-                  DisplayName = 'AMOUNT'
-                end
-                item
-                  FieldName = 'SALARY'
-                  FieldCaption = #1054#1082#1083#1072#1076'('#1057#1090#1072#1074#1082#1072')'
-                  FieldType = ffNumber
-                  DisplayName = 'SALARY'
-                end
-                item
-                  FieldName = 'ADDITIONHARM'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1074#1088#1077#1076'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONHARM'
-                end
-                item
-                  FieldName = 'ADDITIONSECRET'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1089#1077#1082#1088#1077#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONSECRET'
-                end
-                item
-                  FieldName = 'ADDITIONOTHER'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1087#1088#1086#1095#1077#1077
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONOTHER'
-                end
-                item
-                  FieldName = 'DESCR'
-                  FieldCaption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'DESCR'
-                end
-                item
-                  FieldName = 'SALID'
-                  FieldCaption = 'SALID'
-                  FieldType = ffNumber
-                  DisplayName = 'SALID'
-                end
-                item
-                  FieldName = 'JOBTITLEID'
-                  FieldCaption = 'JOBTITLEID'
-                  FieldType = ffNumber
-                  DisplayName = 'JOBTITLEID'
-                end
-                item
-                  FieldName = 'QUALIFICATIONID'
-                  FieldCaption = 'QUALIFICATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'QUALIFICATIONID'
-                end
-                item
-                  FieldName = 'RATEID'
-                  FieldCaption = 'RATEID'
-                  FieldType = ffNumber
-                  DisplayName = 'RATEID'
-                end
-                item
-                  FieldName = 'ALONESALARY'
-                  FieldCaption = 'ALONESALARY'
-                  FieldType = ffNumber
-                  DisplayName = 'ALONESALARY'
-                end
-                item
-                  FieldName = 'OCCUPIED'
-                  FieldCaption = 'OCCUPIED'
-                  FieldType = ffNumber
-                  DisplayName = 'OCCUPIED'
-                end
-                item
-                  FieldName = 'SUBORDINATIONID'
-                  FieldCaption = 'SUBORDINATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'SUBORDINATIONID'
-                end
-                item
-                  FieldName = 'QUALIFICATION'
-                  FieldCaption = #1050#1074#1072#1083#1080#1092'.'
-                  FieldType = ffString
-                  DisplayName = 'QUALIFICATION'
-                end>
-            end>
-          ExplicitWidth = 806
-          DesignSize = (
-            764
-            27)
-        end
       end
-      object VrDbGrid2: TVrDbGrid
+      object grd_education: TcxGrid
         Left = 0
         Top = 34
-        Width = 922
+        Width = 959
         Height = 509
-        ScrollBars = ssHorizontal
-        ShowCheckBoxes = False
-        CheckFieldName = 'ID'
-        CheckedRowsColoured = False
-        CheckedRowsColour = clBlack
-        MultiSelect = False
-        ColouredRows = True
-        CrmEvnColor = clInfoBk
-        CrmOddColor = clWindow
-        SortChangeEnable = True
-        ToneColor1 = clBlack
-        ToneColor2 = clBlack
-        ToneColor3 = clBlack
-        ToneColorRows = False
         Align = alClient
-        DataSource = DS_DOCEDUCATION
         TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'CITEZENID'
+        ExplicitLeft = 376
+        ExplicitTop = 343
+        ExplicitWidth = 250
+        ExplicitHeight = 200
+        object grd_educationDBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = DS_DOCEDUCATION
+          DataController.KeyFieldNames = 'ID'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object grd_educationDBTableView1DOCTYPE: TcxGridDBColumn
+            DataBinding.FieldName = 'DOCTYPE'
+            HeaderAlignmentHorz = taCenter
+            Width = 267
+          end
+          object grd_educationDBTableView1OUTYEAR: TcxGridDBColumn
+            DataBinding.FieldName = 'OUTYEAR'
+            HeaderAlignmentHorz = taCenter
+            Width = 97
+          end
+          object grd_educationDBTableView1CITEZENID: TcxGridDBColumn
+            DataBinding.FieldName = 'CITEZENID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = 'ID'
+          object grd_educationDBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = 'DOCTYPE'
-            Width = 100
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1DOCSERIA: TcxGridDBColumn
+            DataBinding.FieldName = 'DOCSERIA'
+            HeaderAlignmentHorz = taCenter
+            Width = 80
           end
-          item
-            Expanded = False
-            FieldName = 'DOCSERIA'
-            Width = 68
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1DOCNUMB: TcxGridDBColumn
+            DataBinding.FieldName = 'DOCNUMB'
+            HeaderAlignmentHorz = taCenter
+            Width = 89
           end
-          item
-            Expanded = False
-            FieldName = 'DOCNUMB'
-            Width = 94
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1NAME: TcxGridDBColumn
+            DataBinding.FieldName = 'NAME'
+            HeaderAlignmentHorz = taCenter
+            Width = 305
           end
-          item
-            Expanded = False
-            FieldName = 'NAME'
-            Width = 105
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1SPECIALITY: TcxGridDBColumn
+            DataBinding.FieldName = 'SPECIALITY'
+            HeaderAlignmentHorz = taCenter
+            Width = 245
           end
-          item
-            Expanded = False
-            FieldName = 'OUTYEAR'
-            Width = 51
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1CVALIFICATION: TcxGridDBColumn
+            DataBinding.FieldName = 'CVALIFICATION'
+            HeaderAlignmentHorz = taCenter
+            Width = 150
           end
-          item
-            Expanded = False
-            FieldName = 'SPECIALITY'
-            Width = 164
-            Visible = True
-            SortMode = smNone
+          object grd_educationDBTableView1OVEREDUCATION: TcxGridDBColumn
+            DataBinding.FieldName = 'OVEREDUCATION'
+            HeaderAlignmentHorz = taCenter
+            Width = 300
           end
-          item
-            Expanded = False
-            FieldName = 'CVALIFICATION'
-            Width = 111
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'OVEREDUCATION'
-            Visible = True
-            SortMode = smNone
-          end>
+        end
+        object grd_educationLevel1: TcxGridLevel
+          GridView = grd_educationDBTableView1
+        end
       end
     end
     object TabSheet3: TTabSheet
       Caption = #1047#1085#1072#1085#1080#1077' '#1103#1079#1099#1082#1086#1074'  '
       ImageIndex = 2
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object GridPanel3: TGridPanel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 916
+        Width = 953
         Height = 28
         Align = alTop
         BevelOuter = bvNone
@@ -773,29 +645,26 @@ inherited CITEZENEDIT: TCITEZENEDIT
             Column = 0
             Control = PKDBEditButtons3
             Row = 0
-          end
-          item
-            Column = 1
-            Control = PKDBFindPanel3
-            Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 0
-        ExplicitWidth = 958
+        ExplicitWidth = 945
         object PKDBEditButtons3: TPKDBEditButtons
           Left = 0
           Top = 0
           Width = 180
           Height = 28
           CheckUserPrivs = False
+          CheckRecStatus = False
+          EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
           TableName = 'HR_LANGUAGE'
           TempTableName = 'HR_LANGUAGETEMP'
           PrimaryFieldName = 'ID'
           ParentFieldName = 'CITEZENID'
-          Grid = VrDbGrid3
+          Grid = grd_language
           Connection = DataModule1.ADConnection1
           UseTempTable = True
           EditDialogClassName = 'TLANGUAGEEDIT'
@@ -803,180 +672,57 @@ inherited CITEZENEDIT: TCITEZENEDIT
             180
             28)
         end
-        object PKDBFindPanel3: TPKDBFindPanel
-          Left = 152
-          Top = 0
-          Width = 764
-          Height = 27
-          QuerysCollection = <
-            item
-              QueryCaption = 'C'#1086#1089#1090#1072#1074' '#1088#1072#1089#1087#1080#1089#1072#1085#1080#1103
-              MainQuery = True
-              KeyFieldName = 'ID'
-              FieldList = <
-                item
-                  FieldName = 'JOBTITLE'
-                  FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                  FieldType = ffString
-                  DisplayName = 'JOBTITLE'
-                end
-                item
-                  FieldName = 'CATEGORYNUMB'
-                  FieldCaption = #1050#1072#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'CATEGORYNUMB'
-                end
-                item
-                  FieldName = 'AMOUNT'
-                  FieldCaption = #1050#1086#1083'-'#1074#1086'.'
-                  FieldType = ffNumber
-                  DisplayName = 'AMOUNT'
-                end
-                item
-                  FieldName = 'SALARY'
-                  FieldCaption = #1054#1082#1083#1072#1076'('#1057#1090#1072#1074#1082#1072')'
-                  FieldType = ffNumber
-                  DisplayName = 'SALARY'
-                end
-                item
-                  FieldName = 'ADDITIONHARM'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1074#1088#1077#1076'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONHARM'
-                end
-                item
-                  FieldName = 'ADDITIONSECRET'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1089#1077#1082#1088#1077#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONSECRET'
-                end
-                item
-                  FieldName = 'ADDITIONOTHER'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1087#1088#1086#1095#1077#1077
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONOTHER'
-                end
-                item
-                  FieldName = 'DESCR'
-                  FieldCaption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'DESCR'
-                end
-                item
-                  FieldName = 'SALID'
-                  FieldCaption = 'SALID'
-                  FieldType = ffNumber
-                  DisplayName = 'SALID'
-                end
-                item
-                  FieldName = 'JOBTITLEID'
-                  FieldCaption = 'JOBTITLEID'
-                  FieldType = ffNumber
-                  DisplayName = 'JOBTITLEID'
-                end
-                item
-                  FieldName = 'QUALIFICATIONID'
-                  FieldCaption = 'QUALIFICATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'QUALIFICATIONID'
-                end
-                item
-                  FieldName = 'RATEID'
-                  FieldCaption = 'RATEID'
-                  FieldType = ffNumber
-                  DisplayName = 'RATEID'
-                end
-                item
-                  FieldName = 'ALONESALARY'
-                  FieldCaption = 'ALONESALARY'
-                  FieldType = ffNumber
-                  DisplayName = 'ALONESALARY'
-                end
-                item
-                  FieldName = 'OCCUPIED'
-                  FieldCaption = 'OCCUPIED'
-                  FieldType = ffNumber
-                  DisplayName = 'OCCUPIED'
-                end
-                item
-                  FieldName = 'SUBORDINATIONID'
-                  FieldCaption = 'SUBORDINATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'SUBORDINATIONID'
-                end
-                item
-                  FieldName = 'QUALIFICATION'
-                  FieldCaption = #1050#1074#1072#1083#1080#1092'.'
-                  FieldType = ffString
-                  DisplayName = 'QUALIFICATION'
-                end>
-            end>
-          ExplicitWidth = 806
-          DesignSize = (
-            764
-            27)
-        end
       end
-      object VrDbGrid3: TVrDbGrid
+      object grd_language: TcxGrid
         Left = 0
         Top = 34
-        Width = 922
+        Width = 959
         Height = 509
-        ScrollBars = ssHorizontal
-        ShowCheckBoxes = False
-        CheckFieldName = 'ID'
-        CheckedRowsColoured = False
-        CheckedRowsColour = clBlack
-        MultiSelect = False
-        ColouredRows = True
-        CrmEvnColor = clInfoBk
-        CrmOddColor = clWindow
-        SortChangeEnable = True
-        ToneColor1 = clBlack
-        ToneColor2 = clBlack
-        ToneColor3 = clBlack
-        ToneColorRows = False
         Align = alClient
-        DataSource = DS_LANGUAGE
         TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'STEP'
-            Width = 167
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'CITEZENID'
+        ExplicitLeft = 709
+        ExplicitWidth = 509
+        ExplicitHeight = 250
+        object grd_languageDBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = DS_LANGUAGE
+          DataController.KeyFieldNames = 'ID'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object grd_languageDBTableView1CITEZENID: TcxGridDBColumn
+            DataBinding.FieldName = 'CITEZENID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = 'LANG'
-            Width = 3000
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'ID'
+          object grd_languageDBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
             Visible = False
-            SortMode = smNone
-          end>
+            HeaderAlignmentHorz = taCenter
+          end
+          object grd_languageDBTableView1LANG: TcxGridDBColumn
+            DataBinding.FieldName = 'LANG'
+            HeaderAlignmentHorz = taCenter
+            Width = 579
+          end
+          object grd_languageDBTableView1STEP: TcxGridDBColumn
+            DataBinding.FieldName = 'STEP'
+            HeaderAlignmentHorz = taCenter
+            Width = 1500
+          end
+        end
+        object grd_languageLevel1: TcxGridLevel
+          GridView = grd_languageDBTableView1
+        end
       end
     end
     object TabSheet6: TTabSheet
       Caption = #1042#1086#1080#1085#1089#1082#1080#1081' '#1091#1095#1077#1090
       ImageIndex = 5
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object PKDBBLabelComboBox3: TPKDBBLabelComboBox
         Left = 15
         Top = 205
@@ -1139,12 +885,15 @@ inherited CITEZENEDIT: TCITEZENEDIT
     object TabSheet2: TTabSheet
       Caption = #1040#1076#1088#1077#1089
       ImageIndex = 5
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object GridPanel1: TGridPanel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 916
+        Width = 953
         Height = 28
         Align = alTop
         BevelOuter = bvNone
@@ -1165,29 +914,26 @@ inherited CITEZENEDIT: TCITEZENEDIT
             Column = 0
             Control = PKDBEditButtons1
             Row = 0
-          end
-          item
-            Column = 1
-            Control = PKDBFindPanel1
-            Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 0
-        ExplicitWidth = 958
+        ExplicitWidth = 945
         object PKDBEditButtons1: TPKDBEditButtons
           Left = 0
           Top = 0
           Width = 180
           Height = 28
           CheckUserPrivs = False
+          CheckRecStatus = False
+          EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
           TableName = 'HR_ADRESS'
           TempTableName = 'HR_ADRESSTEMP'
           PrimaryFieldName = 'ID'
           ParentFieldName = 'CITEZENID'
-          Grid = VrDbGrid1
+          Grid = grd_adress
           Connection = DataModule1.ADConnection1
           UseTempTable = True
           EditDialogClassName = 'TADDRESS'
@@ -1195,218 +941,81 @@ inherited CITEZENEDIT: TCITEZENEDIT
             180
             28)
         end
-        object PKDBFindPanel1: TPKDBFindPanel
-          Left = 152
-          Top = 0
-          Width = 764
-          Height = 27
-          QuerysCollection = <
-            item
-              QueryCaption = 'C'#1086#1089#1090#1072#1074' '#1088#1072#1089#1087#1080#1089#1072#1085#1080#1103
-              MainQuery = True
-              KeyFieldName = 'ID'
-              FieldList = <
-                item
-                  FieldName = 'JOBTITLE'
-                  FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                  FieldType = ffString
-                  DisplayName = 'JOBTITLE'
-                end
-                item
-                  FieldName = 'CATEGORYNUMB'
-                  FieldCaption = #1050#1072#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'CATEGORYNUMB'
-                end
-                item
-                  FieldName = 'AMOUNT'
-                  FieldCaption = #1050#1086#1083'-'#1074#1086'.'
-                  FieldType = ffNumber
-                  DisplayName = 'AMOUNT'
-                end
-                item
-                  FieldName = 'SALARY'
-                  FieldCaption = #1054#1082#1083#1072#1076'('#1057#1090#1072#1074#1082#1072')'
-                  FieldType = ffNumber
-                  DisplayName = 'SALARY'
-                end
-                item
-                  FieldName = 'ADDITIONHARM'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1074#1088#1077#1076'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONHARM'
-                end
-                item
-                  FieldName = 'ADDITIONSECRET'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1089#1077#1082#1088#1077#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONSECRET'
-                end
-                item
-                  FieldName = 'ADDITIONOTHER'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1087#1088#1086#1095#1077#1077
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONOTHER'
-                end
-                item
-                  FieldName = 'DESCR'
-                  FieldCaption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'DESCR'
-                end
-                item
-                  FieldName = 'SALID'
-                  FieldCaption = 'SALID'
-                  FieldType = ffNumber
-                  DisplayName = 'SALID'
-                end
-                item
-                  FieldName = 'JOBTITLEID'
-                  FieldCaption = 'JOBTITLEID'
-                  FieldType = ffNumber
-                  DisplayName = 'JOBTITLEID'
-                end
-                item
-                  FieldName = 'QUALIFICATIONID'
-                  FieldCaption = 'QUALIFICATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'QUALIFICATIONID'
-                end
-                item
-                  FieldName = 'RATEID'
-                  FieldCaption = 'RATEID'
-                  FieldType = ffNumber
-                  DisplayName = 'RATEID'
-                end
-                item
-                  FieldName = 'ALONESALARY'
-                  FieldCaption = 'ALONESALARY'
-                  FieldType = ffNumber
-                  DisplayName = 'ALONESALARY'
-                end
-                item
-                  FieldName = 'OCCUPIED'
-                  FieldCaption = 'OCCUPIED'
-                  FieldType = ffNumber
-                  DisplayName = 'OCCUPIED'
-                end
-                item
-                  FieldName = 'SUBORDINATIONID'
-                  FieldCaption = 'SUBORDINATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'SUBORDINATIONID'
-                end
-                item
-                  FieldName = 'QUALIFICATION'
-                  FieldCaption = #1050#1074#1072#1083#1080#1092'.'
-                  FieldType = ffString
-                  DisplayName = 'QUALIFICATION'
-                end>
-            end>
-          ExplicitWidth = 806
-          DesignSize = (
-            764
-            27)
-        end
       end
-      object VrDbGrid1: TVrDbGrid
+      object grd_adress: TcxGrid
         Left = 0
         Top = 34
-        Width = 922
+        Width = 959
         Height = 509
-        ScrollBars = ssHorizontal
-        ShowCheckBoxes = False
-        CheckFieldName = 'ID'
-        CheckedRowsColoured = False
-        CheckedRowsColour = clBlack
-        MultiSelect = False
-        ColouredRows = True
-        CrmEvnColor = clInfoBk
-        CrmOddColor = clWindow
-        SortChangeEnable = True
-        ToneColor1 = clBlack
-        ToneColor2 = clBlack
-        ToneColor3 = clBlack
-        ToneColorRows = False
         Align = alClient
-        DataSource = DS_ADRESS_ALL
         TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'ID'
+        ExplicitLeft = 416
+        ExplicitTop = 343
+        ExplicitWidth = 250
+        ExplicitHeight = 200
+        object grd_adressDBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = DS_ADRESS_ALL
+          DataController.KeyFieldNames = 'ID'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object grd_adressDBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = #1058'REGION'
-            Width = 100
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'AREA'
-            Width = 133
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'TOWNNAME'
-            Width = 176
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'SUBTOWN'
-            Width = 122
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'CITEZENID'
+          object grd_adressDBTableView1CITEZENID: TcxGridDBColumn
+            DataBinding.FieldName = 'CITEZENID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = 'STRRETHOUSE'
-            Width = 259
-            Visible = True
-            SortMode = smNone
+          object grd_adressDBTableView1REGION: TcxGridDBColumn
+            DataBinding.FieldName = #1058'REGION'
+            HeaderAlignmentHorz = taCenter
+            Width = 140
           end
-          item
-            Expanded = False
-            FieldName = 'REGDATE'
-            Visible = False
-            SortMode = smNone
+          object grd_adressDBTableView1AREA: TcxGridDBColumn
+            DataBinding.FieldName = 'AREA'
+            HeaderAlignmentHorz = taCenter
+            Width = 175
           end
-          item
-            Expanded = False
-            FieldName = 'STATUSNAME'
-            Visible = True
-            SortMode = smNone
-          end>
+          object grd_adressDBTableView1TOWNNAME: TcxGridDBColumn
+            DataBinding.FieldName = 'TOWNNAME'
+            HeaderAlignmentHorz = taCenter
+            Width = 216
+          end
+          object grd_adressDBTableView1SUBTOWN: TcxGridDBColumn
+            DataBinding.FieldName = 'SUBTOWN'
+            HeaderAlignmentHorz = taCenter
+            Width = 200
+          end
+          object grd_adressDBTableView1STRRETHOUSE: TcxGridDBColumn
+            DataBinding.FieldName = 'STRRETHOUSE'
+            HeaderAlignmentHorz = taCenter
+            Width = 82
+          end
+          object grd_adressDBTableView1STATUSNAME: TcxGridDBColumn
+            DataBinding.FieldName = 'STATUSNAME'
+          end
+        end
+        object grd_adressLevel1: TcxGridLevel
+          GridView = grd_adressDBTableView1
+        end
       end
     end
     object TabSheet4: TTabSheet
       Caption = #1057#1086#1089#1090#1072#1074' '#1089#1077#1084#1100#1080
       ImageIndex = 5
-      ExplicitWidth = 964
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object GridPanel4: TGridPanel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 916
+        Width = 953
         Height = 28
         Align = alTop
         BevelOuter = bvNone
@@ -1427,29 +1036,26 @@ inherited CITEZENEDIT: TCITEZENEDIT
             Column = 0
             Control = PKDBEditButtons4
             Row = 0
-          end
-          item
-            Column = 1
-            Control = PKDBFindPanel4
-            Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 0
-        ExplicitWidth = 958
+        ExplicitWidth = 945
         object PKDBEditButtons4: TPKDBEditButtons
           Left = 0
           Top = 0
           Width = 180
           Height = 28
           CheckUserPrivs = False
+          CheckRecStatus = False
+          EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
           TableName = 'HR_FAMILY'
           TempTableName = 'HR_FAMILY_TEMP'
           PrimaryFieldName = 'ID'
           ParentFieldName = 'CITEZENID'
-          Grid = VrDbGrid4
+          Grid = grd_family
           Connection = DataModule1.ADConnection1
           UseTempTable = True
           EditDialogClassName = 'TFAMILYEDIT'
@@ -1457,159 +1063,79 @@ inherited CITEZENEDIT: TCITEZENEDIT
             180
             28)
         end
-        object PKDBFindPanel4: TPKDBFindPanel
-          Left = 152
-          Top = 0
-          Width = 764
-          Height = 27
-          QuerysCollection = <
-            item
-              MainQuery = True
-              KeyFieldName = 'ID'
-              FieldList = <
-                item
-                  FieldName = 'BIRTHDATE'
-                  FieldCaption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-                  FieldType = ffDate
-                  DisplayName = 'BIRTHDATE'
-                end
-                item
-                  FieldName = 'BIRTHPLACE'
-                  FieldCaption = #1052#1077#1089#1090#1086' '#1088#1086#1078#1076#1077#1085#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'BIRTHPLACE'
-                end
-                item
-                  FieldName = 'STEP'
-                  FieldCaption = #1057#1090#1077#1087#1077#1100' '#1088#1086#1076#1089#1090#1074#1072
-                  FieldType = ffString
-                  DisplayName = 'STEP'
-                end
-                item
-                  FieldName = 'LASTNAME'
-                  FieldCaption = #1060#1072#1084#1080#1083#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'LASTNAME'
-                end
-                item
-                  FieldName = 'NAME'
-                  FieldCaption = #1048#1084#1103
-                  FieldType = ffString
-                  DisplayName = 'NAME'
-                end
-                item
-                  FieldName = 'FATHERSHIP'
-                  FieldCaption = #1054#1090#1095#1077#1089#1090#1074#1086
-                  FieldType = ffString
-                  DisplayName = 'FATHERSHIP'
-                end>
-            end>
-          ExplicitWidth = 806
-          DesignSize = (
-            764
-            27)
-        end
       end
-      object VrDbGrid4: TVrDbGrid
-        AlignWithMargins = True
-        Left = 3
+      object grd_family: TcxGrid
+        Left = 0
         Top = 34
-        Width = 916
-        Height = 506
-        Margins.Top = 0
-        ScrollBars = ssHorizontal
-        ShowCheckBoxes = True
-        CheckFieldName = 'ID'
-        CheckedRowsColoured = True
-        CheckedRowsColour = clYellow
-        MultiSelect = True
-        ColouredRows = True
-        CrmEvnColor = clInfoBk
-        CrmOddColor = clWindow
-        SortChangeEnable = True
-        ToneColor1 = clBlack
-        ToneColor2 = clBlack
-        ToneColor3 = clBlack
-        ToneColorRows = False
+        Width = 959
+        Height = 509
         Align = alClient
-        DataSource = DS_FAMILY
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'STEP'
-            Width = 100
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'LASTNAME'
-            Width = 100
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'NAME'
-            Width = 100
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'FATHERSHIP'
-            Width = 100
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'CITEZENID'
+        ExplicitLeft = 64
+        ExplicitTop = 176
+        ExplicitWidth = 250
+        ExplicitHeight = 200
+        object grd_familyDBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = DS_FAMILY
+          DataController.KeyFieldNames = 'ID'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object grd_familyDBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
             Visible = False
-            SortMode = smNone
           end
-          item
-            Expanded = False
-            FieldName = 'BIRTHDATE'
-            Width = 3000
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'BIRTHPLACE'
+          object grd_familyDBTableView1CITEZENID: TcxGridDBColumn
+            DataBinding.FieldName = 'CITEZENID'
             Visible = False
-            SortMode = smNone
           end
-          item
-            Expanded = False
-            FieldName = 'ID'
-            Visible = False
-            SortMode = smNone
+          object grd_familyDBTableView1STEP: TcxGridDBColumn
+            DataBinding.FieldName = 'STEP'
+            GroupSummaryAlignment = taCenter
+            Width = 150
           end
-          item
-            Expanded = False
-            Visible = True
-            SortMode = smNone
-          end>
+          object grd_familyDBTableView1LASTNAME: TcxGridDBColumn
+            DataBinding.FieldName = 'LASTNAME'
+            GroupSummaryAlignment = taCenter
+            Width = 163
+          end
+          object grd_familyDBTableView1NAME: TcxGridDBColumn
+            DataBinding.FieldName = 'NAME'
+            GroupSummaryAlignment = taCenter
+            Width = 120
+          end
+          object grd_familyDBTableView1FATHERSHIP: TcxGridDBColumn
+            DataBinding.FieldName = 'FATHERSHIP'
+            GroupSummaryAlignment = taCenter
+            Width = 120
+          end
+          object grd_familyDBTableView1BIRTHDATE: TcxGridDBColumn
+            DataBinding.FieldName = 'BIRTHDATE'
+            GroupSummaryAlignment = taCenter
+          end
+          object grd_familyDBTableView1BIRTHPLACE: TcxGridDBColumn
+            DataBinding.FieldName = 'BIRTHPLACE'
+          end
+        end
+        object grd_familyLevel1: TcxGridLevel
+          GridView = grd_familyDBTableView1
+        end
       end
     end
     object TabSheet7: TTabSheet
       Caption = #1058#1077#1083#1077#1092#1086#1085#1099
       ImageIndex = 6
-      ExplicitWidth = 964
+      TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 951
+      ExplicitHeight = 0
       object GridPanel5: TGridPanel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 916
+        Width = 953
         Height = 28
         Align = alTop
         BevelOuter = bvNone
@@ -1630,29 +1156,26 @@ inherited CITEZENEDIT: TCITEZENEDIT
             Column = 0
             Control = PKDBEditButtons5
             Row = 0
-          end
-          item
-            Column = 1
-            Control = PKDBFindPanel5
-            Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 0
-        ExplicitWidth = 958
+        ExplicitWidth = 945
         object PKDBEditButtons5: TPKDBEditButtons
           Left = 0
           Top = 0
           Width = 180
           Height = 28
           CheckUserPrivs = False
+          CheckRecStatus = False
+          EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
           TableName = 'HR_PHONENUMBER'
           TempTableName = 'HR_PHONENUMBER_TEMP'
           PrimaryFieldName = 'ID'
           ParentFieldName = 'CITEZENID'
-          Grid = VrDbGrid5
+          Grid = grd_phone
           Connection = DataModule1.ADConnection1
           UseTempTable = True
           EditDialogClassName = 'TPHONENUMBEREDIT'
@@ -1660,192 +1183,61 @@ inherited CITEZENEDIT: TCITEZENEDIT
             180
             28)
         end
-        object PKDBFindPanel5: TPKDBFindPanel
-          Left = 152
-          Top = 0
-          Width = 764
-          Height = 27
-          QuerysCollection = <
-            item
-              Query = QRY_PHONENUMBER
-              QueryCaption = #1058#1077#1083#1077#1092#1086#1085#1099
-              MainQuery = True
-              KeyFieldName = 'ID'
-              FieldList = <
-                item
-                  FieldName = 'JOBTITLE'
-                  FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                  FieldType = ffString
-                  DisplayName = 'JOBTITLE'
-                end
-                item
-                  FieldName = 'CATEGORYNUMB'
-                  FieldCaption = #1050#1072#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'CATEGORYNUMB'
-                end
-                item
-                  FieldName = 'AMOUNT'
-                  FieldCaption = #1050#1086#1083'-'#1074#1086'.'
-                  FieldType = ffNumber
-                  DisplayName = 'AMOUNT'
-                end
-                item
-                  FieldName = 'SALARY'
-                  FieldCaption = #1054#1082#1083#1072#1076'('#1057#1090#1072#1074#1082#1072')'
-                  FieldType = ffNumber
-                  DisplayName = 'SALARY'
-                end
-                item
-                  FieldName = 'ADDITIONHARM'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1074#1088#1077#1076'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONHARM'
-                end
-                item
-                  FieldName = 'ADDITIONSECRET'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1089#1077#1082#1088#1077#1090'.'
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONSECRET'
-                end
-                item
-                  FieldName = 'ADDITIONOTHER'
-                  FieldCaption = #1053#1072#1076#1073'. '#1079#1072' '#1087#1088#1086#1095#1077#1077
-                  FieldType = ffNumber
-                  DisplayName = 'ADDITIONOTHER'
-                end
-                item
-                  FieldName = 'DESCR'
-                  FieldCaption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-                  FieldType = ffString
-                  DisplayName = 'DESCR'
-                end
-                item
-                  FieldName = 'SALID'
-                  FieldCaption = 'SALID'
-                  FieldType = ffNumber
-                  DisplayName = 'SALID'
-                end
-                item
-                  FieldName = 'JOBTITLEID'
-                  FieldCaption = 'JOBTITLEID'
-                  FieldType = ffNumber
-                  DisplayName = 'JOBTITLEID'
-                end
-                item
-                  FieldName = 'QUALIFICATIONID'
-                  FieldCaption = 'QUALIFICATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'QUALIFICATIONID'
-                end
-                item
-                  FieldName = 'RATEID'
-                  FieldCaption = 'RATEID'
-                  FieldType = ffNumber
-                  DisplayName = 'RATEID'
-                end
-                item
-                  FieldName = 'ALONESALARY'
-                  FieldCaption = 'ALONESALARY'
-                  FieldType = ffNumber
-                  DisplayName = 'ALONESALARY'
-                end
-                item
-                  FieldName = 'OCCUPIED'
-                  FieldCaption = 'OCCUPIED'
-                  FieldType = ffNumber
-                  DisplayName = 'OCCUPIED'
-                end
-                item
-                  FieldName = 'SUBORDINATIONID'
-                  FieldCaption = 'SUBORDINATIONID'
-                  FieldType = ffNumber
-                  DisplayName = 'SUBORDINATIONID'
-                end
-                item
-                  FieldName = 'QUALIFICATION'
-                  FieldCaption = #1050#1074#1072#1083#1080#1092'.'
-                  FieldType = ffString
-                  DisplayName = 'QUALIFICATION'
-                end>
-            end>
-          ExplicitWidth = 806
-          DesignSize = (
-            764
-            27)
-        end
       end
-      object VrDbGrid5: TVrDbGrid
+      object grd_phone: TcxGrid
         Left = 0
         Top = 34
-        Width = 922
+        Width = 959
         Height = 509
-        ScrollBars = ssHorizontal
-        ShowCheckBoxes = False
-        CheckFieldName = 'ID'
-        CheckedRowsColoured = False
-        CheckedRowsColour = clBlack
-        MultiSelect = False
-        ColouredRows = True
-        CrmEvnColor = clInfoBk
-        CrmOddColor = clWindow
-        SortChangeEnable = True
-        ToneColor1 = clBlack
-        ToneColor2 = clBlack
-        ToneColor3 = clBlack
-        ToneColorRows = False
         Align = alClient
-        DataSource = DS_PHONENUMBER
         TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'PHONENUMBER'
-            Width = 206
-            Visible = True
-            SortMode = smNone
-          end
-          item
-            Expanded = False
-            FieldName = 'ID'
+        ExplicitLeft = 392
+        ExplicitTop = 343
+        ExplicitWidth = 250
+        ExplicitHeight = 200
+        object grd_phoneDBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = DS_PHONENUMBER
+          DataController.KeyFieldNames = 'ID'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object grd_phoneDBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
             Visible = False
-            SortMode = smNone
           end
-          item
-            Expanded = False
-            FieldName = 'CITEZENID'
+          object grd_phoneDBTableView1CITEZENID: TcxGridDBColumn
+            DataBinding.FieldName = 'CITEZENID'
             Visible = False
-            SortMode = smNone
           end
-          item
-            Expanded = False
-            FieldName = 'STATUSID'
+          object grd_phoneDBTableView1STATUSID: TcxGridDBColumn
+            DataBinding.FieldName = 'STATUSID'
             Visible = False
-            SortMode = smNone
+            HeaderAlignmentHorz = taCenter
           end
-          item
-            Expanded = False
-            FieldName = 'DESRIPTION'
-            Visible = True
-            SortMode = smNone
+          object grd_phoneDBTableView1PHONENUMBER: TcxGridDBColumn
+            DataBinding.FieldName = 'PHONENUMBER'
+            HeaderAlignmentHorz = taCenter
+            Width = 233
           end
-          item
-            Expanded = False
-            FieldName = 'PHONETYPE'
-            Visible = False
-            SortMode = smNone
+          object grd_phoneDBTableView1PHONETYPE: TcxGridDBColumn
+            DataBinding.FieldName = 'PHONETYPE'
+            HeaderAlignmentHorz = taCenter
+            Width = 202
           end
-          item
-            Expanded = False
-            FieldName = 'STATUS'
-            Visible = False
-            SortMode = smNone
-          end>
+          object grd_phoneDBTableView1STATUS: TcxGridDBColumn
+            DataBinding.FieldName = 'STATUS'
+            HeaderAlignmentHorz = taCenter
+            Width = 120
+          end
+          object grd_phoneDBTableView1DESRIPTION: TcxGridDBColumn
+            DataBinding.FieldName = 'DESRIPTION'
+            Width = 1200
+          end
+        end
+        object grd_phoneLevel1: TcxGridLevel
+          GridView = grd_phoneDBTableView1
+        end
       end
     end
   end

@@ -314,7 +314,7 @@ inherited MILITARYDEPT: TMILITARYDEPT
     Top = 0
   end
   object PopupMenu1: TPopupMenu
-    Left = 448
+    Left = 488
     object N1: TMenuItem
       Caption = #1069#1082#1089#1087#1086#1088#1090' '#1074' Excel'
       OnClick = N1Click

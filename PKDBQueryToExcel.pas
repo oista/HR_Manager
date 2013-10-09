@@ -30,7 +30,7 @@ begin
   Fexcelfile := CreateOleObject('Excel.Application');
   Fexcelfile.workbooks.add;
   Fexcelfile.WorkBooks[1].WorkSheets[1].Name := Fcurquery.Name;
-  //Fcurquery.Open;
+  Fcurquery.Open;
 end;
                              // внесение в файл всех данных
 procedure PostDataAll(Fcurquery :  TADQuery);

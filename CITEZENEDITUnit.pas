@@ -9,7 +9,13 @@ uses
   PKDBEditButtons, DB, PKDBBBaseComboBox, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
   uADStanAsync, uADDAptManager, uADCompDataSet, uADCompClient, PKDBContext
-  ,Vcl.Imaging.jpeg, Vcl.DBCtrls,REPORTUnit;
+  ,Vcl.Imaging.jpeg, Vcl.DBCtrls,REPORTUnit, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, cxStyles, dxSkinsCore,
+  dxSkinOffice2007Blue, dxSkinOffice2007Silver, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinscxPCPainter, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridCustomTableView,
+  cxGridTableView, cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView,
+  cxGrid, PKDBDefs;
 
 type
   TCITEZENEDIT = class(TEditDialog)
@@ -20,12 +26,8 @@ type
     TabSheet6: TTabSheet;
     GridPanel2: TGridPanel;
     PKDBEditButtons2: TPKDBEditButtons;
-    PKDBFindPanel2: TPKDBFindPanel;
     GridPanel3: TGridPanel;
     PKDBEditButtons3: TPKDBEditButtons;
-    PKDBFindPanel3: TPKDBFindPanel;
-    VrDbGrid2: TVrDbGrid;
-    VrDbGrid3: TVrDbGrid;
     QRY_DOCEDUCATION: TADQuery;
     QRY_LANGUAGE: TADQuery;
     QRY_ADRESS_ALL: TADQuery;
@@ -48,8 +50,6 @@ type
     TabSheet2: TTabSheet;
     GridPanel1: TGridPanel;
     PKDBEditButtons1: TPKDBEditButtons;
-    PKDBFindPanel1: TPKDBFindPanel;
-    VrDbGrid1: TVrDbGrid;
     PKDBBLabelComboBox3: TPKDBBLabelComboBox;
     PKDBLabelEdit7: TPKDBLabelEdit;
     PKDBLabelEdit8: TPKDBLabelEdit;
@@ -88,12 +88,8 @@ type
     TabSheet7: TTabSheet;
     GridPanel5: TGridPanel;
     PKDBEditButtons5: TPKDBEditButtons;
-    PKDBFindPanel5: TPKDBFindPanel;
-    VrDbGrid5: TVrDbGrid;
     GridPanel4: TGridPanel;
     PKDBEditButtons4: TPKDBEditButtons;
-    PKDBFindPanel4: TPKDBFindPanel;
-    VrDbGrid4: TVrDbGrid;
     QRY_FAMILY: TADQuery;
     QRY_FAMILYID: TFMTBCDField;
     QRY_FAMILYCITEZENID: TFMTBCDField;
@@ -144,6 +140,58 @@ type
     CheckBox2: TCheckBox;
     QRY_PHONENUMBERBLOBPHOTO: TBlobField;
     DBImage1: TDBImage;
+    grd_educationDBTableView1: TcxGridDBTableView;
+    grd_educationLevel1: TcxGridLevel;
+    grd_education: TcxGrid;
+    grd_educationDBTableView1CITEZENID: TcxGridDBColumn;
+    grd_educationDBTableView1ID: TcxGridDBColumn;
+    grd_educationDBTableView1DOCTYPE: TcxGridDBColumn;
+    grd_educationDBTableView1DOCSERIA: TcxGridDBColumn;
+    grd_educationDBTableView1DOCNUMB: TcxGridDBColumn;
+    grd_educationDBTableView1NAME: TcxGridDBColumn;
+    grd_educationDBTableView1OUTYEAR: TcxGridDBColumn;
+    grd_educationDBTableView1OVEREDUCATION: TcxGridDBColumn;
+    grd_educationDBTableView1SPECIALITY: TcxGridDBColumn;
+    grd_educationDBTableView1CVALIFICATION: TcxGridDBColumn;
+    grd_languageDBTableView1: TcxGridDBTableView;
+    grd_languageLevel1: TcxGridLevel;
+    grd_language: TcxGrid;
+    grd_languageDBTableView1CITEZENID: TcxGridDBColumn;
+    grd_languageDBTableView1LANG: TcxGridDBColumn;
+    grd_languageDBTableView1STEP: TcxGridDBColumn;
+    grd_languageDBTableView1ID: TcxGridDBColumn;
+    grd_adressDBTableView1: TcxGridDBTableView;
+    grd_adressLevel1: TcxGridLevel;
+    grd_adress: TcxGrid;
+    grd_adressDBTableView1ID: TcxGridDBColumn;
+    grd_adressDBTableView1CITEZENID: TcxGridDBColumn;
+    grd_adressDBTableView1REGION: TcxGridDBColumn;
+    grd_adressDBTableView1AREA: TcxGridDBColumn;
+    grd_adressDBTableView1TOWNNAME: TcxGridDBColumn;
+    grd_adressDBTableView1SUBTOWN: TcxGridDBColumn;
+    grd_adressDBTableView1STRRETHOUSE: TcxGridDBColumn;
+    grd_adressDBTableView1STATUSNAME: TcxGridDBColumn;
+    grd_familyDBTableView1: TcxGridDBTableView;
+    grd_familyLevel1: TcxGridLevel;
+    grd_family: TcxGrid;
+    grd_familyDBTableView1ID: TcxGridDBColumn;
+    grd_familyDBTableView1CITEZENID: TcxGridDBColumn;
+    grd_familyDBTableView1BIRTHDATE: TcxGridDBColumn;
+    grd_familyDBTableView1BIRTHPLACE: TcxGridDBColumn;
+    grd_familyDBTableView1STEP: TcxGridDBColumn;
+    grd_familyDBTableView1LASTNAME: TcxGridDBColumn;
+    grd_familyDBTableView1NAME: TcxGridDBColumn;
+    grd_familyDBTableView1FATHERSHIP: TcxGridDBColumn;
+    grd_phoneDBTableView1: TcxGridDBTableView;
+    grd_phoneLevel1: TcxGridLevel;
+    grd_phone: TcxGrid;
+    grd_phoneDBTableView1ID: TcxGridDBColumn;
+    grd_phoneDBTableView1CITEZENID: TcxGridDBColumn;
+    grd_phoneDBTableView1STATUSID: TcxGridDBColumn;
+    grd_phoneDBTableView1DESRIPTION: TcxGridDBColumn;
+    grd_phoneDBTableView1PHONENUMBER: TcxGridDBColumn;
+    grd_phoneDBTableView1PHONETYPE: TcxGridDBColumn;
+    grd_phoneDBTableView1STATUS: TcxGridDBColumn;
     procedure Open; override;
     function  FindErrors: Boolean; override;
     procedure RunCommand(); override;
@@ -255,7 +303,7 @@ begin
     End;
 
   // 20.08.2012 ќЅя«ј“≈Ћ№Ќќ:адрес и образование
-  if  VRDBGrid2.DataSource.DataSet.IsEmpty  or VRDBGrid1.DataSource.DataSet.IsEmpty
+  if  DS_ADRESS_ALL.DataSet.IsEmpty  or DS_DOCEDUCATION.DataSet.IsEmpty
   then
    begin
      showmessage('Ќе введен адрес или образование');
@@ -354,7 +402,7 @@ begin
   PKDBEditButtons4.ParentKey := PKDBTable1.Fields.PrimaryKey.FieldVal;
   PKDBEditButtons5.ParentKey := PKDBTable1.Fields.PrimaryKey.FieldVal;
 
-  if self.CommandType in [tcUpdate] then
+  if self.CommandType in [tcUpdate, tcInsert] then
    begin        // св€занные данные при редактировании
     QRY_DOCEDUCATION.Params.ParamByName('ID').Value := StrToFloat(PKDBEditButtons1.ParentKey);
     QRY_LANGUAGE.Params.ParamByName('ID').Value := StrToFloat(PKDBEditButtons1.ParentKey);

@@ -1,224 +1,123 @@
 inherited SALARY: TSALARY
   Caption = #1054#1082#1083#1072#1076#1099'/'#1058#1072#1088#1080#1092#1099'      '
-  ClientHeight = 480
-  ClientWidth = 872
-  ExplicitWidth = 880
-  ExplicitHeight = 514
+  ClientHeight = 541
+  ClientWidth = 1103
+  ExplicitWidth = 1119
+  ExplicitHeight = 579
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Top = 439
-    Width = 872
-    ExplicitWidth = 829
+    Top = 500
+    Width = 1103
+    ExplicitTop = 439
+    ExplicitWidth = 872
     inherited Button1: TButton
-      Left = 709
-      ExplicitLeft = 666
+      Left = 940
+      ExplicitLeft = 709
     end
     inherited Button2: TButton
-      Left = 790
-      ExplicitLeft = 747
+      Left = 1021
+      ExplicitLeft = 790
     end
   end
   inherited Panel2: TPanel
-    Left = 33
-    Width = 839
-    Height = 439
-    ExplicitLeft = 33
-    ExplicitWidth = 796
+    Width = 1103
+    Height = 500
+    ExplicitWidth = 872
+    ExplicitHeight = 439
     inherited Splitter1: TSplitter
-      Height = 439
+      Left = 33
+      Height = 500
+      ExplicitHeight = 439
     end
     inherited Panel3: TPanel
-      Width = 836
-      Height = 439
-      ExplicitWidth = 793
+      Left = 36
+      Width = 1067
+      Height = 500
+      ExplicitLeft = 36
+      ExplicitWidth = 836
+      ExplicitHeight = 439
       inherited Splitter2: TSplitter
-        Top = 411
-        Width = 836
+        Top = 472
+        Width = 1067
         ExplicitTop = 341
         ExplicitWidth = 587
       end
-      inherited Panel5: TPanel
-        Top = 414
-        Width = 836
+      inherited ExtPanel: TPanel
+        Top = 475
+        Width = 1067
         Height = 25
         Visible = False
-        ExplicitTop = 398
-        ExplicitWidth = 793
+        ExplicitTop = 414
+        ExplicitWidth = 836
         ExplicitHeight = 25
       end
-      inherited PageControl1: TPageControl
-        Width = 836
-        Height = 411
-        ExplicitWidth = 793
-        ExplicitHeight = 395
-        inherited TabSheet1: TTabSheet
+      inherited cxPageControl1: TcxPageControl
+        Width = 1067
+        Height = 472
+        ExplicitWidth = 836
+        ExplicitHeight = 411
+        ClientRectBottom = 466
+        ClientRectRight = 1061
+        inherited cxTabSheet1: TcxTabSheet
           Caption = #1054#1082#1083#1072#1076#1099'/'#1058#1072#1088#1080#1092#1099'      '
-          ExplicitWidth = 785
-          ExplicitHeight = 367
-          inherited Grid: TVrDbGrid
-            Width = 822
-            Height = 346
-            CheckFieldName = 'ID'
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'ID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CATEGORYNUMB'
-                Width = 38
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'JOBTITLE_HR'
-                Width = 344
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'SPEC'
-                Width = -1
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'DEGREE'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'QUAL'
-                Width = 85
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CODE'
-                Width = 80
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'JOBTITLEID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'QUALIFICATIONID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'RATEID'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'SALARY'
-                Width = 93
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'CONTRACT'
-                Visible = True
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'JOBTITLE'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'DESCRIPTION'
-                Visible = False
-                SortMode = smNone
-              end
-              item
-                Expanded = False
-                FieldName = 'SALID'
-                Visible = False
-                SortMode = smNone
-              end>
-          end
+          ExplicitWidth = 828
+          ExplicitHeight = 378
           inherited GridPanel1: TGridPanel
-            Width = 822
-            ExplicitWidth = 779
+            Width = 1053
+            ExplicitWidth = 822
             inherited PKDBEditButtons1: TPKDBEditButtons
-              TableName = 'CS_SALARY'
-              PrimaryFieldName = 'ID'
-              Grid = Grid
-              Connection = DataModule1.ADConnection1
-              EditDialogClassName = 'TSALARYEDIT'
+              EnableButtons = [ebRefresh]
             end
-            inherited PKDBFindPanel1: TPKDBFindPanel
-              Width = 670
-              QuerysCollection = <
-                item
-                  Query = MainQuery
-                  QueryCaption = #1047#1072#1088#1087#1083#1072#1090#1072
-                  MainQuery = True
-                  FieldList = <
-                    item
-                      FieldName = 'SPEC'
-                      FieldCaption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-                      FieldType = ffString
-                      DisplayName = 'SPEC'
-                    end
-                    item
-                      FieldName = 'CATEGORYNUMB'
-                      FieldCaption = #1050#1072#1090#1077#1075'.'
-                      FieldType = ffNumber
-                      DisplayName = 'CATEGORYNUMB'
-                    end
-                    item
-                      FieldName = 'SALARY'
-                      FieldCaption = #1054#1082#1083#1072#1076'('#1057#1090#1072#1074#1082#1072')'
-                      FieldType = ffNumber
-                      DisplayName = 'SALARY'
-                    end
-                    item
-                      FieldName = 'CODE'
-                      FieldCaption = #1050#1086#1076' '#1089#1090#1072#1074#1082#1080
-                      FieldType = ffString
-                      DisplayName = 'CODE'
-                    end
-                    item
-                      FieldName = 'CONTRACT'
-                      FieldCaption = #1050#1086#1085#1090#1088#1072#1082#1090
-                      FieldType = ffString
-                      DisplayName = 'CONTRACT'
-                    end>
-                end>
-              ExplicitWidth = 627
+          end
+          inherited Grid: TcxGrid
+            Width = 1053
+            Height = 399
+            ExplicitWidth = 822
+            ExplicitHeight = 338
+            inherited GridDBTableView1: TcxGridDBTableView
+              OptionsView.CellEndEllipsis = True
+              object GridDBTableView1ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ID'
+                Visible = False
+                HeaderAlignmentHorz = taCenter
+              end
+              object GridDBTableView1CATEGORYNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'CATEGORYNUMB'
+                HeaderAlignmentHorz = taCenter
+                Width = 49
+              end
+              object GridDBTableView1JOBTITLE_HR: TcxGridDBColumn
+                DataBinding.FieldName = 'JOBTITLE_HR'
+                HeaderAlignmentHorz = taCenter
+                Width = 369
+              end
+              object GridDBTableView1QUAL: TcxGridDBColumn
+                DataBinding.FieldName = 'QUAL'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1SALARY: TcxGridDBColumn
+                DataBinding.FieldName = 'SALARY'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1CODE: TcxGridDBColumn
+                DataBinding.FieldName = 'CODE'
+                Width = 1200
+              end
             end
           end
         end
       end
     end
-  end
-  inherited Panel6: TPanel
-    Width = 33
-    Height = 439
-    Visible = False
-    ExplicitWidth = 33
+    inherited TreePanel: TPanel
+      Width = 33
+      Height = 500
+      Visible = False
+      ExplicitWidth = 33
+      ExplicitHeight = 439
+    end
   end
   inherited MainQuery: TADQuery
     Connection = DataModule1.ADConnection1
@@ -268,7 +167,7 @@ inherited SALARY: TSALARY
     end
   end
   inherited DataSource1: TDataSource
-    Left = 416
+    Left = 456
     Top = 0
   end
 end

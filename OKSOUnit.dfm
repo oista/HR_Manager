@@ -68,6 +68,7 @@ inherited OKSO: TOKSO
             Width = 1166
             ExplicitWidth = 1166
             inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
               TableName = 'HR_OKSO'
               Connection = DataModule1.ADConnection1
               EditDialogClassName = 'TOKSOEDIT'
@@ -88,7 +89,7 @@ inherited OKSO: TOKSO
               object GridDBTableView1CVALIFICATION: TcxGridDBColumn
                 DataBinding.FieldName = 'CVALIFICATION'
                 HeaderAlignmentHorz = taCenter
-                Width = 179
+                Width = 566
               end
               object GridDBTableView1SPECIALITYCODE: TcxGridDBColumn
                 DataBinding.FieldName = 'SPECIALITYCODE'

@@ -7,7 +7,8 @@ uses
   Dialogs, EditDialogUnit, StdCtrls, PKDBEdit, PKDBBBaseComboBox, PKDBTable,
   ComCtrls, ExtCtrls, reportunit, PKDBDictEdit, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
-  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, PKDBContext;
+  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, PKDBContext,
+  PKDBDateTimeEdit, PKDBDefs;
 
 type
   THOLIDAYEDIT = class(TEditDialog)
@@ -44,7 +45,7 @@ var
   cform: TWREPORT;
 
 implementation
- uses DM, EMPLOYEEUnit;
+ uses DM;
 {$R *.dfm}
 
 { THOLIDAYEDIT }
@@ -63,6 +64,7 @@ begin
    begin
     // передаем компонентам сотрудника и ТД
     PKDBTable1.ReadFromDB(PrimaryKey);
+
     // подтягиваем приказ
     if (PKDBTable1.Fields.PrimaryKey.FieldVal<>'')  then
      begin
@@ -70,11 +72,9 @@ begin
       ADQuery1.Open;
       PKDBTable2.ReadFromDB(ADQuery1ID.asstring);
       ADQuery1.Close;
-
      end;
    end;
-
-  inherited;
+       inherited;
 end;
 
 
@@ -106,9 +106,10 @@ begin
 
   if CheckBox1.Checked then    // если надо вывести форму  после "ОК"
      begin
-      Cform := TWREPORT.Create(EMPLOYEE);
-      ShowMessage(PKDBTable2.Fields.PrimaryKey.FieldVal);
+      Cform := TWREPORT.Create(self);
       Cform.madeOrderHoliday(strtofloat(PKDBTable2.Fields.PrimaryKey.FieldVal));
+      Self.Visible:=False;
+      Cform.ShowModal;
      end;
 end;
 

@@ -59,9 +59,9 @@ inherited RETRAININGEDIT: TRETRAININGEDIT
         Connection = DataModule1.ADConnection1
         Table = PKDBTable1
         TableField = 'JOBTITLEID'
-        LookUpRool = 'JOBTITLE'
+        LookUpRool = 'speciality'
         ReadOnly = False
-        DictionaryClass = 'TJOBTITLE'
+        DictionaryClass = 'TOKSO'
         WithoutTable = False
         EditLabel.Width = 78
         EditLabel.Height = 13
@@ -153,9 +153,9 @@ inherited RETRAININGEDIT: TRETRAININGEDIT
         FieldLabel = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
         Nullable = False
         FieldType = ftsNumber
-        ReferencingTable = 'HR_JOBTITLE'
+        ReferencingTable = 'HR_OKSO'
         ReferencingColumn = 'ID'
-        LookUpRool = 'JOBTITLE'
+        LookUpRool = 'SPECIALITY'
         DisplayName = 'JOBTITLEID'
       end
       item
@@ -222,6 +222,9 @@ inherited RETRAININGEDIT: TRETRAININGEDIT
       end>
     TableName = 'HR_RETRAINING'
     Connection = DataModule1.ADConnection1
-    Top = 96
+    Top = 168
+  end
+  inherited Context: TPKDBContext
+    Left = 536
   end
 end

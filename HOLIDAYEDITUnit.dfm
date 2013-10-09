@@ -256,7 +256,7 @@ inherited HOLIDAYEDIT: THOLIDAYEDIT
       end
       item
         FieldName = 'ID'
-        Nullable = False
+        Nullable = True
         FieldType = ftsNumber
         IsPrimaryKey = True
         DisplayName = 'ID'
@@ -314,8 +314,8 @@ inherited HOLIDAYEDIT: THOLIDAYEDIT
     Top = 104
   end
   inherited Context: TPKDBContext
-    Left = 656
-    Top = 264
+    Left = 632
+    Top = 240
   end
   object PKDBTable2: TPKDBTable
     Fields = <
@@ -371,7 +371,7 @@ inherited HOLIDAYEDIT: THOLIDAYEDIT
     SQL.Strings = (
       'SELECT t.id FROM HR_HOLIDAY_ORDER t '
       'WHERE t.holidayid= :xholiday')
-    Left = 608
+    Left = 632
     Top = 152
     ParamData = <
       item

@@ -65,6 +65,7 @@ inherited JOBHISTORYEDIT: TJOBHISTORYEDIT
         Top = 68
         Width = 353
         Height = 21
+        Connection = DataModule1.ADConnection1
         Table = PKDBTable2
         TableField = 'SALARYID'
         LookUpRool = 'jobtitle_hr||'#39' '#39'||qual'
@@ -83,6 +84,7 @@ inherited JOBHISTORYEDIT: TJOBHISTORYEDIT
         Top = 25
         Width = 353
         Height = 21
+        Connection = DataModule1.ADConnection1
         Table = PKDBTable2
         TableField = 'SCHEDULEID'
         LookUpRool = 'DEPT_NO||'#39' '#39'||DNAME'
@@ -263,7 +265,6 @@ inherited JOBHISTORYEDIT: TJOBHISTORYEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 432
-    Top = 104
   end
   object PKDBTable2: TPKDBTable
     Fields = <

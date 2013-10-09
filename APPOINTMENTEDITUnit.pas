@@ -7,7 +7,8 @@ uses
   Dialogs, EditDialogUnit, StdCtrls, ExtCtrls, PKDBDictEdit, PKDBTable, ComCtrls,
   PKDBEdit, PKDBBBaseComboBox,dictunit, DB, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
-  uADStanAsync, uADDAptManager, uADCompClient, uADCompDataSet, reportunit;
+  uADStanAsync, uADDAptManager, uADCompClient, uADCompDataSet, reportunit, PKDBDefs,
+  PKDBContext;
 
 type
   TPROCSTATE=(NEW, ACT, ARCHIVE);

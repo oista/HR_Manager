@@ -199,6 +199,5 @@ inherited VACANCYEDIT: TVACANCYEDIT
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 448
-    Top = 88
   end
 end

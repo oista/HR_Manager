@@ -81,7 +81,6 @@ inherited FAMILYCITEZENEDIT: TFAMILYCITEZENEDIT
         Top = 160
         Width = 153
         Height = 21
-        ItemHeight = 13
         TabOrder = 4
         Text = #1055#1086#1083
         DBTable = 'HR_FACETCONTENT'
@@ -166,7 +165,6 @@ inherited FAMILYCITEZENEDIT: TFAMILYCITEZENEDIT
     TableName = 'HR_CITEZEN'
     Connection = DataModule1.ADConnection1
     Left = 440
-    Top = 88
   end
   object PKDBTable2: TPKDBTable
     Fields = <

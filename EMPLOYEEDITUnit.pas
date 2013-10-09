@@ -7,7 +7,7 @@ uses
   Dialogs, EditDialogUnit, StdCtrls, ExtCtrls, PKDBDictEdit, PKDBTable, ComCtrls,
   PKDBEdit, PKDBBBaseComboBox, reportunit, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
-  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, PKDBContext;
+  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, PKDBContext, PKDBDefs;
 
 type
   TEMPLOYEEDIT = class(TEditDialog)

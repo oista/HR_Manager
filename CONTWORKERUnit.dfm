@@ -64,6 +64,10 @@ inherited CONTWORKER: TCONTWORKER
           TabOrder = 0
           object TabSheet2: TTabSheet
             Caption = #1056#1072#1073'. '#1084#1077#1089#1090#1072
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object VrDbGrid1: TVrDbGrid
               AlignWithMargins = True
               Left = 3
@@ -248,6 +252,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_EMPLOYEE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -370,6 +375,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet6: TTabSheet
             Caption = #1040#1090#1090#1077#1089#1090#1072#1094#1080#1103
             ImageIndex = 4
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel5: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -412,6 +421,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_ATESTATION'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -580,6 +590,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet7: TTabSheet
             Caption = #1050#1074#1072#1083#1080#1092#1080#1082#1072#1094#1080#1103
             ImageIndex = 5
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel2: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -622,6 +636,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_SKILLUP'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -808,6 +823,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet8: TTabSheet
             Caption = #1055#1077#1088#1077#1087#1086#1076#1075#1086#1090#1086#1074#1082#1072' '
             ImageIndex = 6
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel7: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -850,6 +869,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_RETRAINING'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -1022,6 +1042,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet5: TTabSheet
             Caption = #1053#1072#1075#1088#1072#1076#1099
             ImageIndex = 3
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel4: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -1064,6 +1088,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_AWARD'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -1199,6 +1224,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet9: TTabSheet
             Caption = #1054#1090#1087#1091#1089#1082
             ImageIndex = 7
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel8: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -1241,6 +1270,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_HOLIDAY'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -1414,6 +1444,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet10: TTabSheet
             Caption = #1051#1100#1075#1086#1090#1099
             ImageIndex = 8
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel9: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -1456,6 +1490,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_SOCIAL'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -1573,6 +1608,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet4: TTabSheet
             Caption = #1044#1080#1089#1094#1080#1087#1083#1080#1085#1072
             ImageIndex = 2
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel3: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -1615,6 +1654,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_DISCIPLINE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -1768,6 +1808,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet13: TTabSheet
             Caption = #1042#1086#1080#1085#1089#1082#1080#1081' '#1091#1095#1077#1090
             ImageIndex = 3
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object PKDBBLabelComboBox2: TPKDBBLabelComboBox
               Left = 15
               Top = 70
@@ -1931,6 +1975,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet11: TTabSheet
             Caption = #1054#1073#1088#1072#1079#1086#1074#1072#1085#1080#1077
             ImageIndex = 1
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel10: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -1973,6 +2021,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_DOCEDUCATION'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -2189,6 +2238,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet14: TTabSheet
             Caption = #1040#1076#1088#1077#1089
             ImageIndex = 4
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel12: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -2231,6 +2284,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_ADRESS'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -2396,6 +2450,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet3: TTabSheet
             Caption = #1057#1090#1088#1072#1093#1086#1074#1072#1085#1080#1077
             ImageIndex = 14
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel11: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -2438,6 +2496,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_INSURANCE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -2611,6 +2670,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet15: TTabSheet
             Caption = #1053#1072#1083#1086#1075'. '#1080' '#1087#1077#1085#1089' '#1091#1095#1077#1090
             ImageIndex = 5
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object PKDBLabelEdit4: TPKDBLabelEdit
               Left = 15
               Top = 25
@@ -2845,6 +2908,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet16: TTabSheet
             Caption = #1056#1086#1076#1089#1090#1074#1077#1085#1085#1080#1082#1080
             ImageIndex = 6
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel13: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -2887,6 +2954,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_FAMILY'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -3045,6 +3113,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet19: TTabSheet
             Caption = #1048#1089#1090#1086#1088#1080#1103' '#1088#1072#1073'.'
             ImageIndex = 9
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object GridPanel15: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -3087,6 +3159,7 @@ inherited CONTWORKER: TCONTWORKER
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                CheckRecStatus = False
                 TableName = 'HR_EMPLOYEE'
                 PrimaryFieldName = 'ID'
                 ParentFieldName = 'ID'
@@ -3260,6 +3333,10 @@ inherited CONTWORKER: TCONTWORKER
           object TabSheet12: TTabSheet
             Caption = #1044#1086#1087'. '#1089#1074#1077#1076#1077#1085#1080#1103
             ImageIndex = 15
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object PKDBBLabelComboBox8: TPKDBBLabelComboBox
               Left = 17
               Top = 25
@@ -3336,12 +3413,135 @@ inherited CONTWORKER: TCONTWORKER
       inherited cxPageControl1: TcxPageControl
         Width = 1104
         Height = 279
+        ExplicitWidth = 1104
+        ExplicitHeight = 279
         ClientRectBottom = 279
         ClientRectRight = 1104
         inherited cxTabSheet1: TcxTabSheet
+          Caption = #1054#1092#1086#1088#1084#1083#1077#1085#1080#1077'    '
           ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
+          ExplicitWidth = 1104
+          ExplicitHeight = 255
+          inherited GridPanel1: TGridPanel
+            Width = 1098
+            ExplicitWidth = 1098
+            inherited PKDBEditButtons1: TPKDBEditButtons
+              EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
+              Connection = DataModule1.ADConnection1
+              EditDialogClassName = 'TCONTWORKEREDIT'
+            end
+          end
+          inherited Grid: TcxGrid
+            Width = 1098
+            Height = 215
+            PopupMenu = pm_main
+            ExplicitWidth = 1098
+            ExplicitHeight = 215
+            inherited GridDBTableView1: TcxGridDBTableView
+              object GridDBTableView1STATUSID: TcxGridDBColumn
+                DataBinding.FieldName = 'STATUSID'
+                Visible = False
+              end
+              object GridDBTableView1WORKUNITTYPE: TcxGridDBColumn
+                DataBinding.FieldName = 'WORKUNITTYPE'
+                Visible = False
+              end
+              object GridDBTableView1WORKCONTRACTID: TcxGridDBColumn
+                DataBinding.FieldName = 'WORKCONTRACTID'
+                Visible = False
+              end
+              object GridDBTableView1SCHEDULEID: TcxGridDBColumn
+                DataBinding.FieldName = 'SCHEDULEID'
+                Visible = False
+              end
+              object GridDBTableView1CITEZENID: TcxGridDBColumn
+                DataBinding.FieldName = 'CITEZENID'
+                Visible = False
+              end
+              object GridDBTableView1ORDERID: TcxGridDBColumn
+                DataBinding.FieldName = 'ORDERID'
+                Visible = False
+              end
+              object GridDBTableView1STRUCTUREID: TcxGridDBColumn
+                DataBinding.FieldName = 'STRUCTUREID'
+                Visible = False
+              end
+              object GridDBTableView1WORKUNITTYPEROW: TcxGridDBColumn
+                DataBinding.FieldName = 'WORKUNITTYPEROW'
+                Visible = False
+              end
+              object GridDBTableView1ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ID'
+                Visible = False
+              end
+              object GridDBTableView1CATEGORYNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'CATEGORYNUMB'
+                Width = 32
+              end
+              object GridDBTableView1TABNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'TABNUMB'
+                Width = 49
+              end
+              object GridDBTableView1DCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'DCODE'
+                Width = 44
+              end
+              object GridDBTableView1DEPT: TcxGridDBColumn
+                DataBinding.FieldName = 'DEPT'
+                Width = 72
+              end
+              object GridDBTableView1LASTNAME: TcxGridDBColumn
+                DataBinding.FieldName = 'LASTNAME'
+                Width = 159
+              end
+              object GridDBTableView1NAME: TcxGridDBColumn
+                DataBinding.FieldName = 'NAME'
+                Width = 120
+              end
+              object GridDBTableView1FATHERSHIP: TcxGridDBColumn
+                DataBinding.FieldName = 'FATHERSHIP'
+                Width = 161
+              end
+              object GridDBTableView1JOBTITLE: TcxGridDBColumn
+                DataBinding.FieldName = 'JOBTITLE'
+                Width = 272
+              end
+              object GridDBTableView1BIRTHDATE: TcxGridDBColumn
+                DataBinding.FieldName = 'BIRTHDATE'
+                Width = 100
+              end
+              object GridDBTableView1AGREEMENTNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'AGREEMENTNUMB'
+                Width = 86
+              end
+              object GridDBTableView1AGREEMENTDATE: TcxGridDBColumn
+                DataBinding.FieldName = 'AGREEMENTDATE'
+                Width = 103
+              end
+              object GridDBTableView1PASSPORTSERIES: TcxGridDBColumn
+                DataBinding.FieldName = 'PASSPORTSERIES'
+              end
+              object GridDBTableView1PASSPORTNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'PASSPORTNUMB'
+              end
+              object GridDBTableView1PASSINST: TcxGridDBColumn
+                DataBinding.FieldName = 'PASSINST'
+                Width = 169
+              end
+              object GridDBTableView1ADRESS: TcxGridDBColumn
+                DataBinding.FieldName = 'ADRESS'
+                Width = 1142
+              end
+              object GridDBTableView1INDATE: TcxGridDBColumn
+                DataBinding.FieldName = 'INDATE'
+                Visible = False
+              end
+              object GridDBTableView1EDUCATION: TcxGridDBColumn
+                DataBinding.FieldName = 'EDUCATION'
+                Visible = False
+              end
+            end
+          end
         end
       end
     end
@@ -3393,7 +3593,8 @@ inherited CONTWORKER: TCONTWORKER
       '       rownum, t.*'
       'from'
       '      HR_V_EMPLOYEE_INCOME t')
-    Top = 0
+    Left = 360
+    Top = 8
     object MainQueryROWNUM: TFMTBCDField
       DisplayLabel = ' '#8470
       FieldName = 'ROWNUM'
@@ -3611,7 +3812,8 @@ inherited CONTWORKER: TCONTWORKER
     end
   end
   inherited DataSource1: TDataSource
-    Top = 0
+    Left = 280
+    Top = 8
   end
   object QRY_JOBSTRUCTURE: TADQuery
     MasterSource = DataSource1
@@ -3914,8 +4116,9 @@ inherited CONTWORKER: TCONTWORKER
     Left = 144
     Top = 616
   end
-  object PopupMenu1: TPopupMenu
-    Left = 488
+  object pm_main: TPopupMenu
+    Left = 504
+    Top = 8
     object N3: TMenuItem
       Caption = #1054#1092#1086#1088#1084#1080#1090#1100' '#1074' '#1096#1090#1072#1090
       OnClick = N3Click
@@ -5037,7 +5240,8 @@ inherited CONTWORKER: TCONTWORKER
       ' ee.citezenid = :xcitezenid'
       'and ee.status = 1806638'
       'and ee.workunittype = 3009016')
-    Left = 544
+    Left = 616
+    Top = 8
     ParamData = <
       item
         Name = 'XCITEZENID'

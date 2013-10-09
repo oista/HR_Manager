@@ -7,7 +7,13 @@ uses
   Dialogs, DictUnit, DB, PKDBFindPanel, PKDBEditButtons, ExtCtrls, Grids, DBGrids,
   VrDbGrid, ComCtrls, StdCtrls, uADStanIntf, uADStanOption, uADStanParam,
   uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf, uADStanAsync,
-  uADDAptManager, uADCompDataSet, uADCompClient;
+  uADDAptManager, uADCompDataSet, uADCompClient, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinOffice2007Blue,
+  dxSkinOffice2007Silver, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinscxPCPainter, cxPCdxBarPopupMenu, cxStyles, cxCustomData, cxFilter,
+  cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
+  cxGrid, cxPC;
 
 type
   TVACANCY = class(TDictForm)
@@ -35,6 +41,16 @@ type
     MainQueryCONTRACT: TStringField;
     MainQueryDEPT: TStringField;
     MainQuerySTATUS: TStringField;
+    GridDBTableView1JOBTITLE: TcxGridDBColumn;
+    GridDBTableView1QUALIFICATION: TcxGridDBColumn;
+    GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
+    GridDBTableView1ADDITIONHARM: TcxGridDBColumn;
+    GridDBTableView1ADDITIONSECRET: TcxGridDBColumn;
+    GridDBTableView1ADDITIONOTHER: TcxGridDBColumn;
+    GridDBTableView1DESCR: TcxGridDBColumn;
+    GridDBTableView1DCODE: TcxGridDBColumn;
+    GridDBTableView1DEPT: TcxGridDBColumn;
+    GridDBTableView1STATUS: TcxGridDBColumn;
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }

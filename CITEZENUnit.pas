@@ -1,3 +1,4 @@
+
 unit CITEZENUnit;
 
 interface
@@ -23,7 +24,7 @@ uses
   dxSkinXmas2008Blue, dxSkinscxPCPainter, cxPCdxBarPopupMenu, cxStyles,
   cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData,
   cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid, cxPC;
+  cxGridTableView, cxGridDBTableView, cxGrid, cxPC,cxGridExportLink;
 
 type
   TCITEZEN = class(TDictForm)
@@ -40,24 +41,16 @@ type
     DS_LANGUAGE: TDataSource;
     GridPanel2: TGridPanel;
     PKDBEditButtons2: TPKDBEditButtons;
-    PKDBFindPanel2: TPKDBFindPanel;
-    VrDbGrid1: TVrDbGrid;
     TabSheet6: TTabSheet;
     TabSheet7: TTabSheet;
     QRY_ADRESS_ALL: TADQuery;
     DS_ADRESS_ALL: TDataSource;
     GridPanel4: TGridPanel;
     PKDBEditButtons4: TPKDBEditButtons;
-    PKDBFindPanel4: TPKDBFindPanel;
     GridPanel6: TGridPanel;
     PKDBEditButtons6: TPKDBEditButtons;
-    PKDBFindPanel6: TPKDBFindPanel;
     GridPanel8: TGridPanel;
     PKDBEditButtons7: TPKDBEditButtons;
-    PKDBFindPanel7: TPKDBFindPanel;
-    VrDbGrid2: TVrDbGrid;
-    VrDbGrid3: TVrDbGrid;
-    VrDbGrid5: TVrDbGrid;
     QRY_LANGUAGECITEZENID: TFMTBCDField;
     QRY_LANGUAGEID: TFMTBCDField;
     QRY_LANGUAGELANG: TStringField;
@@ -97,8 +90,6 @@ type
     QRY_DOCPASSPORTCHANGESTATUSDATE: TDateTimeField;
     GridPanel3: TGridPanel;
     PKDBEditButtons3: TPKDBEditButtons;
-    PKDBFindPanel3: TPKDBFindPanel;
-    VrDbGrid4: TVrDbGrid;
     QRY_FAMILY: TADQuery;
     DS_FAMILY: TDataSource;
     QRY_FAMILYID: TFMTBCDField;
@@ -140,8 +131,6 @@ type
     TabSheet10: TTabSheet;
     GridPanel5: TGridPanel;
     PKDBEditButtons5: TPKDBEditButtons;
-    PKDBFindPanel5: TPKDBFindPanel;
-    VrDbGrid6: TVrDbGrid;
     QRY_PROFESSION: TADQuery;
     DS_PROFESSION: TDataSource;
     QRY_PROFESSIONID: TFMTBCDField;
@@ -156,13 +145,11 @@ type
     QRY_PROFESSIONNAME: TStringField;
     QRY_PROFESSIONFATHERSHIP: TStringField;
     QRY_PROFESSIONPROFFTYPE: TStringField;
-    PopupMenu1: TPopupMenu;
+    pm_MainGrid: TPopupMenu;
     N1: TMenuItem;
     TabSheet11: TTabSheet;
     GridPanel7: TGridPanel;
     PKDBEditButtons8: TPKDBEditButtons;
-    PKDBFindPanel8: TPKDBFindPanel;
-    VrDbGrid7: TVrDbGrid;
     QRY_JOBHISTORY: TADQuery;
     DS_JOBHISTORY: TDataSource;
     QRY_JOBHISTORYCITEZENID: TFMTBCDField;
@@ -178,8 +165,6 @@ type
     TabSheet12: TTabSheet;
     GridPanel9: TGridPanel;
     PKDBEditButtons9: TPKDBEditButtons;
-    PKDBFindPanel9: TPKDBFindPanel;
-    VrDbGrid8: TVrDbGrid;
     QRY_PHONENUMBER: TADQuery;
     FloatField1: TFMTBCDField;
     FloatField2: TFMTBCDField;
@@ -202,27 +187,25 @@ type
     TabSheet13: TTabSheet;
     GridPanel10: TGridPanel;
     PKDBEditButtons10: TPKDBEditButtons;
-    PKDBFindPanel10: TPKDBFindPanel;
-    VrDbGrid9: TVrDbGrid;
-    ADQuery10: TADQuery;
-    DataSource11: TDataSource;
-    ADQuery10ID: TFMTBCDField;
-    ADQuery10AGREEMENTNUMB: TStringField;
-    ADQuery10AGREEMENTDATE: TDateTimeField;
-    ADQuery10STATUSID: TFMTBCDField;
-    ADQuery10INDATE: TDateTimeField;
-    ADQuery10OUTDATE: TDateTimeField;
-    ADQuery10TESTPERIOD: TDateTimeField;
-    ADQuery10EMPLOYEEID: TFMTBCDField;
-    ADQuery10SOURCETYPE: TStringField;
-    ADQuery10LASTNAME: TStringField;
-    ADQuery10NAME: TStringField;
-    ADQuery10FATHERSHIP: TStringField;
-    ADQuery10CITEZENID: TFMTBCDField;
-    ADQuery10STATUSNAME: TStringField;
-    ADQuery10JOBTITLE: TStringField;
-    ADQuery10STATUS: TStringField;
-    ADQuery10WORKTYPE: TStringField;
+    QRY_WORKCONTRACT: TADQuery;
+    DS_WORKCONTRACT: TDataSource;
+    QRY_WORKCONTRACTID: TFMTBCDField;
+    QRY_WORKCONTRACTAGREEMENTNUMB: TStringField;
+    QRY_WORKCONTRACTAGREEMENTDATE: TDateTimeField;
+    QRY_WORKCONTRACTSTATUSID: TFMTBCDField;
+    QRY_WORKCONTRACTINDATE: TDateTimeField;
+    QRY_WORKCONTRACTOUTDATE: TDateTimeField;
+    QRY_WORKCONTRACTTESTPERIOD: TDateTimeField;
+    QRY_WORKCONTRACTEMPLOYEEID: TFMTBCDField;
+    QRY_WORKCONTRACTSOURCETYPE: TStringField;
+    QRY_WORKCONTRACTLASTNAME: TStringField;
+    QRY_WORKCONTRACTNAME: TStringField;
+    QRY_WORKCONTRACTFATHERSHIP: TStringField;
+    QRY_WORKCONTRACTCITEZENID: TFMTBCDField;
+    QRY_WORKCONTRACTSTATUSNAME: TStringField;
+    QRY_WORKCONTRACTJOBTITLE: TStringField;
+    QRY_WORKCONTRACTSTATUS: TStringField;
+    QRY_WORKCONTRACTWORKTYPE: TStringField;
     TabSheet14: TTabSheet;
     GridPanel11: TGridPanel;
     PKDBEditButtons11: TPKDBEditButtons;
@@ -237,9 +220,9 @@ type
     QRY_ALL_ORDERSQUALIFICATION: TStringField;
     QRY_ALL_ORDERSCITEZENID: TFMTBCDField;
     PKDBLabelEdit15: TPKDBLabelEdit;
-    PopupMenu2: TPopupMenu;
+    pm_Order: TPopupMenu;
     MenuItem1: TMenuItem;
-    PopupMenu3: TPopupMenu;
+    pm_Workcont: TPopupMenu;
     MenuItem2: TMenuItem;
     DEL_DOC: TADStoredProc;
     N2: TMenuItem;
@@ -270,13 +253,124 @@ type
     MainQueryADRESS: TStringField;
     QRY_ALL_ORDERSSTATUS: TStringField;
     QRY_ALL_ORDERSCHANGESTATUSDATE: TDateTimeField;
-    VrDbGrid10: TVrDbGrid;
+    GridDBTableView1LASTNAME: TcxGridDBColumn;
+    GridDBTableView1NAME: TcxGridDBColumn;
+    GridDBTableView1FATHERSHIP: TcxGridDBColumn;
+    GridDBTableView1PASSPORTSERIES: TcxGridDBColumn;
+    GridDBTableView1PASSPORTNUMB: TcxGridDBColumn;
+    GridDBTableView1PASSDATE: TcxGridDBColumn;
+    GridDBTableView1PASSINST: TcxGridDBColumn;
+    GridDBTableView1POL: TcxGridDBColumn;
+    GridDBTableView1FAMILYCOND: TcxGridDBColumn;
+    GridDBTableView1BIRTHDATE: TcxGridDBColumn;
+    GridDBTableView1BIRTHPLACE: TcxGridDBColumn;
+    GridDBTableView1BOOKNUMB: TcxGridDBColumn;
+    GridDBTableView1SNILSNO: TcxGridDBColumn;
+    GridDBTableView1SNILSDATE: TcxGridDBColumn;
+    GridDBTableView1TAXNUMB: TcxGridDBColumn;
+    GridDBTableView1PENSIONDATE: TcxGridDBColumn;
+    GridDBTableView1PENSIONDOCNUMB: TcxGridDBColumn;
+    GridDBTableView1EDUCATION: TcxGridDBColumn;
+    GridDBTableView1ADRESS: TcxGridDBColumn;
+    grd_docpassportDBTableView1: TcxGridDBTableView;
+    grd_docpassportLevel1: TcxGridLevel;
+    grd_docpassport: TcxGrid;
+    grd_workcontractDBTableView1: TcxGridDBTableView;
+    grd_workcontractLevel1: TcxGridLevel;
+    grd_workcontract: TcxGrid;
+    grd_orderDBTableView1: TcxGridDBTableView;
+    grd_orderLevel1: TcxGridLevel;
+    grd_order: TcxGrid;
+    grd_docpassportDBTableView1LASTNAME: TcxGridDBColumn;
+    grd_docpassportDBTableView1NAME: TcxGridDBColumn;
+    grd_docpassportDBTableView1FATHERSHIP: TcxGridDBColumn;
+    grd_docpassportDBTableView1ORGNAME: TcxGridDBColumn;
+    grd_docpassportDBTableView1PASSPORTNUMB: TcxGridDBColumn;
+    grd_docpassportDBTableView1PASSDATE: TcxGridDBColumn;
+    grd_docpassportDBTableView1PASSPORTSERIES: TcxGridDBColumn;
+    grd_docpassportDBTableView1CHANGESTATUSDATE: TcxGridDBColumn;
+    QRY_DOCPASSPORTSTATUSNAME: TStringField;
+    grd_docpassportDBTableView1STATUSNAME: TcxGridDBColumn;
+    grd_orderDBTableView1ORDERDATE: TcxGridDBColumn;
+    grd_orderDBTableView1ORDERNUMB: TcxGridDBColumn;
+    grd_orderDBTableView1ORDTYPE: TcxGridDBColumn;
+    grd_orderDBTableView1DESCR: TcxGridDBColumn;
+    grd_orderDBTableView1JOBTITLE: TcxGridDBColumn;
+    grd_orderDBTableView1QUALIFICATION: TcxGridDBColumn;
+    grd_orderDBTableView1STATUS: TcxGridDBColumn;
+    grd_orderDBTableView1CHANGESTATUSDATE: TcxGridDBColumn;
+    grd_workcontractDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
+    grd_workcontractDBTableView1AGREEMENTDATE: TcxGridDBColumn;
+    grd_workcontractDBTableView1INDATE: TcxGridDBColumn;
+    grd_workcontractDBTableView1OUTDATE: TcxGridDBColumn;
+    grd_workcontractDBTableView1STATUSNAME: TcxGridDBColumn;
+    grd_workcontractDBTableView1JOBTITLE: TcxGridDBColumn;
+    grd_workcontractDBTableView1STATUS: TcxGridDBColumn;
+    grd_workcontractDBTableView1WORKTYPE: TcxGridDBColumn;
+    grd_EDUCATION: TcxGrid;
+    grd_EDUCATIONDBTableView1: TcxGridDBTableView;
+    grd_EDUCATIONDBTableView1DOCTYPE: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1SPECIALITY: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1CVALIFICATION: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1EDUCATIONFORM: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1DOCSERIA: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1DOCNUMB: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1NAME: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1OUTYEAR: TcxGridDBColumn;
+    grd_EDUCATIONDBTableView1OVEREDUCATION: TcxGridDBColumn;
+    grd_EDUCATIONLevel1: TcxGridLevel;
+    grd_languageDBTableView1: TcxGridDBTableView;
+    grd_languageLevel1: TcxGridLevel;
+    grd_language: TcxGrid;
+    grd_languageDBTableView1LANG: TcxGridDBColumn;
+    grd_languageDBTableView1STEP: TcxGridDBColumn;
+    grd_adressDBTableView1: TcxGridDBTableView;
+    grd_adressLevel1: TcxGridLevel;
+    grd_adress: TcxGrid;
+    grd_adressDBTableView1REGDATE: TcxGridDBColumn;
+    grd_adressDBTableView1STATUS: TcxGridDBColumn;
+    grd_adressDBTableView1REGION: TcxGridDBColumn;
+    grd_adressDBTableView1AREA: TcxGridDBColumn;
+    grd_adressDBTableView1TOWNNAME: TcxGridDBColumn;
+    grd_adressDBTableView1SUBTOWN: TcxGridDBColumn;
+    grd_adressDBTableView1STRRETHOUSE: TcxGridDBColumn;
+    grd_adressDBTableView1STATUSNAME: TcxGridDBColumn;
+    grd_phonenumberDBTableView1: TcxGridDBTableView;
+    grd_phonenumberLevel1: TcxGridLevel;
+    grd_phonenumber: TcxGrid;
+    grd_phonenumberDBTableView1DESRIPTION: TcxGridDBColumn;
+    grd_phonenumberDBTableView1PHONENUMBER: TcxGridDBColumn;
+    grd_phonenumberDBTableView1PHONETYPE: TcxGridDBColumn;
+    grd_phonenumberDBTableView1STATUS: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1: TcxGridDBTableView;
+    grd_jobhistoryLevel1: TcxGridLevel;
+    grd_jobhistory: TcxGrid;
+    grd_jobhistoryDBTableView1INDATE: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1OUTDATE: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1DEPT_NO: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1AGREEMENTNUMB: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1AGREEMENTDATE: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1SUMSAL: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1REASON: TcxGridDBColumn;
+    grd_jobhistoryDBTableView1ID: TcxGridDBColumn;
+    grd_proffessionDBTableView1: TcxGridDBTableView;
+    grd_proffessionLevel1: TcxGridLevel;
+    grd_proffession: TcxGrid;
+    grd_proffessionDBTableView1CODE: TcxGridDBColumn;
+    grd_proffessionDBTableView1KATEG: TcxGridDBColumn;
+    grd_proffessionDBTableView1JOBTITLE: TcxGridDBColumn;
+    grd_familyDBTableView1: TcxGridDBTableView;
+    grd_familyLevel1: TcxGridLevel;
+    grd_family: TcxGrid;
+    grd_familyDBTableView1BIRTHDATE: TcxGridDBColumn;
+    grd_familyDBTableView1BIRTHPLACE: TcxGridDBColumn;
+    grd_familyDBTableView1STEP: TcxGridDBColumn;
+    grd_familyDBTableView1LASTNAME: TcxGridDBColumn;
+    grd_familyDBTableView1NAME: TcxGridDBColumn;
+    grd_familyDBTableView1FATHERSHIP: TcxGridDBColumn;
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure GridCellClick(Column: TColumn);
     procedure clearboxes;
-    procedure GridKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure GridKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure anotherrow;
     procedure otherdata;
     procedure ViewReport(Sender: TObject);
@@ -301,6 +395,8 @@ type
     procedure DeleteDoc(Sender: TObject);
     procedure Excel1Click(Sender: TObject);
     procedure BeforeEditDoc(Sender: TObject);
+    procedure DataSource1DataChange(Sender: TObject; Field: TField);
+    procedure FormCreate(Sender: TObject);
 
   private
 
@@ -320,21 +416,21 @@ uses DM, MainUnit,PKDBQueryToExcel;
 
 procedure TCITEZEN.BeforeEditDoc(Sender: TObject);
 begin
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
     begin
        PKDBEditButtons11.TableName          := 'HR_APPOINT_ORDER';
        PKDBEditButtons11.EditDialogClassName:= '';
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
     begin
        PKDBEditButtons11.TableName:= 'HR_ORDER';
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
     begin
        PKDBEditButtons11.TableName:= 'HR_DISMISS_ORDER';
     end;
 
-  VrDbGrid10.Refresh;
+  grd_order.Refresh;
 
 end;
 
@@ -359,24 +455,7 @@ begin
    Cform.madereportT2(MainQuery.FieldByName('ID').AsFloat);
 end;
 
-procedure TCITEZEN.GridCellClick(Column: TColumn);
-begin
-  inherited;
-  anotherrow;
-end;
 
-procedure TCITEZEN.GridKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  inherited;
-  anotherrow;
-end;
-procedure TCITEZEN.GridKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  inherited;
-  anotherrow;
-end;
 
 procedure TCITEZEN.InitForm;
 begin
@@ -387,8 +466,6 @@ begin
   TBL_DOCSNILS.ReadFromDB(MainQueryID.Asstring);
   TBL_DOCWORKBOOK.ReadFromDB(MainQueryID.Asstring);
   otherdata;
-  mainform.WindowState:= wsMaximized;
- // PageControl1.Height:=150;
 
   // вкладка - первая
   PageControl2.ActivePageIndex := 0;
@@ -459,7 +536,7 @@ end;
 procedure TCITEZEN.CLWorkcontract(Sender: TObject);
 begin
    // переход на труд договора
-  CloseQuerys(ADQuery10);     inherited;
+  CloseQuerys(QRY_WORKCONTRACT);     inherited;
 end;
 procedure TCITEZEN.CLOrders(Sender: TObject);
 begin
@@ -485,17 +562,17 @@ end;
 
 procedure TCITEZEN.MenuItem1Click(Sender: TObject);
 begin // вывод приказов
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
     begin
      Cform := TWREPORT.Create(self);
      Cform.madeOrderAppoint(QRY_ALL_ORDERS.FieldByName('ID').AsFloat);
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
     begin
      Cform := TWREPORT.Create(self);
      Cform.madeOrderJoin(QRY_ALL_ORDERS.FieldByName('ID').AsFloat);
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
     begin
      Cform := TWREPORT.Create(self);
      Cform.madeOrderDismiss(QRY_ALL_ORDERS.FieldByName('ID').AsFloat);
@@ -504,15 +581,15 @@ end;
 
 procedure TCITEZEN.MenuItem2Click(Sender: TObject);
 begin // вывод договоров и соглашений
- if  VrDbGrid9.DataSource.DataSet.FieldByName('worktype').AsString= 'ДОП. СОГЛАШЕНИЕ' then
+ if  QRY_WORKCONTRACT.FieldByName('worktype').AsString= 'ДОП. СОГЛАШЕНИЕ' then
     begin
      Cform := TWREPORT.Create(self);
-     Cform.madeExtAgreement(ADQuery10.FieldByName('ID').AsFloat);
+    Cform.madeExtAgreement(QRY_WORKCONTRACT.FieldByName('ID').AsFloat);
     end
  else
     begin
      Cform := TWREPORT.Create(self);
-     Cform.madeWorkContract(ADQuery10.FieldByName('ID').AsFloat);
+     Cform.madeWorkContract(QRY_WORKCONTRACT.FieldByName('ID').AsFloat);
     end;
 end;
 
@@ -522,23 +599,29 @@ Cform := TWREPORT.Create(self);
 Cform.madereportT2(MainQuery.FieldByName('ID').AsFloat);
 end;
 
+procedure TCITEZEN.DataSource1DataChange(Sender: TObject; Field: TField);
+begin
+  inherited;
+  anotherrow;
+end;
+
 procedure TCITEZEN.DeleteDoc(Sender: TObject);
 begin   // удаление документа
 
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о переводе' then
     begin
        PKDBEditButtons11.TableName:= 'HR_APPOINT_ORDER';
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ о приеме' then
     begin
        PKDBEditButtons11.TableName:= 'HR_ORDER';
     end;
-  if  VrDbGrid10.DataSource.DataSet.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
+  if  QRY_ALL_ORDERS.FieldByName('ORDTYPE').AsString= 'Приказ об увольнении' then
     begin
        PKDBEditButtons11.TableName:= 'HR_DISMISS_ORDER';
     end;
 
-  VrDbGrid10.Refresh;
+  grd_order.Refresh;
 end;
 
 procedure  TCITEZEN.clearboxes;
@@ -554,8 +637,14 @@ end;
 
 procedure TCITEZEN.Excel1Click(Sender: TObject);
 begin
-  MainQuery.FindFirst;    // Экспорт в Excel
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
+    cxGridExportLink.ExportGridToExcel('CitezenList'+datetostr(now),Grid, True, True, True, 'xls' );
+end;
+
+
+procedure TCITEZEN.FormCreate(Sender: TObject);
+begin
+  inherited;
+
 end;
 
 // переход на другую запись

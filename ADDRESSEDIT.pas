@@ -7,7 +7,8 @@ uses
   Dialogs, EditDialogUnit, PKDBTable, ComCtrls, StdCtrls, ExtCtrls, PKDBEdit,
   PKDBBBaseComboBox, PKDBDictEdit, DictUnit, uADStanIntf, uADStanOption,
   uADStanParam, uADStanError, uADDatSManager, uADPhysIntf, uADDAptIntf,
-  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient;
+  uADStanAsync, uADDAptManager, DB, uADCompDataSet, uADCompClient, PKDBDefs,
+  PKDBContext;
 
 type
   TADDRESS = class(TEditDialog)

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, EditDialogUnit, PKDBTable, ComCtrls, StdCtrls, ExtCtrls, PKDBDictEdit,
-  PKDBEdit;
+  PKDBEdit, PKDBContext;
 
 type
   TORDEREDIT = class(TEditDialog)

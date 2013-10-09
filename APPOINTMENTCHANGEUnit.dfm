@@ -7,6 +7,54 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
   ExplicitHeight = 680
   PixelsPerInch = 96
   TextHeight = 13
+  object PKDBDictLabelEdit2: TPKDBDictLabelEdit [0]
+    Left = 437
+    Top = 52
+    Width = 390
+    Height = 21
+    Connection = DataModule1.ADConnection1
+    Table = PKDBTable1
+    TableField = 'CITEZENID'
+    LookUpRool = 'lastname||'#39' '#39'||name||'#39' '#39'||fathership||'#39' '#1087#1072#1089#1087#1086#1088#1090' '#8470#39'||PASSPORTNUMB'
+    ReadOnly = False
+    DictionaryClass = 'TEMPLOYEE'
+    WithoutTable = False
+    EditLabel.Width = 57
+    EditLabel.Height = 13
+    EditLabel.Caption = #1043#1088#1072#1078#1076#1072#1085#1080#1085
+    DesignSize = (
+      390
+      21)
+  end
+  object PKDBDictEdit2: TPKDBDictEdit [1]
+    Left = 437
+    Top = 97
+    Width = 390
+    Height = 21
+    Connection = DataModule1.ADConnection1
+    Table = PKDBTable2
+    TableField = 'ID'
+    LookUpRool = #39#1055#1054#1044#1056'.'#8470#39'||DCODE||'#39' '#39'|| jobtitle||'#39' '#39'||qualification'
+    ReadOnly = False
+    OnBeforeOpenButtonClick = PKDBDictEdit1BeforeOpenButtonClick
+    WithoutTable = False
+    DesignSize = (
+      390
+      21)
+  end
+  object PKDBBBaseComboBox2: TPKDBBBaseComboBox [2]
+    Left = 22
+    Top = 434
+    Width = 178
+    Height = 21
+    TabOrder = 2
+    Text = #1056#1072#1073#1086#1090#1086#1076#1072#1090#1077#1083#1100
+    DBTable = 'hr_V_EMPLOYER'
+    PrimaryKey = 'id'
+    content = ' fiolw'
+    Table = PKDBTable3
+    TableField = 'EMPLOYERID'
+  end
   inherited Panel1: TPanel
     Left = 865
     Height = 656
@@ -235,55 +283,6 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
         1
         1)
     end
-  end
-  object PKDBDictLabelEdit2: TPKDBDictLabelEdit [1]
-    Left = 437
-    Top = 52
-    Width = 390
-    Height = 21
-    Connection = DataModule1.ADConnection1
-    Table = PKDBTable1
-    TableField = 'CITEZENID'
-    LookUpRool = 'lastname||'#39' '#39'||name||'#39' '#39'||fathership||'#39' '#1087#1072#1089#1087#1086#1088#1090' '#8470#39'||PASSPORTNUMB'
-    ReadOnly = False
-    DictionaryClass = 'TEMPLOYEE'
-    WithoutTable = False
-    EditLabel.Width = 57
-    EditLabel.Height = 13
-    EditLabel.Caption = #1043#1088#1072#1078#1076#1072#1085#1080#1085
-    DesignSize = (
-      390
-      21)
-  end
-  object PKDBDictEdit2: TPKDBDictEdit [2]
-    Left = 437
-    Top = 97
-    Width = 390
-    Height = 21
-    Connection = DataModule1.ADConnection1
-    Table = PKDBTable2
-    TableField = 'ID'
-    LookUpRool = #39#1055#1054#1044#1056'.'#8470#39'||DCODE||'#39' '#39'|| jobtitle||'#39' '#39'||qualification'
-    ReadOnly = False
-    OnBeforeOpenButtonClick = PKDBDictEdit1BeforeOpenButtonClick
-    WithoutTable = False
-    DesignSize = (
-      390
-      21)
-  end
-  object PKDBBBaseComboBox2: TPKDBBBaseComboBox [3]
-    Left = 22
-    Top = 434
-    Width = 178
-    Height = 21
-    ItemHeight = 0
-    TabOrder = 2
-    Text = #1056#1072#1073#1086#1090#1086#1076#1072#1090#1077#1083#1100
-    DBTable = 'hr_V_EMPLOYER'
-    PrimaryKey = 'id'
-    content = ' fiolw'
-    Table = PKDBTable3
-    TableField = 'EMPLOYERID'
   end
   inherited PageControl1: TPageControl
     Width = 859
@@ -530,7 +529,6 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
           Top = 81
           Width = 178
           Height = 21
-          ItemHeight = 0
           TabOrder = 2
           DBTable = 'hr_v_employer'
           PrimaryKey = 'id'
@@ -696,7 +694,6 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
           Top = 81
           Width = 178
           Height = 21
-          ItemHeight = 0
           TabOrder = 2
           DBTable = 'hr_v_employer'
           PrimaryKey = 'id'
@@ -710,7 +707,6 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
         Top = 115
         Width = 177
         Height = 21
-        ItemHeight = 0
         TabOrder = 11
         Text = #1058#1080#1087' '#1087#1077#1088#1077#1074#1086#1076#1072
         DBTable = 'HR_FACETCONTENT'
@@ -872,7 +868,6 @@ inherited APPOINTMENTCHANGE: TAPPOINTMENTCHANGE
     Connection = DataModule1.ADConnection1
     PrimaryKeySeq = 'AE_IDSEQ'
     Left = 877
-    Top = 88
   end
   object ADStoredProc2: TADStoredProc
     Connection = DataModule1.ADConnection1

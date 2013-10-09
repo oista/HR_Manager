@@ -10,16 +10,20 @@ inherited ORDEREDIT: TORDEREDIT
   inherited Panel1: TPanel
     Left = 538
     Height = 222
+    ExplicitLeft = 538
+    ExplicitHeight = 222
   end
   inherited PageControl1: TPageControl
     Width = 532
     Height = 216
+    ExplicitWidth = 532
+    ExplicitHeight = 216
     inherited TabSheet1: TTabSheet
       Caption = #1055#1088#1080#1082#1072#1079
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 356
-      ExplicitHeight = 385
+      ExplicitWidth = 524
+      ExplicitHeight = 188
       object PKDBDictLabelEdit1: TPKDBDictLabelEdit
         Left = 15
         Top = 25
@@ -29,6 +33,7 @@ inherited ORDEREDIT: TORDEREDIT
         Table = PKDBTable1
         TableField = 'ORDERTYPE'
         LookUpRool = ' rowcontent'
+        ReadOnly = False
         WithoutTable = False
         EditLabel.Width = 62
         EditLabel.Height = 13
@@ -121,7 +126,10 @@ inherited ORDEREDIT: TORDEREDIT
       end>
     TableName = 'HR_ORDER'
     Connection = DataModule1.ADConnection1
-    Left = 544
-    Top = 88
+    Left = 568
+    Top = 96
+  end
+  inherited Context: TPKDBContext
+    Top = 144
   end
 end

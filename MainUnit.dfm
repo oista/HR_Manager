@@ -3,9 +3,10 @@ object MainForm: TMainForm
   Top = 0
   Margins.Right = 0
   Caption = #1050#1072#1076#1088#1086#1074#1099#1081' '#1091#1095#1077#1090
-  ClientHeight = 474
-  ClientWidth = 717
+  ClientHeight = 675
+  ClientWidth = 327
   Color = clBtnFace
+  DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -21,8 +22,8 @@ object MainForm: TMainForm
     AlignWithMargins = True
     Left = 3
     Top = 1
-    Width = 713
-    Height = 453
+    Width = 323
+    Height = 654
     Margins.Top = 1
     Margins.Right = 1
     Margins.Bottom = 1
@@ -30,12 +31,16 @@ object MainForm: TMainForm
     DockSite = True
     OwnerDraw = True
     TabOrder = 0
+    ExplicitWidth = 713
+    ExplicitHeight = 453
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 455
-    Width = 717
+    Top = 656
+    Width = 327
     Height = 19
     Panels = <>
+    ExplicitTop = 455
+    ExplicitWidth = 717
   end
 end

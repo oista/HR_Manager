@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, EditDialogUnit, StdCtrls, PKDBEdit, PKDBBBaseComboBox, PKDBTable,
-  ComCtrls, ExtCtrls, PKDBMemo, reportunit;
+  ComCtrls, ExtCtrls, PKDBMemo, reportunit, PKDBContext, PKDBDefs;
 
 type
   TAWARDEDIT = class(TEditDialog)
@@ -32,13 +32,13 @@ implementation
 
 procedure TAWARDEDIT.runcommand;
 begin
-   PKDBTable1.GetTempPrimarykey;
-   PrimaryKey := PKDBTable1.Insert;
+  inherited;
 
   if chk1.Checked then
    begin
       Cform := TWREPORT.Create(AWARDEDIT);
       Cform.madeAwardOrder(strtofloat(PKDBTable1.Fields.PrimaryKey.FieldVal));
+      Cform.ShowModal;
    end;
 end;
 
