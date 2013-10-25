@@ -13,7 +13,7 @@ uses
   uADDAptIntf, uADStanAsync, uADDAptManager, uADCompDataSet, uADCompClient,
   cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, PKDBEditButtons, Vcl.ExtCtrls,
-  cxPC, Vcl.StdCtrls, Vcl.ComCtrls;
+  cxPC, Vcl.StdCtrls, Vcl.ComCtrls, cxGridExportLink, Vcl.Menus;
 
 type
   TDOCLEAVEListForm = class(TDictForm)
@@ -133,6 +133,8 @@ type
     qry_DOCLEAVECONTIME: TStringField;
     cxGrid1DBTableView1CONTIME: TcxGridDBColumn;
     qry_DOCLEAVEID: TFMTBCDField;
+    pm1: TPopupMenu;
+    Excel1: TMenuItem;
   private
     { Private declarations }
   public
@@ -148,10 +150,10 @@ uses DM, MainUnit;
 
 
 procedure TDOCLEAVEListForm.initform;
+var filename:string;
 begin
-   inherited;
-   qry_DOCLEAVE.Open;
-   DM.DataModule1.alter_nls.Execute;
+ filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_ОправдвтельныеДокументы_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+ cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 initialization

@@ -715,10 +715,11 @@ begin
 end;
 
 procedure TCONJUCTION.Excel1Click(Sender: TObject);
+var
+filename: string;
 begin
-  cxGridExportLink.ExportGridToExcel('ConjuctionList',Grid, True, True, True, 'xls' );
-  //MainQuery.FindFirst;  // экспорт в Excel
-  //PKDBQuerytoExcel.ImportVisible(MainQuery);
+  filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_СовместителиСписок_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+  cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 initialization

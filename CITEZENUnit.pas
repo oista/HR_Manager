@@ -368,6 +368,9 @@ type
     grd_familyDBTableView1LASTNAME: TcxGridDBColumn;
     grd_familyDBTableView1NAME: TcxGridDBColumn;
     grd_familyDBTableView1FATHERSHIP: TcxGridDBColumn;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure clearboxes;
@@ -397,6 +400,9 @@ type
     procedure BeforeEditDoc(Sender: TObject);
     procedure DataSource1DataChange(Sender: TObject; Field: TField);
     procedure FormCreate(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
+
 
   private
 
@@ -593,6 +599,21 @@ begin // вывод договоров и соглашений
     end;
 end;
 
+
+procedure TCITEZEN.N4Click(Sender: TObject);
+begin
+  // ппредварительный приказ о приеме
+  Cform := TWREPORT.Create(self);
+  Cform.madeOrderJoinBLANK(MainQuery.FieldByName('ID').AsFloat);
+end;
+
+procedure TCITEZEN.N5Click(Sender: TObject);
+begin
+ // ппредварительный трудовой договор
+Cform := TWREPORT.Create(self);
+Cform.makeWorkContractBLANK(MainQuery.FieldByName('ID').AsFloat);
+end;
+
 procedure TCITEZEN.ViewReport(Sender: TObject);
 begin
 Cform := TWREPORT.Create(self);
@@ -636,8 +657,11 @@ begin
 end;
 
 procedure TCITEZEN.Excel1Click(Sender: TObject);
+var
+filename: string;
 begin
-    cxGridExportLink.ExportGridToExcel('CitezenList'+datetostr(now),Grid, True, True, True, 'xls' );
+  filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_√раждане—писок_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+  cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 

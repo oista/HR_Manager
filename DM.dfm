@@ -27,7 +27,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object PKApplicationUpdate1: TPKApplicationUpdate
-    VersionNumber = 148
+    VersionNumber = 149
     Connection = ADConnection1
     ProjectName = '698038'
     Left = 224

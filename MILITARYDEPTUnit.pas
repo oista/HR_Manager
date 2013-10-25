@@ -63,6 +63,8 @@ type
     GridDBTableView1MILACCOUNTGEN: TcxGridDBColumn;
     GridDBTableView1MILACCOUNTSPEC: TcxGridDBColumn;
     GridDBTableView1CITEZENID: TcxGridDBColumn;
+    MainQueryCATEGORYNUMB: TFMTBCDField;
+    GridDBTableView1CATEGORYNUMB: TcxGridDBColumn;
     procedure N1Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
 
@@ -80,8 +82,11 @@ implementation
 
 {$R *.dfm}
 procedure TMILITARYDEPT.N1Click(Sender: TObject);
+var
+filename: string;
 begin
-   cxGridExportLink.ExportGridToExcel('MilytaryList'+datetostr(now),Grid, True, True, True, 'xls' );
+  filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_ВоинскийУчет_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+  cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 procedure TMILITARYDEPT.N2Click(Sender: TObject);

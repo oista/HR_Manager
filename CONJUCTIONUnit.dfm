@@ -103,6 +103,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_ATESTATION'
                 PrimaryFieldName = 'ID'
@@ -216,6 +217,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh]
                 TableName = 'HR_EMPLOYEE'
@@ -348,6 +350,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_SKILLUP'
                 PrimaryFieldName = 'ID'
@@ -460,6 +463,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_RETRAINING'
                 PrimaryFieldName = 'ID'
@@ -568,6 +572,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_AWARD'
                 PrimaryFieldName = 'ID'
@@ -658,6 +663,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_HOLIDAY'
                 PrimaryFieldName = 'ID'
@@ -780,6 +786,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_SOCIAL'
                 PrimaryFieldName = 'ID'
@@ -875,6 +882,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_DISCIPLINE'
                 PrimaryFieldName = 'ID'
@@ -1145,6 +1153,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_DOCEDUCATION'
                 PrimaryFieldName = 'ID'
@@ -1264,6 +1273,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_ADRESS'
                 PrimaryFieldName = 'ID'
@@ -1378,6 +1388,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_INSURANCE'
                 PrimaryFieldName = 'ID'
@@ -1842,6 +1853,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_FAMILY'
                 PrimaryFieldName = 'ID'
@@ -1945,6 +1957,7 @@ inherited CONJUCTION: TCONJUCTION
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_EMPLOYEE'
                 PrimaryFieldName = 'ID'

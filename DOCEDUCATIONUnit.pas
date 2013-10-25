@@ -13,7 +13,7 @@ uses
   dxSkinscxPCPainter, cxPCdxBarPopupMenu, cxStyles, cxCustomData, cxFilter,
   cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView,
-  cxGrid, cxPC;
+  cxGrid, cxPC, cxGridExportLink;
 
 type
   TDOCEDUCATION = class(TDictForm)
@@ -48,7 +48,6 @@ type
     GridDBTableView1STEP: TcxGridDBColumn;
     GridDBTableView1OVEREDUCATION: TcxGridDBColumn;
     GridDBTableView1SPECIALITY: TcxGridDBColumn;
-    GridDBTableView1CVALIFICATIONCODE: TcxGridDBColumn;
     GridDBTableView1CVALIFICATION: TcxGridDBColumn;
     GridDBTableView1FIO: TcxGridDBColumn;
     GridDBTableView1EDUCATIONFORM: TcxGridDBColumn;
@@ -68,9 +67,10 @@ implementation
 
 {$R *.dfm}
 procedure TDOCEDUCATION.Excel1Click(Sender: TObject);
+var filename:string;
 begin
-  MainQuery.FindFirst;    // Экспорт в Excel
-  PKDBQuerytoExcel.ImportVisible(MainQuery);
+ filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_Документы_об_образовании_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+ cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 initialization

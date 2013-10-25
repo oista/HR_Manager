@@ -1,33 +1,33 @@
 inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
   Caption = #1055#1072#1089#1087#1086#1088#1090'   '
   ClientHeight = 379
-  ExplicitWidth = 467
+  ExplicitWidth = 618
   ExplicitHeight = 403
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Left = 360
+    Left = 511
     Width = 101
     Height = 379
-    ExplicitLeft = 360
+    ExplicitLeft = 511
     ExplicitWidth = 101
     ExplicitHeight = 379
   end
   inherited PageControl1: TPageControl
-    Width = 354
+    Width = 505
     Height = 373
-    ExplicitWidth = 354
+    ExplicitWidth = 505
     ExplicitHeight = 373
     inherited TabSheet1: TTabSheet
       Caption = #1055#1072#1089#1087#1086#1088#1090'    '
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 346
+      ExplicitWidth = 497
       ExplicitHeight = 345
       object PKDBLabelEdit1: TPKDBLabelEdit
         Left = 15
         Top = 25
-        Width = 322
+        Width = 386
         Height = 21
         TabOrder = 0
         Text = #1060#1072#1084#1080#1083#1080#1103
@@ -40,7 +40,7 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       object PKDBLabelEdit2: TPKDBLabelEdit
         Left = 15
         Top = 70
-        Width = 322
+        Width = 386
         Height = 21
         TabOrder = 1
         Text = #1048#1084#1103
@@ -53,7 +53,7 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       object PKDBLabelEdit3: TPKDBLabelEdit
         Left = 15
         Top = 115
-        Width = 322
+        Width = 386
         Height = 21
         TabOrder = 2
         Text = #1054#1090#1095#1077#1089#1090#1074#1086
@@ -65,8 +65,8 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       end
       object PKDBLabelEdit4: TPKDBLabelEdit
         Left = 144
-        Top = 160
-        Width = 193
+        Top = 153
+        Width = 257
         Height = 21
         TabOrder = 3
         Text = #8470' '#1087#1072#1089#1087#1086#1088#1090#1072
@@ -79,7 +79,7 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       object PKDBLabelEdit5: TPKDBLabelEdit
         Left = 15
         Top = 205
-        Width = 322
+        Width = 386
         Height = 21
         TabOrder = 4
         Text = #1050#1086#1075#1076#1072' '#1074#1099#1076#1072#1085
@@ -93,9 +93,8 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       object PKDBBLabelComboBox1: TPKDBBLabelComboBox
         Left = 15
         Top = 295
-        Width = 322
+        Width = 386
         Height = 21
-        ItemHeight = 13
         TabOrder = 5
         Text = #1057#1090#1088#1072#1085#1072
         DBTable = 'HR_FACETCONTENT'
@@ -109,37 +108,37 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
         EditLabel.Height = 13
         EditLabel.Caption = #1057#1090#1088#1072#1085#1072
       end
-      object PKDBBLabelComboBox2: TPKDBBLabelComboBox
-        Left = 15
-        Top = 250
-        Width = 322
-        Height = 21
-        Color = clWhite
-        ItemHeight = 13
-        TabOrder = 6
-        Text = #1050#1077#1084' '#1074#1099#1076#1072#1085
-        DBTable = 'HR_ORGANISATION'
-        PrimaryKey = 'ID'
-        content = 'name'
-        constraint = ' organisationtype=59874'
-        Table = PKDBTable1
-        TableField = 'PASSINSTITUTION'
-        EditLabel.Width = 55
-        EditLabel.Height = 13
-        EditLabel.Caption = #1050#1077#1084' '#1074#1099#1076#1072#1085
-      end
       object PKDBLabelEdit6: TPKDBLabelEdit
         Left = 15
         Top = 160
         Width = 106
         Height = 21
-        TabOrder = 7
+        TabOrder = 6
         Text = #1057#1077#1088#1080#1103' '#1087#1072#1089#1087#1086#1088#1090#1072
         Table = PKDBTable1
         TableField = 'PASSPORTSERIES'
         EditLabel.Width = 81
         EditLabel.Height = 13
         EditLabel.Caption = #1057#1077#1088#1080#1103' '#1087#1072#1089#1087#1086#1088#1090#1072
+      end
+      object PKDBDictLabelEdit1: TPKDBDictLabelEdit
+        Left = 17
+        Top = 248
+        Width = 384
+        Height = 21
+        Connection = DataModule1.ADConnection1
+        Table = PKDBTable1
+        TableField = 'PASSINSTITUTION'
+        LookUpRool = 'name'
+        ReadOnly = False
+        DictionaryClass = 'TORGANISATION_PASSPORT'
+        WithoutTable = False
+        EditLabel.Width = 55
+        EditLabel.Height = 13
+        EditLabel.Caption = #1050#1077#1084' '#1074#1099#1076#1072#1085
+        DesignSize = (
+          384
+          21)
       end
     end
   end
@@ -241,7 +240,10 @@ inherited DOCPASSPORTEDIT: TDOCPASSPORTEDIT
       end>
     TableName = 'HR_DOCPASSPORT'
     Connection = DataModule1.ADConnection1
-    Left = 392
-    Top = 88
+    Left = 544
+    Top = 152
+  end
+  inherited Context: TPKDBContext
+    Left = 544
   end
 end

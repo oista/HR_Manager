@@ -2,7 +2,6 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
   Caption = #1054#1087#1088#1072#1074#1076#1072#1090#1077#1083#1100#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099'      '
   ClientHeight = 799
   ClientWidth = 1265
-  ExplicitTop = -172
   ExplicitWidth = 1281
   ExplicitHeight = 837
   PixelsPerInch = 96
@@ -99,6 +98,7 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'TC_DOCLEAVE'
@@ -119,6 +119,7 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
               Width = 1181
               Height = 368
               Align = alClient
+              PopupMenu = pm1
               TabOrder = 1
               object cxGrid1DBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
@@ -192,7 +193,6 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
             Width = 1175
             Height = 252
             ExplicitWidth = 1175
-            ExplicitHeight = 252
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
               object GridDBTableView1DCODE: TcxGridDBColumn
@@ -349,6 +349,7 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
                     Width = 180
                     Height = 28
                     CheckUserPrivs = False
+                    StatusFieldName = 'STATUSID'
                     CheckRecStatus = False
                     PrimaryFieldName = 'ID'
                     ParentFieldName = 'ID'
@@ -433,6 +434,7 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
                   Width = 180
                   Height = 28
                   CheckUserPrivs = False
+                  StatusFieldName = 'STATUSID'
                   CheckRecStatus = False
                   PrimaryFieldName = 'ID'
                   ParentFieldName = 'ID'
@@ -867,5 +869,12 @@ inherited DOCLEAVEListForm: TDOCLEAVEListForm
     DataSet = qry_DOCLEAVE
     Left = 456
     Top = 352
+  end
+  object pm1: TPopupMenu
+    Left = 776
+    Top = 496
+    object Excel1: TMenuItem
+      Caption = #1069#1082#1089#1087#1086#1088#1090' '#1074' Excel'
+    end
   end
 end

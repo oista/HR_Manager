@@ -12,6 +12,8 @@ object BMenuForm: TBMenuForm
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object PKDBOfficePager1: TPKDBOfficePager

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, EditDialogUnit, PKDBTable, ComCtrls, StdCtrls, ExtCtrls,
-  PKDBDictEdit, PKDBEdit, PKDBBBaseComboBox;
+  PKDBDictEdit, PKDBEdit, PKDBBBaseComboBox, PKDBContext;
 
 type
   TDOCPASSPORTEDIT = class(TEditDialog)
@@ -15,8 +15,8 @@ type
     PKDBLabelEdit4: TPKDBLabelEdit;
     PKDBLabelEdit5: TPKDBLabelEdit;
     PKDBBLabelComboBox1: TPKDBBLabelComboBox;
-    PKDBBLabelComboBox2: TPKDBBLabelComboBox;
     PKDBLabelEdit6: TPKDBLabelEdit;
+    PKDBDictLabelEdit1: TPKDBDictLabelEdit;
   private
     { Private declarations }
   public

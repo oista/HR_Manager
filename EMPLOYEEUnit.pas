@@ -970,25 +970,34 @@ begin
 end;
 
 procedure TEMPLOYEE.Excel1Click(Sender: TObject);
+var
+filename :string;
 begin
-   cxGridExportLink.ExportGridToExcel('EmployeeList'+datetostr(now),Grid, True, True, True, 'xls' );
+  filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_СотрудникиСписок_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+  cxGridExportLink.ExportGridToExcel(filename ,Grid, True, True, True, 'xls' );
 end;
 
 procedure TEMPLOYEE.Excel2Click(Sender: TObject);
-var j: Integer;
+var
+j: Integer;
+filename :string;
 begin  // ЭКСПОРТ  EXCEL нижних таблиц
+ filename:='';
  case PageControl2.ActivePage.TabIndex    of
   1: begin
-       cxGridExportLink.ExportGridToExcel('JobStructureList'+datetostr(now),grd_JOBSTRUCTURE, True, True, True, 'xls' );
+       filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_РабочиеМеста_'+fld_MainQueryLastname.asstring+' ' +StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+       cxGridExportLink.ExportGridToExcel(filename,grd_JOBSTRUCTURE, True, True, True, 'xls' );
       // раб места
      end;
   5: begin
-      cxGridExportLink.ExportGridToExcel('HolidayList'+datetostr(now),grd_HOLIDAY, True, True, True, 'xls' );
-      //PKDBQuerytoExcel.ImportVisible(QRY_HOLIDAY);   // отпуска
+        // отпуска
+       filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_Отпуска_'+fld_MainQueryLastname.asstring+' ' +StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+       cxGridExportLink.ExportGridToExcel(filename, grd_HOLIDAY, True, True, True, 'xls' );
      end;
   14:begin
-      cxGridExportLink.ExportGridToExcel('JobHistoryList'+datetostr(now),grd_JOBHISTORY, True, True, True, 'xls' );
-      //PKDBQuerytoExcel.ImportVisible(QRY_JOBHISTORY);   // история работ
+       //
+       filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_ИсторияРабот_'+fld_MainQueryLastname.asstring+' ' +StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+       cxGridExportLink.ExportGridToExcel(filename, grd_JOBHISTORY, True, True, True, 'xls' );
      end;
 end;
 end;

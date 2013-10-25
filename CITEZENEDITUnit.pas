@@ -56,10 +56,8 @@ type
     PKDBBLabelComboBox2: TPKDBBLabelComboBox;
     PKDBBLabelComboBox1: TPKDBBLabelComboBox;
     PKDBLabelEdit9: TPKDBLabelEdit;
-    PKDBBLabelComboBox4: TPKDBBLabelComboBox;
     PKDBBLabelComboBox5: TPKDBBLabelComboBox;
     PKDBLabelEdit4: TPKDBLabelEdit;
-    PKDBBLabelComboBox7: TPKDBBLabelComboBox;
     PKDBLabelEdit10: TPKDBLabelEdit;
     TBL_DOCPASSPORT: TPKDBTable;
     TBL_MILITARY: TPKDBTable;
@@ -192,6 +190,8 @@ type
     grd_phoneDBTableView1PHONENUMBER: TcxGridDBColumn;
     grd_phoneDBTableView1PHONETYPE: TcxGridDBColumn;
     grd_phoneDBTableView1STATUS: TcxGridDBColumn;
+    PKDBDictLabelEdit1: TPKDBDictLabelEdit;
+    PKDBDictLabelEdit2: TPKDBDictLabelEdit;
     procedure Open; override;
     function  FindErrors: Boolean; override;
     procedure RunCommand(); override;

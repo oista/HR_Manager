@@ -77,24 +77,15 @@ inherited DOCEDUCATION: TDOCEDUCATION
           inherited Grid: TcxGrid
             Width = 1261
             Height = 396
+            PopupMenu = PopupMenu1
             ExplicitWidth = 1261
             ExplicitHeight = 396
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
-              object GridDBTableView1EDUCATIONFORM: TcxGridDBColumn
-                DataBinding.FieldName = 'EDUCATIONFORM'
+              object GridDBTableView1DCODE: TcxGridDBColumn
+                DataBinding.FieldName = 'DCODE'
                 HeaderAlignmentHorz = taCenter
-                Width = 108
-              end
-              object GridDBTableView1EDUCATION: TcxGridDBColumn
-                DataBinding.FieldName = 'EDUCATION'
-                HeaderAlignmentHorz = taCenter
-                Width = 301
-              end
-              object GridDBTableView1DOCTYPE: TcxGridDBColumn
-                DataBinding.FieldName = 'DOCTYPE'
-                HeaderAlignmentHorz = taCenter
-                Width = 170
+                Width = 45
               end
               object GridDBTableView1FIO: TcxGridDBColumn
                 DataBinding.FieldName = 'FIO'
@@ -106,10 +97,31 @@ inherited DOCEDUCATION: TDOCEDUCATION
                 HeaderAlignmentHorz = taCenter
                 Width = 90
               end
-              object GridDBTableView1DCODE: TcxGridDBColumn
-                DataBinding.FieldName = 'DCODE'
+              object GridDBTableView1EDUCATION: TcxGridDBColumn
+                DataBinding.FieldName = 'EDUCATION'
                 HeaderAlignmentHorz = taCenter
-                Width = 45
+                Width = 301
+              end
+              object GridDBTableView1DOCTYPE: TcxGridDBColumn
+                DataBinding.FieldName = 'DOCTYPE'
+                HeaderAlignmentHorz = taCenter
+                Width = 170
+              end
+              object GridDBTableView1NAME: TcxGridDBColumn
+                Caption = #1042#1059#1047
+                DataBinding.FieldName = 'NAME'
+                HeaderAlignmentHorz = taCenter
+                Width = 120
+              end
+              object GridDBTableView1OUTYEAR: TcxGridDBColumn
+                DataBinding.FieldName = 'OUTYEAR'
+                HeaderAlignmentHorz = taCenter
+                Width = 78
+              end
+              object GridDBTableView1EDUCATIONFORM: TcxGridDBColumn
+                DataBinding.FieldName = 'EDUCATIONFORM'
+                HeaderAlignmentHorz = taCenter
+                Width = 108
               end
               object GridDBTableView1DOCSERIA: TcxGridDBColumn
                 DataBinding.FieldName = 'DOCSERIA'
@@ -121,26 +133,10 @@ inherited DOCEDUCATION: TDOCEDUCATION
                 HeaderAlignmentHorz = taCenter
                 Width = 79
               end
-              object GridDBTableView1NAME: TcxGridDBColumn
-                Caption = #1042#1059#1047
-                DataBinding.FieldName = 'NAME'
-                HeaderAlignmentHorz = taCenter
-                Width = 120
-              end
               object GridDBTableView1SPECIALITY: TcxGridDBColumn
                 DataBinding.FieldName = 'SPECIALITY'
                 HeaderAlignmentHorz = taCenter
                 Width = 228
-              end
-              object GridDBTableView1OUTYEAR: TcxGridDBColumn
-                DataBinding.FieldName = 'OUTYEAR'
-                HeaderAlignmentHorz = taCenter
-                Width = 78
-              end
-              object GridDBTableView1CVALIFICATIONCODE: TcxGridDBColumn
-                DataBinding.FieldName = 'CVALIFICATIONCODE'
-                HeaderAlignmentHorz = taCenter
-                Width = 64
               end
               object GridDBTableView1CVALIFICATION: TcxGridDBColumn
                 DataBinding.FieldName = 'CVALIFICATION'

@@ -13,6 +13,7 @@ uses
   cxLookAndFeels, uADStanParam, uADDatSManager, uADDAptIntf;
 
 type
+
   TDataModule1 = class(TDataModule)
     ADGUIxErrorDialog1: TADGUIxErrorDialog;
     ADPhysOracleDriverLink1: TADPhysOracleDriverLink;
@@ -32,6 +33,7 @@ type
 
 var
   DataModule1: TDataModule1;
+  exportdir:  string;
 
 implementation
 uses  MainUnit;
@@ -40,6 +42,12 @@ uses  MainUnit;
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 begin
+  exportdir:='C:\EXPORT\';
+
+  if DirectoryExists(exportdir)
+   then exportdir:='C:\EXPORT\'
+   else CreateDir(exportdir);
+
 
   cxLocalizer1.Active  := False;
   cxLocalizer1.FileName:=

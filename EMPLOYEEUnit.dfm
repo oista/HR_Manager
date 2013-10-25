@@ -1295,7 +1295,6 @@ inherited EMPLOYEE: TEMPLOYEE
               Width = 1314
               Height = 238
               Align = alClient
-              PopupMenu = pm_STATUS
               TabOrder = 1
               object grd_ADRESSDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>

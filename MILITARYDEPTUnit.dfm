@@ -58,15 +58,15 @@ inherited MILITARYDEPT: TMILITARYDEPT
         Height = 471
         ExplicitWidth = 1037
         ExplicitHeight = 471
-        ClientRectBottom = 471
-        ClientRectRight = 1037
+        ClientRectBottom = 465
+        ClientRectRight = 1031
         inherited cxTabSheet1: TcxTabSheet
           Caption = #1042#1086#1080#1085#1089#1082#1080#1081' '#1091#1095#1077#1090'  '
-          ExplicitWidth = 1037
-          ExplicitHeight = 447
+          ExplicitWidth = 1029
+          ExplicitHeight = 438
           inherited GridPanel1: TGridPanel
-            Width = 1031
-            ExplicitWidth = 1031
+            Width = 1023
+            ExplicitWidth = 1023
             inherited PKDBEditButtons1: TPKDBEditButtons
               EnableButtons = [ebRefresh]
               TableName = 'HR_V_MILITARYDEPT'
@@ -74,10 +74,10 @@ inherited MILITARYDEPT: TMILITARYDEPT
             end
           end
           inherited Grid: TcxGrid
-            Width = 1031
-            Height = 407
-            ExplicitWidth = 1031
-            ExplicitHeight = 407
+            Width = 1023
+            Height = 398
+            ExplicitWidth = 1023
+            ExplicitHeight = 398
             inherited GridDBTableView1: TcxGridDBTableView
               OptionsView.CellAutoHeight = False
               object GridDBTableView1ID: TcxGridDBColumn
@@ -159,6 +159,10 @@ inherited MILITARYDEPT: TMILITARYDEPT
                 HeaderAlignmentHorz = taCenter
                 Width = 218
               end
+              object GridDBTableView1CATEGORYNUMB: TcxGridDBColumn
+                DataBinding.FieldName = 'CATEGORYNUMB'
+                Width = 65
+              end
               object GridDBTableView1DCODE: TcxGridDBColumn
                 DataBinding.FieldName = 'DCODE'
                 HeaderAlignmentHorz = taCenter
@@ -200,7 +204,7 @@ inherited MILITARYDEPT: TMILITARYDEPT
     Connection = DataModule1.ADConnection1
     SQL.Strings = (
       'Select * from HR_V_MILITARYDEPT')
-    Left = 368
+    Left = 328
     Top = 0
     object MainQueryID: TFMTBCDField
       FieldName = 'ID'
@@ -305,6 +309,12 @@ inherited MILITARYDEPT: TMILITARYDEPT
     end
     object MainQueryCITEZENID: TFMTBCDField
       FieldName = 'CITEZENID'
+      Precision = 38
+      Size = 38
+    end
+    object MainQueryCATEGORYNUMB: TFMTBCDField
+      DisplayLabel = #1050#1072#1090'.'#1044#1086#1083#1078#1085'.'
+      FieldName = 'CATEGORYNUMB'
       Precision = 38
       Size = 38
     end

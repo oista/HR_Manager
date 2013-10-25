@@ -35,10 +35,13 @@ type
     procedure madeMissionOrder      (V1:double);
     procedure madeAwardOrder        (V1:double);
     procedure madeInvalidCard       (V1:double);
-    procedure madeHarmReference     (V1: double);
-    procedure madeCheckup           (V1: double);
+    procedure madeHarmReference     (V1:double);
+    procedure madeCheckup           (V1:double);
     procedure madeStructurereportArch(V1:double);
-    procedure madeMilitaryReport     (V1:double);
+    procedure madeMilitaryReport    (V1:double);
+
+    procedure makeWorkContractBLANK (V1:double);
+    procedure madeOrderJoinBLANK    (V1:double);
   end;
 
 var
@@ -146,6 +149,7 @@ begin     // приказ о приеме
  CRV.ReportSource:=Rep.DefaultInterface;
  CRV.ViewReport;
 end;
+
 
 procedure TWREPORT.madeReference(V1: double);
 begin     // справочка о работе
@@ -255,5 +259,25 @@ begin          // структура состава
  CRV.ReportSource:=Rep.DefaultInterface;
  CRV.ViewReport;
 end;
+
+
+procedure TWREPORT.makeWorkContractBLANK(V1: double);
+begin      // предварительный трудовой договор
+ app.LogOnServer('crdb_oracle.dll',connect,rep_login,rep_login,rep_pas);
+ rep.ConnectTo(app.OpenReport('HR_WORKCONTRACT_BLANK.rpt'));
+ rep.ParameterFields.GetItemByName('citezenid','HR_WORKCONTRACT_BLANK').AddCurrentValue(V1);
+ CRV.ReportSource:=Rep.DefaultInterface;
+ CRV.ViewReport;
+end;
+
+procedure TWREPORT.madeOrderJoinBLANK(V1: double);
+begin     // предварительный приказ о приеме
+ app.LogOnServer('crdb_oracle.dll',connect,rep_login,rep_login,rep_pas);
+ rep.ConnectTo(app.OpenReport('HR_ORDERJOIN_BLANK.rpt'));
+ rep.ParameterFields.GetItemByName('citezeid','HR_ORDERJOIN_BLANK').AddCurrentValue(V1);
+ CRV.ReportSource:=Rep.DefaultInterface;
+ CRV.ViewReport;
+end;
+
 
 end.

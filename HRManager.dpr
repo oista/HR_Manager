@@ -79,12 +79,14 @@ uses
   ATTCOURSEUnit in 'ATTCOURSEUnit.pas' {ATTCOUSE},
   PROFESSIONEDITUnit in 'PROFESSIONEDITUnit.pas' {PROFFESIONEDIT},
   PROFESSIONUnit in 'PROFESSIONUnit.pas' {PROFFESION},
-  DictUnit in '..\LIB\PKDBSoft\DictUnit.pas' {DictForm},
   DOCLEAVEUnit in 'DOCLEAVEUnit.pas' {DOCLEAVEListForm},
   EditDialogUnit in '..\LIB\PKDBSoft\EditDialogUnit.pas' {EditDialog},
   DOCLEAVEEDITUnit in 'DOCLEAVEEDITUnit.pas' {DOCLEAVEEDIT},
   DMENUUnit in 'DMENUUnit.pas' {BMenuForm},
-  REGIONUnit in 'REGIONUnit.pas' {REGION};
+  REGIONUnit in 'REGIONUnit.pas' {REGION},
+  ORGANISATION_MILITARYUnit in 'ORGANISATION_MILITARYUnit.pas' {ORGANISATION_MILITARY},
+  DictUnit in '..\LIB\PKDBSoft\DictUnit.pas' {DictForm},
+  ORGANISATION_PASSPORTUnit in 'ORGANISATION_PASSPORTUnit.pas' {ORGANISATION_PASSPORT};
 
 {$R *.res}
 
@@ -97,6 +99,7 @@ begin
   Application.CreateForm(TBMenuForm, BMenuForm);
   BMenuForm.Caption:=  ' адровый учет';
   Application.Run;
+
   // устанавливаем кошерный формат NLS
   DM.DataModule1.alter_nls.Execute;
 end.

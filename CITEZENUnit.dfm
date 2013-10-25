@@ -2,7 +2,6 @@ inherited CITEZEN: TCITEZEN
   Caption = #1043#1088#1072#1078#1076#1072#1085#1077'      '
   ClientHeight = 644
   ClientWidth = 1346
-  ExplicitTop = -60
   ExplicitWidth = 1362
   ExplicitHeight = 682
   PixelsPerInch = 96
@@ -66,8 +65,6 @@ inherited CITEZEN: TCITEZEN
           ActivePage = TabSheet12
           Align = alClient
           TabOrder = 0
-          ExplicitLeft = 160
-          ExplicitTop = -6
           object TabSheet2: TTabSheet
             Caption = #1055#1072#1089#1087#1086#1088#1090#1072
             OnShow = CLPassport
@@ -108,6 +105,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_DOCPASSPORT'
@@ -227,6 +225,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebEdit]
                 TableName = 'HR_WORKCONTRACT'
@@ -344,6 +343,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebDelete]
                 PrimaryFieldName = 'ID'
@@ -460,6 +460,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_DOCEDUCATION'
                 PrimaryFieldName = 'ID'
@@ -580,6 +581,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_LANGUAGE'
                 PrimaryFieldName = 'ID'
@@ -829,6 +831,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_ADRESS'
@@ -1141,6 +1144,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_FAMILY'
@@ -1245,6 +1249,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_PROFFESION'
@@ -1351,6 +1356,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 EnableButtons = [ebRefresh, ebNew, ebCopy, ebEdit, ebDelete]
                 TableName = 'HR_EMPLOYEE'
@@ -1468,6 +1474,7 @@ inherited CITEZEN: TCITEZEN
                 Width = 180
                 Height = 28
                 CheckUserPrivs = False
+                StatusFieldName = 'STATUSID'
                 CheckRecStatus = False
                 TableName = 'HR_PHONENUMBER'
                 TempTableName = 'HR_PHONENUMBER_TEMP'
@@ -2538,13 +2545,24 @@ inherited CITEZEN: TCITEZEN
   object pm_MainGrid: TPopupMenu
     Left = 496
     Top = 144
-    object N1: TMenuItem
-      Caption = #1055#1086#1083#1091#1095#1080#1090#1100' '#1092#1086#1088#1084#1091' '#1058'2'
-      OnClick = ViewReport
-    end
     object Excel1: TMenuItem
       Caption = #1069#1082#1089#1087#1086#1088#1090' '#1074' Excel'
       OnClick = Excel1Click
+    end
+    object N3: TMenuItem
+      Caption = #1060#1086#1088#1084#1099
+      object N1: TMenuItem
+        Caption = #1055#1086#1083#1091#1095#1080#1090#1100' '#1092#1086#1088#1084#1091' '#1058'2'
+        OnClick = ViewReport
+      end
+      object N4: TMenuItem
+        Caption = #1055#1088#1077#1076#1074#1072#1088#1080#1090#1077#1083#1100#1085#1099#1081' '#1087#1088#1080#1082#1072#1079
+        OnClick = N4Click
+      end
+      object N5: TMenuItem
+        Caption = #1055#1088#1077#1076#1074#1072#1088#1080#1090#1077#1083#1100#1085#1099#1081' '#1076#1086#1075#1086#1074#1086#1088
+        OnClick = N5Click
+      end
     end
   end
   object QRY_JOBHISTORY: TADQuery

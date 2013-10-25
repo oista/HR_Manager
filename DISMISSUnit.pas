@@ -100,8 +100,10 @@ implementation
   uses DM, PKDBQueryToExcel;
 {$R *.dfm}
 procedure TDISMISS.Excel1Click(Sender: TObject);
+var filename:string;
 begin
-   cxGridExportLink.ExportGridToExcel('DismissList',Grid, True, True, True, 'xls' );
+  filename :=  StringReplace(exportdir+datetostr(now),'.','-',[rfReplaceAll])+'_”воленные—писок_'+StringReplace(copy(timetostr(now),1,5),':','-',[rfReplaceAll]);
+  cxGridExportLink.ExportGridToExcel(filename,Grid, True, True, True, 'xls' );
 end;
 
 
